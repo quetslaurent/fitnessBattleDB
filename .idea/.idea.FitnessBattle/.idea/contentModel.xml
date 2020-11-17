@@ -4,18 +4,18 @@
     <e p="C:\Users\InfoWare31\AppData\Local\JetBrains\Rider2020.2\extResources" t="IncludeRecursive" />
     <e p="C:\Users\InfoWare31\AppData\Local\JetBrains\Rider2020.2\resharper-host\Local\Transient\Rider\v202\SolutionCaches\_FitnessBattle.1021221505.00" t="ExcludeRecursive" />
     <e p="D:\DepoRider\Exercices\Projet\FitnessBattle" t="IncludeFlat">
-      <e p="FitnessBattle" t="IncludeRecursive">
+      <e p="Api" t="IncludeRecursive">
+        <e p="Api.csproj" t="IncludeRecursive" />
         <e p="appsettings.Development.json" t="Include" />
         <e p="appsettings.json" t="Include" />
         <e p="bin" t="ExcludeRecursive" />
         <e p="Controllers" t="Include">
           <e p="WeatherForecastController.cs" t="Include" />
         </e>
-        <e p="FitnessBattle.csproj" t="IncludeRecursive" />
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
             <e p="netcoreapp3.1" t="Include">
-              <e p="FitnessBattle.AssemblyInfo.cs" t="Include" />
+              <e p="Api.AssemblyInfo.cs" t="Include" />
             </e>
           </e>
         </e>
@@ -26,7 +26,73 @@
         <e p="Startup.cs" t="Include" />
         <e p="WeatherForecast.cs" t="Include" />
       </e>
+      <e p="Application" t="IncludeRecursive">
+        <e p="Application.csproj" t="IncludeRecursive" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp3.1" t="Include">
+              <e p="Application.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="Repositories" t="Include">
+          <e p="ITrainingDateRepository.cs" t="Include" />
+        </e>
+      </e>
+      <e p="Domain" t="IncludeRecursive">
+        <e p="Activity" t="Include">
+          <e p="IActivity.cs" t="Include" />
+        </e>
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="Category" t="Include">
+          <e p="Category.cs" t="Include" />
+          <e p="CategoryFactory.cs" t="Include" />
+          <e p="ICategory.cs" t="Include" />
+          <e p="ICategoryFactory.cs" t="Include" />
+        </e>
+        <e p="Domain.csproj" t="IncludeRecursive" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp3.1" t="Include">
+              <e p="Domain.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="Shared" t="Include">
+          <e p="IEntity.cs" t="Include" />
+        </e>
+        <e p="Training" t="Include">
+          <e p="ActivityTrained.cs" t="Include" />
+          <e p="IActivityTrained.cs" t="Include" />
+          <e p="ITraining.cs" t="Include" />
+          <e p="Training.cs" t="Include" />
+        </e>
+        <e p="TrainingDate" t="Include">
+          <e p="ITrainingDate.cs" t="Include" />
+          <e p="ITrainingDateFactory.cs" t="Include" />
+          <e p="TrainingDate.cs" t="Include" />
+          <e p="TrainingDateFactory.cs" t="Include" />
+        </e>
+        <e p="User" t="Include">
+          <e p="IUser.cs" t="Include" />
+          <e p="IUserFactory.cs" t="Include" />
+          <e p="User.cs" t="Include" />
+          <e p="UserFactory.cs" t="Include" />
+        </e>
+      </e>
       <e p="FitnessBattle.sln" t="IncludeFlat" />
+      <e p="Infrastructure" t="IncludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="Infrastructure.csproj" t="IncludeRecursive" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp3.1" t="Include">
+              <e p="Infrastructure.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+      </e>
       <e p="packages" t="ExcludeRecursive" />
     </e>
   </component>
