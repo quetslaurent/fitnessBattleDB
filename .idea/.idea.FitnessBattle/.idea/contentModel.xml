@@ -37,12 +37,19 @@
           </e>
         </e>
         <e p="Repositories" t="Include">
+          <e p="IActivityRepository.cs" t="Include" />
+          <e p="ICategoryRepository.cs" t="Include" />
           <e p="ITrainingDateRepository.cs" t="Include" />
+          <e p="ITrainingRepository.cs" t="Include" />
+          <e p="IUserRepository.cs" t="Include" />
         </e>
       </e>
       <e p="Domain" t="IncludeRecursive">
         <e p="Activity" t="Include">
+          <e p="Activity.cs" t="Include" />
+          <e p="ActivityFactory.cs" t="Include" />
           <e p="IActivity.cs" t="Include" />
+          <e p="IActivityFactory.cs" t="Include" />
         </e>
         <e p="bin" t="ExcludeRecursive" />
         <e p="Category" t="Include">
@@ -73,6 +80,12 @@
           <e p="ITrainingDateFactory.cs" t="Include" />
           <e p="TrainingDate.cs" t="Include" />
           <e p="TrainingDateFactory.cs" t="Include" />
+        </e>
+        <e p="Unit" t="Include">
+          <e p="IUnit.cs" t="Include" />
+          <e p="IUnitFactory.cs" t="Include" />
+          <e p="Unit.cs" t="Include" />
+          <e p="UnitFactory.cs" t="Include" />
         </e>
         <e p="User" t="Include">
           <e p="IUser.cs" t="Include" />
