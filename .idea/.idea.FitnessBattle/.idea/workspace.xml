@@ -8,15 +8,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2d50f586-c447-40ab-96ed-d6d4355f20d2" name="Default Changelist" comment="reste api et fin des services">
-      <change afterPath="$PROJECT_DIR$/Application/Services/Activity/ActivityService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Application/Services/Activity/Dto/OutputDtoAddActivity.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Application/Services/Activity/Dto/OutputDtoQueryActivity.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Application/Services/Activity/IActivityService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.FitnessBattle/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FitnessBattle/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.FitnessBattle/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FitnessBattle/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Application/Services/Activity/Dto/InputDtoAddActivity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Application/Services/Activity/Dto/InputDtoAddActivity.cs" afterDir="false" />
-    </list>
+    <list default="true" id="2d50f586-c447-40ab-96ed-d6d4355f20d2" name="Default Changelist" comment="reste activity et training service" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -183,7 +175,14 @@
       <option name="project" value="LOCAL" />
       <updated>1605711224066</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="reste activity et training service">
+      <created>1605711893885</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1605711893885</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -210,7 +209,8 @@
     <MESSAGE value="Domain vraiment fini + debut repository" />
     <MESSAGE value="infrastructure" />
     <MESSAGE value="reste api et fin des services" />
-    <option name="LAST_COMMIT_MESSAGE" value="reste api et fin des services" />
+    <MESSAGE value="reste activity et training service" />
+    <option name="LAST_COMMIT_MESSAGE" value="reste activity et training service" />
   </component>
   <component name="WindowStateProjectService">
     <state x="552" y="271" key="Rider.ProjectTemplateDialog.Size" timestamp="1605628738436">
@@ -221,10 +221,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="601" y="114" key="RiderGenerateDialog/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1605710638132" />
-    <state x="552" y="272" key="Vcs.Push.Dialog.v2" timestamp="1605711226648">
+    <state x="552" y="272" key="Vcs.Push.Dialog.v2" timestamp="1605711895557">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="552" y="272" key="Vcs.Push.Dialog.v2/-1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1605711226648" />
+    <state x="552" y="272" key="Vcs.Push.Dialog.v2/-1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1605711895557" />
     <state x="442" y="208" key="Vcs.Push.Dialog.v2/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1605709514641" />
     <state x="586" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1605709494096">
       <screen x="0" y="0" width="1536" height="824" />

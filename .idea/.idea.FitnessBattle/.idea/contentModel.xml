@@ -9,7 +9,9 @@
         <e p="appsettings.Development.json" t="Include" />
         <e p="appsettings.json" t="Include" />
         <e p="bin" t="ExcludeRecursive" />
-        <e p="Controllers" t="Include" />
+        <e p="Controllers" t="Include">
+          <e p="TrainingDateController.cs" t="Include" />
+        </e>
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
             <e p="netcoreapp3.1" t="Include">
@@ -84,7 +86,6 @@
             <e p="Dto" t="Include">
               <e p="InputDtoAddUser.cs" t="Include" />
               <e p="OutputDtoAddUser.cs" t="Include" />
-              <e p="OutputDtoAddUser.cs~" t="Include" />
               <e p="OutputDtoQueryUser.cs" t="Include" />
             </e>
             <e p="IUserService.cs" t="Include" />
