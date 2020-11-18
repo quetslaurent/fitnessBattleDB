@@ -144,6 +144,7 @@
             <e p="IInstanceFromReaderFactory.cs" t="Include" />
             <e p="TrainingDatesFactory.cs" t="Include" />
             <e p="UnitFactory.cs" t="Include" />
+            <e p="UserFactory.cs" t="Include" />
           </e>
           <e p="Shared" t="Include">
             <e p="Database.cs" t="Include" />
@@ -156,7 +157,10 @@
             <e p="UnitRepository.cs" t="Include" />
             <e p="UnitSqlServer.cs" t="Include" />
           </e>
-          <e p="User" t="Include" />
+          <e p="User" t="Include">
+            <e p="UserRepository.cs" t="Include" />
+            <e p="UserSqlServer.cs" t="Include" />
+          </e>
         </e>
       </e>
       <e p="packages" t="ExcludeRecursive" />

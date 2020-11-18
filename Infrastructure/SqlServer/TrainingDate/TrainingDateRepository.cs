@@ -1,48 +1,47 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Data;
 using Application.Repositories;
-using Domain.Activity;
 using Domain.TrainingDate;
-using Infrastructure.SqlServer.Activity;
 using Infrastructure.SqlServer.Factories;
 using Infrastructure.SqlServer.Shared;
-using ActivityFactory = Domain.Activity.ActivityFactory;
+using TrainingDatesFactory = Infrastructure.SqlServer.Factories.TrainingDatesFactory;
+
 
 namespace Infrastructure.SqlServer.TrainingDate
 {
     public class TrainingDateRepository : ITrainingDateRepository
     {
-          private readonly IInstanceFromReaderFactory<ITrainingDate> _factory = new TrainingDateFactory();
+        private readonly IInstanceFromReaderFactory<ITrainingDate> _factory = new TrainingDatesFactory();
 
         public IEnumerable<ITrainingDate> Query()
         {
-            IList<IActivity> trainingDates = new List<IActivity>();
+            IList<ITrainingDate> trainingDates = new List<ITrainingDate>();
             using (var connection = Database.GetConnection())
             {
                 connection.Open();
                 var cmd = connection.CreateCommand();
+
                 cmd.CommandText = TrainingDateSqlServer.ReqQuery;
 
                 var reader = cmd.ExecuteReader(CommandBehavior.CloseConnection);
 
                 while (reader.Read())
-                {
                     trainingDates.Add(_factory.CreateFromReader(reader));
-                }
             }
 
             return trainingDates;
         }
 
-        public IActivity GetById(int id)
+        public ITrainingDate GetById(int id)
         {
             using (var connection = Database.GetConnection())
             {
                 connection.Open();
                 var cmd = connection.CreateCommand();
 
-                cmd.CommandText = ActivitySqlServer.ReqGetById;
-                cmd.Parameters.AddWithValue($"@{ActivitySqlServer.ColId}", id);
+                cmd.CommandText = TrainingDateSqlServer.ReqGetById;
+                cmd.Parameters.AddWithValue($"@{TrainingDateSqlServer.ColId}", id);
 
                 var reader = cmd.ExecuteReader(CommandBehavior.CloseConnection);
 
@@ -55,43 +54,25 @@ namespace Infrastructure.SqlServer.TrainingDate
             return null;
         }
 
-        public IActivity Create(IActivity activity)
+        public ITrainingDate Create(DateTime date)
         {
+            var trainingDate = new Domain.TrainingDate.TrainingDate()
+            {
+                Date = date
+            };
+
             using (var connection = Database.GetConnection())
             {
                 connection.Open();
                 var cmd = connection.CreateCommand();
-                cmd.CommandText = ActivitySqlServer.ReqCreate;
+                cmd.CommandText = TrainingDateSqlServer.ReqCreate;
 
-                cmd.Parameters.AddWithValue($"@{ActivitySqlServer.ColName}", activity.Name);
-                cmd.Parameters.AddWithValue($"@{ActivitySqlServer.ColRepetitions}", activity.Repetitions);
-                cmd.Parameters.AddWithValue($"@{ActivitySqlServer.ColIdUnit}", activity.Unit);
-                cmd.Parameters.AddWithValue($"@{ActivitySqlServer.ColIdCategory}", activity.Category);
+                cmd.Parameters.AddWithValue($"@{TrainingDateSqlServer.ColDate}", date);
 
-                activity.Id = (int) cmd.ExecuteScalar();
+                trainingDate.Id = (int) cmd.ExecuteScalar();
             }
 
-            return activity;
-        }
-
-        public bool Update(int id, IActivity activity)
-        {
-            using (var connection = Database.GetConnection())
-            {
-                connection.Open();
-                var cmd = connection.CreateCommand();
-
-                cmd.CommandText = ActivitySqlServer.ReqPut;
-
-                cmd.Parameters.AddWithValue($"@{ActivitySqlServer.ColId}", id);
-                cmd.Parameters.AddWithValue($"@{ActivitySqlServer.ColName}", activity.Name);
-                cmd.Parameters.AddWithValue($"@{ActivitySqlServer.ColRepetitions}", activity.Repetitions);
-                cmd.Parameters.AddWithValue($"@{ActivitySqlServer.ColIdUnit}", activity.Unit);
-                cmd.Parameters.AddWithValue($"@{ActivitySqlServer.ColIdCategory}", activity.Category);
-
-
-                return cmd.ExecuteNonQuery() > 0;
-            }
+            return trainingDate;
         }
     }
 }

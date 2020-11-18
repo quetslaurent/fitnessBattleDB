@@ -1,8 +1,8 @@
-﻿using System;
+﻿﻿using System;
 
 namespace Domain.TrainingDate
 {
-    public class TrainingDateFactory : ITrainingDateFactory, IInstanceFromReaderFactory
+    public class TrainingDateFactory : ITrainingDateFactory
     {
         public ITrainingDate Create(int id, DateTime dateTime)
         {

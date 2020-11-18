@@ -5,7 +5,7 @@ using Infrastructure.SqlServer.Activity;
 
 namespace Infrastructure.SqlServer.Factories
 {
-    public class Category : IInstanceFromReaderFactory<ICategory>
+    public class CategoryFactory : IInstanceFromReaderFactory<ICategory>
     {
         public ICategory CreateFromReader(SqlDataReader reader)
         {

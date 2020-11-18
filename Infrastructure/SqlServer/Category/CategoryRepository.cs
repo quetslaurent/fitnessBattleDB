@@ -4,6 +4,7 @@ using Application.Repositories;
 using Domain.Category;
 using Infrastructure.SqlServer.Factories;
 using Infrastructure.SqlServer.Shared;
+using CategoryFactory = Infrastructure.SqlServer.Factories.CategoryFactory;
 
 namespace Infrastructure.SqlServer.Category
 {
