@@ -4,4 +4,16 @@
         <TargetFramework>netcoreapp3.1</TargetFramework>
     </PropertyGroup>
 
+    <ItemGroup>
+      <ProjectReference Include="..\Domain\Domain.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="Services\Activity\Dto" />
+      <Folder Include="Services\Category\Dto" />
+      <Folder Include="Services\Training\Dto" />
+      <Folder Include="Services\Unit\Dto" />
+      <Folder Include="Services\User\Dto" />
+    </ItemGroup>
+
 </Project>

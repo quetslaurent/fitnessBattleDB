@@ -8,21 +8,23 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2d50f586-c447-40ab-96ed-d6d4355f20d2" name="Default Changelist" comment="Domain fini">
-      <change afterPath="$PROJECT_DIR$/Application/Repositories/IActivityRepository.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Application/Repositories/ICategoryRepository.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Application/Repositories/ITrainingRepository.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Application/Repositories/IUserRepository.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Domain/Activity/Activity.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Domain/Activity/ActivityFactory.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Domain/Activity/IActivityFactory.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Domain/Unit/IUnit.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Domain/Unit/IUnitFactory.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Domain/Unit/Unit.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Domain/Unit/UnitFactory.cs" afterDir="false" />
+    <list default="true" id="2d50f586-c447-40ab-96ed-d6d4355f20d2" name="Default Changelist" comment="Domain vraiment fini + debut repository">
+      <change afterPath="$PROJECT_DIR$/Application/Services/TrainingDate/Dto/InputDtoAddTrainingDate.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Application/Services/TrainingDate/Dto/OutputDtoAddTrainingDate.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Application/Services/TrainingDate/Dto/OutputDtoQueryTrainingDate.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Application/Services/TrainingDate/ITrainingDateService.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Application/Services/TrainingDate/TrainingDateService.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.FitnessBattle/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FitnessBattle/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.FitnessBattle/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FitnessBattle/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Domain/Activity/IActivity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Domain/Activity/IActivity.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Api/Api.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Api/Api.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Api/Controllers/WeatherForecastController.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Api/WeatherForecast.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Application/Application.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Application/Application.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Application/Repositories/IActivityRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Application/Repositories/IActivityRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Application/Repositories/ICategoryRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Application/Repositories/ICategoryRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Application/Repositories/ITrainingDateRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Application/Repositories/ITrainingDateRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Application/Repositories/ITrainingRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Application/Repositories/ITrainingRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Application/Repositories/IUserRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Application/Repositories/IUserRepository.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,12 +57,7 @@
         <option value="$PROJECT_DIR$/Domain/Training/Training.cs" />
         <option value="$PROJECT_DIR$/Domain/Training/ActivityTrained.cs" />
         <option value="$PROJECT_DIR$/Domain/Training/IActivityTrained.cs" />
-        <option value="$PROJECT_DIR$/Application/Repositories/ITrainingDateRepository.cs" />
-        <option value="$PROJECT_DIR$/Application/Repositories/IUserRepository.cs" />
         <option value="$PROJECT_DIR$/Application/Repositories/ICategory.cs" />
-        <option value="$PROJECT_DIR$/Application/Repositories/ICategoryRepository.cs" />
-        <option value="$PROJECT_DIR$/Application/Repositories/IActivityRepository.cs" />
-        <option value="$PROJECT_DIR$/Application/Repositories/ITrainingRepository.cs" />
         <option value="$PROJECT_DIR$/Domain/Unit/IUnit.cs" />
         <option value="$PROJECT_DIR$/Domain/Unit/Unit.cs" />
         <option value="$PROJECT_DIR$/Domain/Unit/IUnitFactory.cs" />
@@ -69,6 +66,16 @@
         <option value="$PROJECT_DIR$/Domain/Activity/Activity.cs" />
         <option value="$PROJECT_DIR$/Domain/Activity/IActivityFactory.cs" />
         <option value="$PROJECT_DIR$/Domain/Activity/ActivityFactory.cs" />
+        <option value="$PROJECT_DIR$/Application/Repositories/ITrainingDateRepository.cs" />
+        <option value="$PROJECT_DIR$/Application/Repositories/ICategoryRepository.cs" />
+        <option value="$PROJECT_DIR$/Application/Repositories/IActivityRepository.cs" />
+        <option value="$PROJECT_DIR$/Application/Repositories/ITrainingRepository.cs" />
+        <option value="$PROJECT_DIR$/Application/Repositories/IUserRepository.cs" />
+        <option value="$PROJECT_DIR$/Application/Services/TrainingDate/Dto/InputDtoAddTrainingDate.cs" />
+        <option value="$PROJECT_DIR$/Application/Services/TrainingDate/Dto/OutputDtoAddTrainingDate.cs" />
+        <option value="$PROJECT_DIR$/Application/Services/TrainingDate/Dto/OutputDtoQueryTrainingDate.cs" />
+        <option value="$PROJECT_DIR$/Application/Services/TrainingDate/ITrainingDateService.cs" />
+        <option value="$PROJECT_DIR$/Application/Services/TrainingDate/TrainingDateService.cs" />
       </list>
     </option>
   </component>
@@ -123,7 +130,11 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1605627924444</updated>
-      <workItem from="1605627936704" duration="5346000" />
+      <workItem from="1605627936704" duration="5392000" />
+      <workItem from="1605690671137" duration="186000" />
+      <workItem from="1605695626288" duration="509000" />
+      <workItem from="1605697885311" duration="1133000" />
+      <workItem from="1605705206614" duration="370000" />
     </task>
     <task id="LOCAL-00001" summary="base">
       <created>1605628139369</created>
@@ -146,13 +157,20 @@
       <option name="project" value="LOCAL" />
       <updated>1605631913520</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Domain vraiment fini + debut repository">
+      <created>1605633352666</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1605633352666</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
-  <component name="UnityProjectConfiguration" hasMinimizedUI="null" />
+  <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -164,21 +182,23 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="base" />
     <MESSAGE value="Domain fini" />
-    <option name="LAST_COMMIT_MESSAGE" value="Domain fini" />
+    <MESSAGE value="Domain vraiment fini + debut repository" />
+    <option name="LAST_COMMIT_MESSAGE" value="Domain vraiment fini + debut repository" />
   </component>
   <component name="WindowStateProjectService">
     <state x="552" y="271" key="Rider.ProjectTemplateDialog.Size" timestamp="1605628738436">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="552" y="271" key="Rider.ProjectTemplateDialog.Size/-1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1605628738436" />
-    <state x="552" y="272" key="Vcs.Push.Dialog.v2" timestamp="1605631915950">
+    <state x="552" y="272" key="Vcs.Push.Dialog.v2" timestamp="1605633359744">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="552" y="272" key="Vcs.Push.Dialog.v2/-1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1605631915950" />
+    <state x="552" y="272" key="Vcs.Push.Dialog.v2/-1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1605633359744" />
   </component>
 </project>

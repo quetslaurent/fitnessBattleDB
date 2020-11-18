@@ -9,9 +9,7 @@
         <e p="appsettings.Development.json" t="Include" />
         <e p="appsettings.json" t="Include" />
         <e p="bin" t="ExcludeRecursive" />
-        <e p="Controllers" t="Include">
-          <e p="WeatherForecastController.cs" t="Include" />
-        </e>
+        <e p="Controllers" t="Include" />
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
             <e p="netcoreapp3.1" t="Include">
@@ -24,7 +22,6 @@
           <e p="launchSettings.json" t="Include" />
         </e>
         <e p="Startup.cs" t="Include" />
-        <e p="WeatherForecast.cs" t="Include" />
       </e>
       <e p="Application" t="IncludeRecursive">
         <e p="Application.csproj" t="IncludeRecursive" />
@@ -42,6 +39,32 @@
           <e p="ITrainingDateRepository.cs" t="Include" />
           <e p="ITrainingRepository.cs" t="Include" />
           <e p="IUserRepository.cs" t="Include" />
+        </e>
+        <e p="Services" t="Include">
+          <e p="Activity" t="Include">
+            <e p="Dto" t="Include" />
+          </e>
+          <e p="Category" t="Include">
+            <e p="Dto" t="Include" />
+          </e>
+          <e p="Training" t="Include">
+            <e p="Dto" t="Include" />
+          </e>
+          <e p="TrainingDate" t="Include">
+            <e p="Dto" t="Include">
+              <e p="InputDtoAddTrainingDate.cs" t="Include" />
+              <e p="OutputDtoAddTrainingDate.cs" t="Include" />
+              <e p="OutputDtoQueryTrainingDate.cs" t="Include" />
+            </e>
+            <e p="ITrainingDateService.cs" t="Include" />
+            <e p="TrainingDateService.cs" t="Include" />
+          </e>
+          <e p="Unit" t="Include">
+            <e p="Dto" t="Include" />
+          </e>
+          <e p="User" t="Include">
+            <e p="Dto" t="Include" />
+          </e>
         </e>
       </e>
       <e p="Domain" t="IncludeRecursive">
