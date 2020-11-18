@@ -8,23 +8,24 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2d50f586-c447-40ab-96ed-d6d4355f20d2" name="Default Changelist" comment="Domain vraiment fini + debut repository">
-      <change afterPath="$PROJECT_DIR$/Application/Services/TrainingDate/Dto/InputDtoAddTrainingDate.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Application/Services/TrainingDate/Dto/OutputDtoAddTrainingDate.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Application/Services/TrainingDate/Dto/OutputDtoQueryTrainingDate.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Application/Services/TrainingDate/ITrainingDateService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Application/Services/TrainingDate/TrainingDateService.cs" afterDir="false" />
+    <list default="true" id="2d50f586-c447-40ab-96ed-d6d4355f20d2" name="Default Changelist" comment="Domain fini">
+      <change afterPath="$PROJECT_DIR$/Application/Repositories/IUnitRepository.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Infrastructure/SqlServer/Activity/ActivityRepository.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Infrastructure/SqlServer/Activity/ActivitySqlServer.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Infrastructure/SqlServer/Category/CategoryRepository.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Infrastructure/SqlServer/Category/CategorySqlServer.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Infrastructure/SqlServer/Factories/ActivityFactory.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Infrastructure/SqlServer/Factories/CategoryFactory.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Infrastructure/SqlServer/Factories/IInstanceFromReaderFactory.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Infrastructure/SqlServer/Factories/UnitFactory.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Infrastructure/SqlServer/Shared/Database.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Infrastructure/SqlServer/TrainingDate/TrainingDateRepository.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Infrastructure/SqlServer/TrainingDate/TrainingDateSqlServer.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Infrastructure/SqlServer/Unit/UnitRepository.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Infrastructure/SqlServer/Unit/UnitSqlServer.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.FitnessBattle/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FitnessBattle/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.FitnessBattle/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FitnessBattle/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Api/Api.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Api/Api.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Api/Controllers/WeatherForecastController.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Api/WeatherForecast.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Application/Application.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Application/Application.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Application/Repositories/IActivityRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Application/Repositories/IActivityRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Application/Repositories/ICategoryRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Application/Repositories/ICategoryRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Application/Repositories/ITrainingDateRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Application/Repositories/ITrainingDateRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Application/Repositories/ITrainingRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Application/Repositories/ITrainingRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Application/Repositories/IUserRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Application/Repositories/IUserRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Infrastructure/Infrastructure.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Infrastructure/Infrastructure.csproj" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,13 +34,11 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Application/Class1.cs" />
-        <option value="$PROJECT_DIR$/Domain/Class1.cs" />
-        <option value="$PROJECT_DIR$/Infrastructure/Class1.cs" />
         <option value="$PROJECT_DIR$/Domain/Shared/IEntity.cs" />
         <option value="$PROJECT_DIR$/Domain/TrainingDate/ITrainingDate.cs" />
         <option value="$PROJECT_DIR$/Domain/TrainingDate/TrainingDate.cs" />
@@ -48,7 +47,6 @@
         <option value="$PROJECT_DIR$/Domain/Category/ICategory.cs" />
         <option value="$PROJECT_DIR$/Domain/Category/Category.cs" />
         <option value="$PROJECT_DIR$/Domain/Category/ICategoryFactory.cs" />
-        <option value="$PROJECT_DIR$/Domain/Category/CategoryFactory.cs" />
         <option value="$PROJECT_DIR$/Domain/User/IUser.cs" />
         <option value="$PROJECT_DIR$/Domain/User/User.cs" />
         <option value="$PROJECT_DIR$/Domain/User/IUserFactory.cs" />
@@ -76,6 +74,22 @@
         <option value="$PROJECT_DIR$/Application/Services/TrainingDate/Dto/OutputDtoQueryTrainingDate.cs" />
         <option value="$PROJECT_DIR$/Application/Services/TrainingDate/ITrainingDateService.cs" />
         <option value="$PROJECT_DIR$/Application/Services/TrainingDate/TrainingDateService.cs" />
+        <option value="$PROJECT_DIR$/Infrastructure/SqlServer/Category/CategorySqlServer.cs" />
+        <option value="$PROJECT_DIR$/Infrastructure/SqlServer/Factories/IInstanceFromReaderFactory.cs" />
+        <option value="$PROJECT_DIR$/Infrastructure/SqlServer/Shared/Database.cs" />
+        <option value="$PROJECT_DIR$/Infrastructure/SqlServer/Factories/Category.cs" />
+        <option value="$PROJECT_DIR$/Infrastructure/SqlServer/Unit/UnitSqlServer.cs" />
+        <option value="$PROJECT_DIR$/Infrastructure/SqlServer/Activity/ActivityRepository.cs" />
+        <option value="$PROJECT_DIR$/Application/Repositories/IUnitRepository.cs" />
+        <option value="$PROJECT_DIR$/Infrastructure/SqlServer/Factories/UnitFactory.cs" />
+        <option value="$PROJECT_DIR$/Infrastructure/SqlServer/Factories/CategoryFactory.cs" />
+        <option value="$PROJECT_DIR$/Infrastructure/SqlServer/Category/CategoryRepository.cs" />
+        <option value="$PROJECT_DIR$/Infrastructure/SqlServer/Activity/ActivitySqlServer.cs" />
+        <option value="$PROJECT_DIR$/Infrastructure/SqlServer/Unit/UnitRepository.cs" />
+        <option value="$PROJECT_DIR$/Infrastructure/SqlServer/Factories/ActivityFactory.cs" />
+        <option value="$PROJECT_DIR$/Domain/Category/CategoryFactory.cs" />
+        <option value="$PROJECT_DIR$/Infrastructure/SqlServer/TrainingDate/TrainingSqlServer.cs" />
+        <option value="$PROJECT_DIR$/Infrastructure/SqlServer/TrainingDate/TrainingDateRepository.cs" />
       </list>
     </option>
   </component>
@@ -135,6 +149,7 @@
       <workItem from="1605695626288" duration="509000" />
       <workItem from="1605697885311" duration="1133000" />
       <workItem from="1605705206614" duration="370000" />
+      <workItem from="1605708264784" duration="1029000" />
     </task>
     <task id="LOCAL-00001" summary="base">
       <created>1605628139369</created>

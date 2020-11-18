@@ -2,7 +2,7 @@
 
 namespace Domain.TrainingDate
 {
-    public class TrainingDateFactory : ITrainingDateFactory
+    public class TrainingDateFactory : ITrainingDateFactory, IInstanceFromReaderFactory
     {
         public ITrainingDate Create(int id, DateTime dateTime)
         {
