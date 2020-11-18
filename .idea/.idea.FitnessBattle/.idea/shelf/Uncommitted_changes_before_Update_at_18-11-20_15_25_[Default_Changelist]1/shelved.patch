@@ -1,0 +1,474 @@
+Index: Application/Services/TrainingDate/Dto/OutputDtoAddTrainingDate.cs
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>using System;\r\n\r\nnamespace Application.Services.TrainingDate.Dto\r\n{\r\n    public class OutputDtoAddTrainingDate\r\n    {\r\n        public int Id { get; set; }\r\n        public DateTime Date { get; set; }\r\n    }\r\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- Application/Services/TrainingDate/Dto/OutputDtoAddTrainingDate.cs	(revision 28f22956cb524d1c37ac657c494051bd358a15b6)
++++ Application/Services/TrainingDate/Dto/OutputDtoAddTrainingDate.cs	(date 1605707418152)
+@@ -4,7 +4,7 @@
+ {
+     public class OutputDtoAddTrainingDate
+     {
+-        public int Id { get; set; }
++        public int Id { get; set; } // le retour renvoie aussi l'id
+         public DateTime Date { get; set; }
+     }
+ }
+\ No newline at end of file
+Index: Application/Services/TrainingDate/Dto/InputDtoAddTrainingDate.cs
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>using System;\r\n\r\nnamespace Application.Services.TrainingDate.Dto\r\n{\r\n    public class InputDtoAddTrainingDate\r\n    {\r\n        public DateTime Date { get; set; }\r\n    }\r\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- Application/Services/TrainingDate/Dto/InputDtoAddTrainingDate.cs	(revision 28f22956cb524d1c37ac657c494051bd358a15b6)
++++ Application/Services/TrainingDate/Dto/InputDtoAddTrainingDate.cs	(date 1605707495746)
+@@ -2,6 +2,11 @@
+ 
+ namespace Application.Services.TrainingDate.Dto
+ {
++    /*
++     * DTO qui permets d’ajouter un nouveau Trainig,
++     * cela permets de recevoir les éléments sans l’id pour créer un training,
++     * car l’utilisateur ne doit pas entrer l’id dans les données.
++     */
+     public class InputDtoAddTrainingDate
+     {
+         public DateTime Date { get; set; }
+Index: Application/Services/User/UserService.cs
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- Application/Services/User/UserService.cs	(date 1605709023713)
++++ Application/Services/User/UserService.cs	(date 1605709023713)
+@@ -0,0 +1,58 @@
++using System.Collections.Generic;
++using System.Linq;
++using Application.Repositories;
++using Application.Services.Category.Dto;
++using Application.Services.User.Dto;
++using Domain.User;
++
++namespace Application.Services.User
++{
++    public class UserService : IUserService
++    {
++        //repository et factory
++        private readonly IUserRepository _userRepository;
++        private readonly IUserFactory _userFactory = new UserFactory();
++
++        //constructeur
++        public UserService(IUserRepository userRepository)
++        {
++            _userRepository = userRepository;
++        }
++
++        public IEnumerable<OutputDtoQueryUser> Query()
++        {
++            /*
++             * On récupère les categories pour les renvoyer
++             * en format DTO
++             */
++            return _userRepository
++                .Query()
++                .Select(user => new OutputDtoQueryUser
++                {
++                    Id = user.Id,
++                    Name = user.Name,
++                    Admin = user.Admin,
++                    Email = user.Email,
++                    Password = user.Password
++                });
++        }
++
++        public OutputDtoAddUser Create(InputDtoAddUser inputDtoAddUser)
++        {
++            //DTO --> Domain
++            var userFromDto = _userFactory.CreateUserFromValues(inputDtoAddUser.Name,inputDtoAddUser.Password,inputDtoAddUser.Email,inputDtoAddUser.Admin);
++            //Repository demande un element du domain
++            var userInDb = _userRepository.Create(userFromDto);
++            
++            //Domain -> DTO
++            return new OutputDtoAddUser
++            {
++                Id = userInDb.Id,
++                Name = userInDb.Name,
++                Admin = userInDb.Admin,
++                Email = userInDb.Email,
++                Password = userInDb.Password
++            };
++        }
++    }
++}
+\ No newline at end of file
+Index: Application/Services/User/IUserService.cs
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- Application/Services/User/IUserService.cs	(date 1605709457984)
++++ Application/Services/User/IUserService.cs	(date 1605709457984)
+@@ -0,0 +1,11 @@
++using System.Collections.Generic;
++using Application.Services.User.Dto;
++
++namespace Application.Services.User
++{
++    public interface IUserService
++    {
++        IEnumerable<OutputDtoQueryUser> Query();
++        OutputDtoAddUser Create(InputDtoAddUser inputDtaAddUser);
++    }
++}
+\ No newline at end of file
+Index: Application/Services/User/Dto/OutputDtoQueryUser.cs
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- Application/Services/User/Dto/OutputDtoQueryUser.cs	(date 1605708776930)
++++ Application/Services/User/Dto/OutputDtoQueryUser.cs	(date 1605708776930)
+@@ -0,0 +1,11 @@
++namespace Application.Services.User.Dto
++{
++    public class OutputDtoQueryUser
++    {
++        public int Id { get; set; } // le retour renvoie aussi l'id
++        public string Name { get; set; }
++        public string Password { get; set; }
++        public string Email { get; set; }
++        public bool Admin { get; set; }
++    }
++}
+\ No newline at end of file
+Index: Application/Services/User/Dto/OutputDtoAddUser.cs
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- Application/Services/User/Dto/OutputDtoAddUser.cs	(date 1605708775989)
++++ Application/Services/User/Dto/OutputDtoAddUser.cs	(date 1605708775989)
+@@ -0,0 +1,11 @@
++namespace Application.Services.User.Dto
++{
++    public class OutputDtoAddUser
++    {
++        public int Id { get; set; } // le retour renvoie aussi l'id
++        public string Name { get; set; }
++        public string Password { get; set; }
++        public string Email { get; set; }
++        public bool Admin { get; set; }
++    }
++}
+\ No newline at end of file
+Index: Application/Services/User/Dto/InputDtoAddUser.cs
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- Application/Services/User/Dto/InputDtoAddUser.cs	(date 1605708774213)
++++ Application/Services/User/Dto/InputDtoAddUser.cs	(date 1605708774213)
+@@ -0,0 +1,17 @@
++namespace Application.Services.User.Dto
++{
++    public class InputDtoAddUser
++    {
++        /*
++     * DTO qui permets d’ajouter un nouveau User,
++     * cela permets de recevoir les éléments sans l’id pour créer un user,
++     * car l’utilisateur ne doit pas entrer l’id dans les données.
++     */
++        
++        public string Name { get; set; }
++        public string Password { get; set; }
++        public string Email { get; set; }
++        public bool Admin { get; set; }
++        
++    }
++}
+\ No newline at end of file
+Index: Application/Application.csproj
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><Project Sdk=\"Microsoft.NET.Sdk\">\r\n\r\n    <PropertyGroup>\r\n        <TargetFramework>netcoreapp3.1</TargetFramework>\r\n    </PropertyGroup>\r\n\r\n    <ItemGroup>\r\n      <ProjectReference Include=\"..\\Domain\\Domain.csproj\" />\r\n    </ItemGroup>\r\n\r\n    <ItemGroup>\r\n      <Folder Include=\"Services\\Activity\\Dto\" />\r\n      <Folder Include=\"Services\\Category\\Dto\" />\r\n      <Folder Include=\"Services\\Training\\Dto\" />\r\n      <Folder Include=\"Services\\Unit\\Dto\" />\r\n      <Folder Include=\"Services\\User\\Dto\" />\r\n    </ItemGroup>\r\n\r\n</Project>\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- Application/Application.csproj	(revision 28f22956cb524d1c37ac657c494051bd358a15b6)
++++ Application/Application.csproj	(date 1605709435137)
+@@ -10,10 +10,7 @@
+ 
+     <ItemGroup>
+       <Folder Include="Services\Activity\Dto" />
+-      <Folder Include="Services\Category\Dto" />
+       <Folder Include="Services\Training\Dto" />
+-      <Folder Include="Services\Unit\Dto" />
+-      <Folder Include="Services\User\Dto" />
+     </ItemGroup>
+ 
+ </Project>
+Index: Application/Services/Category/CategoryService.cs
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- Application/Services/Category/CategoryService.cs	(date 1605707495763)
++++ Application/Services/Category/CategoryService.cs	(date 1605707495763)
+@@ -0,0 +1,51 @@
++using System.Collections.Generic;
++using System.Linq;
++using Application.Repositories;
++using Application.Services.Category.Dto;
++using Domain.Category;
++
++namespace Application.Services.Category
++{
++    public class CategoryService : ICategoryService
++    {
++        //repository et factory
++        private readonly ICategoryRepository _categoryRepository;
++        private readonly ICategoryFactory _categoryFactory = new CategoryFactory();
++
++        //constructeur
++        public CategoryService(ICategoryRepository categoryRepository)
++        {
++            _categoryRepository = categoryRepository;
++        }
++
++        public IEnumerable<OutputDtoQueryCategory> Query()
++        {
++            /*
++             * On récupère les categories pour les renvoyer
++             * en format DTO
++             */
++            return _categoryRepository
++                .Query()
++                .Select(category => new OutputDtoQueryCategory
++                {
++                    Id = category.Id,
++                    Name = category.Name
++                });
++        }
++
++        public OutputDtoAddCategory Create(InputDtoAddCategory inputDtoAddCategory)
++        {
++            //DTO --> Domain
++            var categoryFromDto = _categoryFactory.CreateFromName(inputDtoAddCategory.Name);
++            //Repository demande un element du domain
++            var categoryInDb = _categoryRepository.Create(categoryFromDto);
++            
++            //Domain -> DTO
++            return new OutputDtoAddCategory
++            {
++                Id = categoryInDb.Id,
++                Name = categoryInDb.Name
++            };
++        }
++    }
++}
+\ No newline at end of file
+Index: Application/Services/Category/ICategoryService.cs
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- Application/Services/Category/ICategoryService.cs	(date 1605707076808)
++++ Application/Services/Category/ICategoryService.cs	(date 1605707076808)
+@@ -0,0 +1,11 @@
++using System.Collections.Generic;
++using Application.Services.Category.Dto;
++
++namespace Application.Services.Category
++{
++    public interface ICategoryService
++    {
++        IEnumerable<OutputDtoQueryCategory> Query();
++        OutputDtoAddCategory Create(InputDtoAddCategory inputDtaAddCategory);
++    }
++}
+\ No newline at end of file
+Index: Application/Services/Category/Dto/OutputDtoQueryCategory.cs
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- Application/Services/Category/Dto/OutputDtoQueryCategory.cs	(date 1605707244360)
++++ Application/Services/Category/Dto/OutputDtoQueryCategory.cs	(date 1605707244360)
+@@ -0,0 +1,8 @@
++namespace Application.Services.Category.Dto
++{
++    public class OutputDtoQueryCategory
++    {
++        public int Id { get; set; } // le retour renvoie aussi l'id
++        public string Name { get; set; }
++    }
++}
+\ No newline at end of file
+Index: Application/Services/Unit/UnitService.cs
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- Application/Services/Unit/UnitService.cs	(date 1605709543348)
++++ Application/Services/Unit/UnitService.cs	(date 1605709543348)
+@@ -0,0 +1,10 @@
++using Domain.Unit;
++
++namespace Application.Services.Unit
++{
++    public class UnitService : IUnitService
++    {
++        
++        private readonly IUnitFactory
++    }
++}
+\ No newline at end of file
+Index: Application/Services/Category/Dto/OutputDtoAddCategory.cs
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- Application/Services/Category/Dto/OutputDtoAddCategory.cs	(date 1605707251246)
++++ Application/Services/Category/Dto/OutputDtoAddCategory.cs	(date 1605707251246)
+@@ -0,0 +1,8 @@
++namespace Application.Services.Category.Dto
++{
++    public class OutputDtoAddCategory
++    {
++        public int Id { get; set; } // le retour renvoie aussi l'id
++        public string Name { get; set; }
++    }
++}
+\ No newline at end of file
+Index: Application/Services/Unit/IUnitService.cs
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- Application/Services/Unit/IUnitService.cs	(date 1605709457941)
++++ Application/Services/Unit/IUnitService.cs	(date 1605709457941)
+@@ -0,0 +1,9 @@
++using Application.Services.Unit.Dto;
++
++namespace Application.Services.Unit
++{
++    public interface IUnitService
++    {
++        OutputDtoAddUnit Create(InputDtoAddUnit inputDtaAddUser);
++    }
++}
+\ No newline at end of file
+Index: .idea/.idea.FitnessBattle/.idea/contentModel.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"ContentModelStore\">\r\n    <e p=\"C:\\Users\\InfoWare31\\AppData\\Local\\JetBrains\\Rider2020.2\\extResources\" t=\"IncludeRecursive\" />\r\n    <e p=\"C:\\Users\\InfoWare31\\AppData\\Local\\JetBrains\\Rider2020.2\\resharper-host\\Local\\Transient\\Rider\\v202\\SolutionCaches\\_FitnessBattle.1021221505.00\" t=\"ExcludeRecursive\" />\r\n    <e p=\"D:\\DepoRider\\Exercices\\Projet\\FitnessBattle\" t=\"IncludeFlat\">\r\n      <e p=\"Api\" t=\"IncludeRecursive\">\r\n        <e p=\"Api.csproj\" t=\"IncludeRecursive\" />\r\n        <e p=\"appsettings.Development.json\" t=\"Include\" />\r\n        <e p=\"appsettings.json\" t=\"Include\" />\r\n        <e p=\"bin\" t=\"ExcludeRecursive\" />\r\n        <e p=\"Controllers\" t=\"Include\" />\r\n        <e p=\"obj\" t=\"ExcludeRecursive\">\r\n          <e p=\"Debug\" t=\"Include\">\r\n            <e p=\"netcoreapp3.1\" t=\"Include\">\r\n              <e p=\"Api.AssemblyInfo.cs\" t=\"Include\" />\r\n            </e>\r\n          </e>\r\n        </e>\r\n        <e p=\"Program.cs\" t=\"Include\" />\r\n        <e p=\"Properties\" t=\"Include\">\r\n          <e p=\"launchSettings.json\" t=\"Include\" />\r\n        </e>\r\n        <e p=\"Startup.cs\" t=\"Include\" />\r\n      </e>\r\n      <e p=\"Application\" t=\"IncludeRecursive\">\r\n        <e p=\"Application.csproj\" t=\"IncludeRecursive\" />\r\n        <e p=\"bin\" t=\"ExcludeRecursive\" />\r\n        <e p=\"obj\" t=\"ExcludeRecursive\">\r\n          <e p=\"Debug\" t=\"Include\">\r\n            <e p=\"netcoreapp3.1\" t=\"Include\">\r\n              <e p=\"Application.AssemblyInfo.cs\" t=\"Include\" />\r\n            </e>\r\n          </e>\r\n        </e>\r\n        <e p=\"Repositories\" t=\"Include\">\r\n          <e p=\"IActivityRepository.cs\" t=\"Include\" />\r\n          <e p=\"ICategoryRepository.cs\" t=\"Include\" />\r\n          <e p=\"ITrainingDateRepository.cs\" t=\"Include\" />\r\n          <e p=\"ITrainingRepository.cs\" t=\"Include\" />\r\n          <e p=\"IUserRepository.cs\" t=\"Include\" />\r\n        </e>\r\n        <e p=\"Services\" t=\"Include\">\r\n          <e p=\"Activity\" t=\"Include\">\r\n            <e p=\"Dto\" t=\"Include\" />\r\n          </e>\r\n          <e p=\"Category\" t=\"Include\">\r\n            <e p=\"Dto\" t=\"Include\" />\r\n          </e>\r\n          <e p=\"Training\" t=\"Include\">\r\n            <e p=\"Dto\" t=\"Include\" />\r\n          </e>\r\n          <e p=\"TrainingDate\" t=\"Include\">\r\n            <e p=\"Dto\" t=\"Include\">\r\n              <e p=\"InputDtoAddTrainingDate.cs\" t=\"Include\" />\r\n              <e p=\"OutputDtoAddTrainingDate.cs\" t=\"Include\" />\r\n              <e p=\"OutputDtoQueryTrainingDate.cs\" t=\"Include\" />\r\n            </e>\r\n            <e p=\"ITrainingDateService.cs\" t=\"Include\" />\r\n            <e p=\"TrainingDateService.cs\" t=\"Include\" />\r\n          </e>\r\n          <e p=\"Unit\" t=\"Include\">\r\n            <e p=\"Dto\" t=\"Include\" />\r\n          </e>\r\n          <e p=\"User\" t=\"Include\">\r\n            <e p=\"Dto\" t=\"Include\" />\r\n          </e>\r\n        </e>\r\n      </e>\r\n      <e p=\"Domain\" t=\"IncludeRecursive\">\r\n        <e p=\"Activity\" t=\"Include\">\r\n          <e p=\"Activity.cs\" t=\"Include\" />\r\n          <e p=\"ActivityFactory.cs\" t=\"Include\" />\r\n          <e p=\"IActivity.cs\" t=\"Include\" />\r\n          <e p=\"IActivityFactory.cs\" t=\"Include\" />\r\n        </e>\r\n        <e p=\"bin\" t=\"ExcludeRecursive\" />\r\n        <e p=\"Category\" t=\"Include\">\r\n          <e p=\"Category.cs\" t=\"Include\" />\r\n          <e p=\"CategoryFactory.cs\" t=\"Include\" />\r\n          <e p=\"ICategory.cs\" t=\"Include\" />\r\n          <e p=\"ICategoryFactory.cs\" t=\"Include\" />\r\n        </e>\r\n        <e p=\"Domain.csproj\" t=\"IncludeRecursive\" />\r\n        <e p=\"obj\" t=\"ExcludeRecursive\">\r\n          <e p=\"Debug\" t=\"Include\">\r\n            <e p=\"netcoreapp3.1\" t=\"Include\">\r\n              <e p=\"Domain.AssemblyInfo.cs\" t=\"Include\" />\r\n            </e>\r\n          </e>\r\n        </e>\r\n        <e p=\"Shared\" t=\"Include\">\r\n          <e p=\"IEntity.cs\" t=\"Include\" />\r\n        </e>\r\n        <e p=\"Training\" t=\"Include\">\r\n          <e p=\"ActivityTrained.cs\" t=\"Include\" />\r\n          <e p=\"IActivityTrained.cs\" t=\"Include\" />\r\n          <e p=\"ITraining.cs\" t=\"Include\" />\r\n          <e p=\"Training.cs\" t=\"Include\" />\r\n        </e>\r\n        <e p=\"TrainingDate\" t=\"Include\">\r\n          <e p=\"ITrainingDate.cs\" t=\"Include\" />\r\n          <e p=\"ITrainingDateFactory.cs\" t=\"Include\" />\r\n          <e p=\"TrainingDate.cs\" t=\"Include\" />\r\n          <e p=\"TrainingDateFactory.cs\" t=\"Include\" />\r\n        </e>\r\n        <e p=\"Unit\" t=\"Include\">\r\n          <e p=\"IUnit.cs\" t=\"Include\" />\r\n          <e p=\"IUnitFactory.cs\" t=\"Include\" />\r\n          <e p=\"Unit.cs\" t=\"Include\" />\r\n          <e p=\"UnitFactory.cs\" t=\"Include\" />\r\n        </e>\r\n        <e p=\"User\" t=\"Include\">\r\n          <e p=\"IUser.cs\" t=\"Include\" />\r\n          <e p=\"IUserFactory.cs\" t=\"Include\" />\r\n          <e p=\"User.cs\" t=\"Include\" />\r\n          <e p=\"UserFactory.cs\" t=\"Include\" />\r\n        </e>\r\n      </e>\r\n      <e p=\"FitnessBattle.sln\" t=\"IncludeFlat\" />\r\n      <e p=\"Infrastructure\" t=\"IncludeRecursive\">\r\n        <e p=\"bin\" t=\"ExcludeRecursive\" />\r\n        <e p=\"Infrastructure.csproj\" t=\"IncludeRecursive\" />\r\n        <e p=\"obj\" t=\"ExcludeRecursive\">\r\n          <e p=\"Debug\" t=\"Include\">\r\n            <e p=\"netcoreapp3.1\" t=\"Include\">\r\n              <e p=\"Infrastructure.AssemblyInfo.cs\" t=\"Include\" />\r\n            </e>\r\n          </e>\r\n        </e>\r\n      </e>\r\n      <e p=\"packages\" t=\"ExcludeRecursive\" />\r\n    </e>\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/.idea.FitnessBattle/.idea/contentModel.xml	(revision 28f22956cb524d1c37ac657c494051bd358a15b6)
++++ .idea/.idea.FitnessBattle/.idea/contentModel.xml	(date 1605709458487)
+@@ -45,7 +45,13 @@
+             <e p="Dto" t="Include" />
+           </e>
+           <e p="Category" t="Include">
+-            <e p="Dto" t="Include" />
++            <e p="CategoryService.cs" t="Include" />
++            <e p="Dto" t="Include">
++              <e p="InputDtoAddCategory.cs" t="Include" />
++              <e p="OutputDtoAddCategory.cs" t="Include" />
++              <e p="OutputDtoQueryCategory.cs" t="Include" />
++            </e>
++            <e p="ICategoryService.cs" t="Include" />
+           </e>
+           <e p="Training" t="Include">
+             <e p="Dto" t="Include" />
+@@ -60,10 +66,21 @@
+             <e p="TrainingDateService.cs" t="Include" />
+           </e>
+           <e p="Unit" t="Include">
+-            <e p="Dto" t="Include" />
++            <e p="Dto" t="Include">
++              <e p="InputDtoAddUnit.cs" t="Include" />
++              <e p="OutputDtoAddUnit.cs" t="Include" />
++            </e>
++            <e p="IUnitService.cs" t="Include" />
++            <e p="UnitService.cs" t="Include" />
+           </e>
+           <e p="User" t="Include">
+-            <e p="Dto" t="Include" />
++            <e p="Dto" t="Include">
++              <e p="InputDtoAddUser.cs" t="Include" />
++              <e p="OutputDtoAddUser.cs" t="Include" />
++              <e p="OutputDtoQueryUser.cs" t="Include" />
++            </e>
++            <e p="IUserService.cs" t="Include" />
++            <e p="UserService.cs" t="Include" />
+           </e>
+         </e>
+       </e>
+Index: Application/Services/Unit/Dto/OutputDtoAddUnit.cs
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- Application/Services/Unit/Dto/OutputDtoAddUnit.cs	(date 1605709144124)
++++ Application/Services/Unit/Dto/OutputDtoAddUnit.cs	(date 1605709144124)
+@@ -0,0 +1,8 @@
++namespace Application.Services.Unit.Dto
++{
++    public class OutputDtoAddUnit
++    {
++        public int Id { get; set; } // le retour renvoie aussi l'id
++        public string Type { get; set; }
++    }
++}
+\ No newline at end of file
+Index: Application/Services/Category/Dto/InputDtoAddCategory.cs
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- Application/Services/Category/Dto/InputDtoAddCategory.cs	(date 1605707210399)
++++ Application/Services/Category/Dto/InputDtoAddCategory.cs	(date 1605707210399)
+@@ -0,0 +1,13 @@
++namespace Application.Services.Category.Dto
++{
++    /*
++     * DTO qui permets d’ajouter une nouvelle Category,
++     * cela permets de recevoir les éléments sans l’id pour créer une categorie,
++     * car l’utilisateur ne doit pas entrer l’id dans les données.
++     */
++    public class InputDtoAddCategory
++    {
++        public string Name { get; set; }
++        
++    }
++}
+\ No newline at end of file
+Index: Application/Services/Unit/Dto/InputDtoAddUnit.cs
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- Application/Services/Unit/Dto/InputDtoAddUnit.cs	(date 1605709144082)
++++ Application/Services/Unit/Dto/InputDtoAddUnit.cs	(date 1605709144082)
+@@ -0,0 +1,14 @@
++namespace Application.Services.Unit.Dto
++{
++    public class InputDtoAddUnit
++    {
++        /*
++     * DTO qui permets d’ajouter un nouveau Unit,
++     * cela permets de recevoir les éléments sans l’id pour créer un unit,
++     * car l’utilisateur ne doit pas entrer l’id dans les données.
++     */
++        
++        public string Type { get; set; }
++        
++    }
++}
+\ No newline at end of file
