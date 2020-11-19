@@ -51,7 +51,8 @@ namespace Infrastructure.SqlServer.Training
 
             return null;
         }
-
+        
+        
         public ITraining Create(ITraining training)
         {
             using (var connection = Database.GetConnection())
@@ -68,6 +69,43 @@ namespace Infrastructure.SqlServer.Training
             }
 
             return training;
+        }
+
+        public bool Delete(int id)
+        {
+            using (var connection = Database.GetConnection())
+            {
+                connection.Open();
+                var cmd = connection.CreateCommand();
+
+                cmd.CommandText = TrainingSqlServer.ReqDeleteById;
+
+                cmd.Parameters.AddWithValue($"@{TrainingSqlServer.ColId}", id);
+
+                return cmd.ExecuteNonQuery() > 0;
+            }
+        }
+        
+        public IEnumerable<ITraining> GetByDateId(int dateId)
+        {
+            IList<ITraining> trainings = new List<ITraining>();
+
+            using (var connection = Database.GetConnection())
+            {
+                connection.Open();
+                var cmd = connection.CreateCommand();
+
+                cmd.CommandText = TrainingSqlServer.ReqGetByTrainingId;
+                cmd.Parameters.AddWithValue($"@{TrainingSqlServer.ColIdTrainingDate}", dateId);
+
+                var reader = cmd.ExecuteReader(CommandBehavior.CloseConnection);
+
+                while (reader.Read())
+                    trainings.Add(_factory.CreateFromReader(reader));
+            }
+
+            return trainings;
+           
         }
 
       

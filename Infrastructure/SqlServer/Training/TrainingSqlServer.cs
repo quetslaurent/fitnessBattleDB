@@ -20,6 +20,10 @@
         public static readonly string ReqDeleteById = $@"
             DELETE FROM {TableName} WHERE {ColId} = @{ColId} 
         ";
+        
+        public static readonly string ReqGetByTrainingId = $@"
+            SELECT * FROM {TableName} WHERE {ColIdTrainingDate} = @{ColIdTrainingDate} 
+        ";
 
     }
 }

@@ -66,5 +66,7 @@ namespace Application.Services.Training
         {
             return _trainingRepository.Delete(trainingId);
         }
+        
+        
     }
 }

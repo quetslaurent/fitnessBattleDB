@@ -1,5 +1,4 @@
-﻿
-using System.Data.SqlClient;
+﻿using System.Data.SqlClient;
 using Domain.Training;
 using Infrastructure.SqlServer.Activity;
 using Infrastructure.SqlServer.Category;
