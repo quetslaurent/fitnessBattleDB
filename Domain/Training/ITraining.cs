@@ -10,7 +10,7 @@ namespace Domain.Training
         IUser User { get; set; }
         IActivity Activity { get; set; }
         
-        double repetitions { get; set; }
+        double Repetitions { get; set; }
         
         ITrainingDate TrainingDate { get; set; }
     }

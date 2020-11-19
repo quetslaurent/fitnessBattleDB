@@ -29,7 +29,7 @@ namespace Application.Services.Activity
         /*
          * Récupérer la liste des activités ayant une même categorie
          */
-        public IEnumerable<OutputDtoQueryActivity> GetByCategory(int categoryId)
+        public IEnumerable<OutputDtoQueryActivity> GetByCategoryId(int categoryId)
         {
            return _activityRepository
                .GetByCategoryId(categoryId)

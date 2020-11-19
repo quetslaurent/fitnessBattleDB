@@ -63,7 +63,13 @@
             <e p="ICategoryService.cs" t="Include" />
           </e>
           <e p="Training" t="Include">
-            <e p="Dto" t="Include" />
+            <e p="Dto" t="Include">
+              <e p="InputDtoAddTraining.cs" t="Include" />
+              <e p="OutputDtoAddTraining.cs" t="Include" />
+              <e p="OutputDtoQueryTraining.cs" t="Include" />
+            </e>
+            <e p="ITrainingService.cs" t="Include" />
+            <e p="TrainingService.cs" t="Include" />
           </e>
           <e p="TrainingDate" t="Include">
             <e p="Dto" t="Include">
@@ -119,10 +125,10 @@
           <e p="IEntity.cs" t="Include" />
         </e>
         <e p="Training" t="Include">
-          <e p="ActivityTrained.cs" t="Include" />
-          <e p="IActivityTrained.cs" t="Include" />
           <e p="ITraining.cs" t="Include" />
+          <e p="ITrainingFactory.cs" t="Include" />
           <e p="Training.cs" t="Include" />
+          <e p="TrainingFactory.cs" t="Include" />
         </e>
         <e p="TrainingDate" t="Include">
           <e p="ITrainingDate.cs" t="Include" />
@@ -168,11 +174,16 @@
             <e p="CategoryFactory.cs" t="Include" />
             <e p="IInstanceFromReaderFactory.cs" t="Include" />
             <e p="TrainingDatesFactory.cs" t="Include" />
+            <e p="TrainingFactory.cs" t="Include" />
             <e p="UnitFactory.cs" t="Include" />
             <e p="UserFactory.cs" t="Include" />
           </e>
           <e p="Shared" t="Include">
             <e p="Database.cs" t="Include" />
+          </e>
+          <e p="Training" t="Include">
+            <e p="TrainingRepository.cs" t="Include" />
+            <e p="TrainingSqlServer.cs" t="Include" />
           </e>
           <e p="TrainingDate" t="Include">
             <e p="TrainingDateRepository.cs" t="Include" />

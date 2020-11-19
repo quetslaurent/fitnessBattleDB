@@ -5,7 +5,7 @@ namespace Application.Services.Activity
 {
     public interface IActivityService
     {
-        IEnumerable<OutputDtoQueryActivity> GetByCategory(int categoryId);
+        IEnumerable<OutputDtoQueryActivity> GetByCategoryId(int categoryId);
         OutputDtoAddActivity Create(InputDtoAddActivity inputDtoAddActivity);
 
         bool Update(InputDtoAddActivity inputDtoAddActivity);
