@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using Application.Repositories;
 using Application.Services.Training.Dto;
 using Domain.Training;
@@ -50,7 +51,11 @@ namespace Application.Services.Training
          */
         public OutputDtoAddTraining Create(InputDtoAddTraining inputDtoAddTraining)
         {
-            var trainingFromDto = _trainingFactory.CreateTrainingFromValues()
+            var user = _userRepository.GetById(inputDtoAddTraining.UserId);
+            var activity = _activityRepository.GetById(inputDtoAddTraining.ActivityId);
+            var trainingDate = _trainingDateRepository.GetById(inputDtoAddTraining.TrainingDateId);
+            
+            var trainingFromDto = _trainingFactory.CreateTrainingFromValues(inputDtoAddTraining.Repetitions,user,activity,trainingDate);
             var trainingInDb = _trainingRepository.Create(trainingFromDto);
             
             return new OutputDtoAddTraining

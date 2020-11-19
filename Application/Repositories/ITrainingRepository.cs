@@ -9,6 +9,9 @@ namespace Application.Repositories
 
         ITraining GetById(int id);
         ITraining Create(ITraining training);
-        bool Update(int id,ITraining training);
+
+        bool Delete(int id);
+
+        IEnumerable<ITraining> GetByDateId(int dateId);
     }
 }

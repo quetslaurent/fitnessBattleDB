@@ -1,6 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using Domain.Activity;
+using Domain.TrainingDate;
+using Domain.User;
 
 namespace Domain.Training
 {
@@ -14,11 +17,15 @@ namespace Domain.Training
             Trainings = new List<ITraining>();
         }
 
-        public ITraining CreateTrainingFromValues(string name, string password, string email, bool admin)
+        public ITraining CreateTrainingFromValues(double repetitions, IUser user, IActivity activity,
+            ITrainingDate trainingDate)
         {
             return new Training
             {
-                
+                Repetitions = repetitions,
+                User = user,
+                Activity = activity,
+                TrainingDate = trainingDate
             };
         }
         
