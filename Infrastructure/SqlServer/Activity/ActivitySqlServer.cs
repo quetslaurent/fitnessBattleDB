@@ -10,8 +10,8 @@ namespace Infrastructure.SqlServer.Activity
         public static readonly string ColId = "id";
         public static readonly string ColName = "name";
         public static readonly string ColRepetitions = "repetitions";
-        public static readonly string ColIdUnit = "unit";
-        public static readonly string ColIdCategory = "category";
+        public static readonly string ColIdUnit = "unitId";
+        public static readonly string ColIdCategory = "categoryId";
 
         public static readonly string ReqCreate = $@"
             INSERT INTO {TableName}({ColName}, {ColRepetitions}, {ColIdUnit}, {ColIdCategory})
@@ -29,6 +29,14 @@ namespace Infrastructure.SqlServer.Activity
             {ColIdUnit} = @{ColIdUnit},
             {ColIdCategory} = @{ColIdCategory},
             WHERE {ColId} = @{ColId}
+        ";
+        
+        public static readonly string ReqGetByCategoryId = $@"
+            SELECT * FROM {TableName} WHERE {ColIdCategory} = @{ColIdCategory} 
+        ";
+        
+        public static readonly string ReqDeleteById = $@"
+            DELETE FROM {TableName} WHERE {ColId} = @{ColId} 
         ";
         
     }

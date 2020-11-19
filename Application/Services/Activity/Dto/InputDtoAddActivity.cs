@@ -1,6 +1,4 @@
-﻿using Domain.Category;
-using Domain.Unit;
-
+﻿
 namespace Application.Services.Activity.Dto
 {
     public class InputDtoAddActivity
@@ -13,8 +11,7 @@ namespace Application.Services.Activity.Dto
 
         public string Name { get; set; }
         public double Repetitions { get; set; }
-        public IUnit Unit { get; set; }
-        public ICategory Category { get; set; }
-        
+        public int CategoryId { get; set; }
+        public int UnitId { get; set; }
     }
 }

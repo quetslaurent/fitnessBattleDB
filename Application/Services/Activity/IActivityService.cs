@@ -5,8 +5,11 @@ namespace Application.Services.Activity
 {
     public interface IActivityService
     {
-        IEnumerable<OutputDtoQueryActivity> Query();
-
+        IEnumerable<OutputDtoQueryActivity> GetByCategory(int categoryId);
         OutputDtoAddActivity Create(InputDtoAddActivity inputDtoAddActivity);
+
+        bool Update(InputDtoAddActivity inputDtoAddActivity);
+
+        bool DeleteActivity(int activityId);
     }
 }
