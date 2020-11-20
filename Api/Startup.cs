@@ -3,6 +3,7 @@ using Application.Services.Activity;
 using Application.Services.Category;
 using Application.Services.Training;
 using Application.Services.TrainingDate;
+using Application.Services.Unit;
 using Application.Services.User;
 using Infrastructure.SqlServer.Activity;
 using Infrastructure.SqlServer.Category;
