@@ -10,6 +10,7 @@
         <e p="appsettings.json" t="Include" />
         <e p="bin" t="ExcludeRecursive" />
         <e p="Controllers" t="Include">
+          <e p="ActivityController.cs" t="Include" />
           <e p="CategoryController.cs" t="Include" />
           <e p="TrainingController.cs" t="Include" />
           <e p="TrainingDateController.cs" t="Include" />
@@ -52,6 +53,7 @@
             <e p="ActivityService.cs" t="Include" />
             <e p="Dto" t="Include">
               <e p="InputDtoAddActivity.cs" t="Include" />
+              <e p="InputDtoUpdateActivity.cs" t="Include" />
               <e p="OutputDtoAddActivity.cs" t="Include" />
               <e p="OutputDtoQueryActivity.cs" t="Include" />
             </e>

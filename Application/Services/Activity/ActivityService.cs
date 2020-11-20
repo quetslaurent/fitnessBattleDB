@@ -69,14 +69,14 @@ namespace Application.Services.Activity
         /*
          * Modifier une activité
          */
-        public bool Update(InputDtoAddActivity inputDtoAddActivity)
+        public bool Update(int id,InputDtoUpdateActivity inputDtoUpdateActivity)
         {
-            var unit = _unitRepository.GetById(inputDtoAddActivity.UnitId);
-            var category = _categoryRepository.GetById(inputDtoAddActivity.CategoryId);
+            var unit = _unitRepository.GetById(inputDtoUpdateActivity.UnitId);
+            var category = _categoryRepository.GetById(inputDtoUpdateActivity.CategoryId);
             
-            var activityFromDto = _activityFactory.CreateFromValues(inputDtoAddActivity.Name,
-                inputDtoAddActivity.Repetitions, unit, category);
-            return _activityRepository.Update(activityFromDto.Id,activityFromDto);
+            var activityFromDto = _activityFactory.CreateFromValues(inputDtoUpdateActivity.Name,
+                inputDtoUpdateActivity.Repetitions, unit, category);
+            return _activityRepository.Update(id,activityFromDto);
         }
 
         /*

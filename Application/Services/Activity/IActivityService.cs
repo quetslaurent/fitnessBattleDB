@@ -8,7 +8,7 @@ namespace Application.Services.Activity
         IEnumerable<OutputDtoQueryActivity> GetByCategoryId(int categoryId);
         OutputDtoAddActivity Create(InputDtoAddActivity inputDtoAddActivity);
 
-        bool Update(InputDtoAddActivity inputDtoAddActivity);
+        bool Update(int id,InputDtoUpdateActivity inputDtoAddActivity);
 
         bool DeleteActivity(int activityId);
     }
