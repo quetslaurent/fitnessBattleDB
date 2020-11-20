@@ -185,6 +185,7 @@
             <e p="UnitFactory.cs" t="Include" />
             <e p="UserFactory.cs" t="Include" />
           </e>
+          <e p="init-tables.sql" t="Include" />
           <e p="Shared" t="Include">
             <e p="Database.cs" t="Include" />
           </e>

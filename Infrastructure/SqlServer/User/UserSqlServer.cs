@@ -2,7 +2,7 @@
 {
     public class UserSqlServer
     {
-        public static readonly string TableName = "user";
+        public static readonly string TableName = "userFitness";
         public static readonly string ColId = "id";
         public static readonly string ColName = "name";
         public static readonly string ColPassword = "password";
