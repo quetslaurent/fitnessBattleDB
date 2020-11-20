@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Data;
+using Application.Repositories;
 using Domain.User;
 using Infrastructure.SqlServer.Factories;
 using Infrastructure.SqlServer.Shared;
@@ -7,7 +8,7 @@ using UserFactory = Infrastructure.SqlServer.Factories.UserFactory;
 
 namespace Infrastructure.SqlServer.User
 {
-    public class UserRepository
+    public class UserRepository : IUserRepository
     {
          private readonly IInstanceFromReaderFactory<IUser> _factory = new UserFactory();
 

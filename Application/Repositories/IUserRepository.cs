@@ -8,6 +8,6 @@ namespace Application.Repositories
         IEnumerable<IUser> Query();
         IUser GetById(int id);
         IUser Create(IUser user);
-        bool Update(int id, IUser user);
+        
     }
 }

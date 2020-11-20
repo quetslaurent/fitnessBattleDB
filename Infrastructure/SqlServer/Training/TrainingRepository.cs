@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Data;
+using Application.Repositories;
 using Domain.Training;
 using Infrastructure.SqlServer.Factories;
 using Infrastructure.SqlServer.Shared;
@@ -7,7 +8,7 @@ using TrainingFactory = Infrastructure.SqlServer.Factories.TrainingFactory;
 
 namespace Infrastructure.SqlServer.Training
 {
-    public class TrainingRepository
+    public class TrainingRepository : ITrainingRepository
     {
          private readonly IInstanceFromReaderFactory<ITraining> _factory = new TrainingFactory();
 
