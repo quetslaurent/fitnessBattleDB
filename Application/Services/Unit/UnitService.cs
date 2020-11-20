@@ -7,7 +7,7 @@ using Application.Services.Unit.Dto;
 using Domain.Category;
 using Domain.Unit;
 
-namespace Application.Services.Category
+namespace Application.Services.Unit
 {
     public class UnitService : IUnitService
     {
@@ -19,6 +19,15 @@ namespace Application.Services.Category
         public UnitService(IUnitRepository unitRepository)
         {
             _unitRepository = unitRepository;
+        }
+
+        public IEnumerable<OutputDtoQueryUnit> Query()
+        {
+            return _unitRepository.Query().Select(unit => new OutputDtoQueryUnit
+            {
+                Id = unit.Id,
+                Type = unit.Type
+            });
         }
 
         public OutputDtoAddUnit Create(InputDtoAddUnit inputDtoAddUnit)

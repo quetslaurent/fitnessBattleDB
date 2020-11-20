@@ -23,7 +23,7 @@ namespace Application.Services.TrainingDate
                 Date = trainingDate.Date
             });
         }
-
+        
         public OutputDtoAddTrainingDate Create(InputDtoAddTrainingDate inputDtoAddTrainingDate)
         {
             var trainingDate = _trainingDateRepository.Create(inputDtoAddTrainingDate.Date);

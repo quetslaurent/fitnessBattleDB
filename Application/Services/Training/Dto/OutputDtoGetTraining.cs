@@ -2,7 +2,7 @@
 
 namespace Application.Services.Training.Dto
 {
-    public class OutputDtoQueryTraining
+    public class OutputDtoGetTraining
     {
         /*
      * DTO qui permets d’ajouter un nouveau Training,

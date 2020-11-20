@@ -31,12 +31,12 @@ namespace Application.Services.Training
         /*
          * Récupérer la liste des training ayant une même date
          */
-        
-        public IEnumerable<OutputDtoQueryTraining> GetByDateId(int dateId)
+
+        public IEnumerable<OutputDtoGetTraining> GetByTrainingDateId(int dateId)
         {
             return _trainingRepository
                 .GetByDateId(dateId)
-                .Select(training => new OutputDtoQueryTraining
+                .Select(training => new OutputDtoGetTraining
                 {
                    Id = training.Id,
                    Repetitions = training.Repetitions,

@@ -10,7 +10,11 @@
         <e p="appsettings.json" t="Include" />
         <e p="bin" t="ExcludeRecursive" />
         <e p="Controllers" t="Include">
+          <e p="CategoryController.cs" t="Include" />
+          <e p="TrainingController.cs" t="Include" />
           <e p="TrainingDateController.cs" t="Include" />
+          <e p="UnitController.cs" t="Include" />
+          <e p="UserController.cs" t="Include" />
         </e>
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
@@ -66,7 +70,7 @@
             <e p="Dto" t="Include">
               <e p="InputDtoAddTraining.cs" t="Include" />
               <e p="OutputDtoAddTraining.cs" t="Include" />
-              <e p="OutputDtoQueryTraining.cs" t="Include" />
+              <e p="OutputDtoGetTraining.cs" t="Include" />
             </e>
             <e p="ITrainingService.cs" t="Include" />
             <e p="TrainingService.cs" t="Include" />
@@ -84,6 +88,7 @@
             <e p="Dto" t="Include">
               <e p="InputDtoAddUnit.cs" t="Include" />
               <e p="OutputDtoAddUnit.cs" t="Include" />
+              <e p="OutputDtoQueryUnit.cs" t="Include" />
             </e>
             <e p="IUnitService.cs" t="Include" />
             <e p="UnitService.cs" t="Include" />

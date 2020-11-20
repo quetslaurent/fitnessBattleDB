@@ -5,7 +5,7 @@ namespace Application.Services.Training
 {
     public interface ITrainingService
     {
-        IEnumerable<OutputDtoQueryTraining> GetByDateId(int dateId);
+        IEnumerable<OutputDtoGetTraining> GetByTrainingDateId(int dateId);
         
         OutputDtoAddTraining Create(InputDtoAddTraining inputDtoAddTraining);
         
