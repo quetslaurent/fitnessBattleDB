@@ -17,9 +17,9 @@ namespace FitnessBattle.Controllers
 
         [HttpGet]
         [Route("{id:int}")]
-        public ActionResult<OutputDtoQueryActivity> GetByCategoryId( int categoryId)
+        public ActionResult<OutputDtoQueryActivity> GetByCategoryId(int id)
         {
-            return Ok(_activityService.GetByCategoryId(categoryId));
+            return Ok(_activityService.GetByCategoryId(id));
         }
 
         [HttpPost]

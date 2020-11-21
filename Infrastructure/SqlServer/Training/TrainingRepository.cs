@@ -65,6 +65,7 @@ namespace Infrastructure.SqlServer.Training
                 cmd.Parameters.AddWithValue($"@{TrainingSqlServer.ColIdTrainingDate}", training.TrainingDate.Id);
                 cmd.Parameters.AddWithValue($"@{TrainingSqlServer.ColIdActivity}", training.Activity.Id);
                 cmd.Parameters.AddWithValue($"@{TrainingSqlServer.ColIdUser}", training.User.Id);
+                cmd.Parameters.AddWithValue($"@{TrainingSqlServer.ColRepetitions}", training.Repetitions);
 
                 training.Id = (int) cmd.ExecuteScalar();
             }

@@ -9,12 +9,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2d50f586-c447-40ab-96ed-d6d4355f20d2" name="Default Changelist" comment="weather forecast">
-      <change afterPath="$PROJECT_DIR$/Infrastructure/SqlServer/init-tables.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.FitnessBattle/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FitnessBattle/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.FitnessBattle/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FitnessBattle/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Infrastructure/SqlServer/Shared/Database.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Infrastructure/SqlServer/Shared/Database.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Infrastructure/SqlServer/TrainingDate/TrainingDateSqlServer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Infrastructure/SqlServer/TrainingDate/TrainingDateSqlServer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Infrastructure/SqlServer/User/UserSqlServer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Infrastructure/SqlServer/User/UserSqlServer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Api/Controllers/ActivityController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Api/Controllers/ActivityController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Api/Controllers/TrainingController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Api/Controllers/TrainingController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Api/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Api/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Infrastructure/SqlServer/Factories/ActivityFactory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Infrastructure/SqlServer/Factories/ActivityFactory.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Infrastructure/SqlServer/Factories/TrainingFactory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Infrastructure/SqlServer/Factories/TrainingFactory.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Infrastructure/SqlServer/Training/TrainingRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Infrastructure/SqlServer/Training/TrainingRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Infrastructure/SqlServer/Unit/UnitSqlServer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Infrastructure/SqlServer/Unit/UnitSqlServer.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,10 +29,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Domain/Activity/ActivityFactory.cs" />
-        <option value="$PROJECT_DIR$/Domain/TrainingDate/TrainingDateFactory.cs" />
-        <option value="$PROJECT_DIR$/Infrastructure/SqlServer/Factories/TrainingDatesFactory.cs" />
-        <option value="$PROJECT_DIR$/Infrastructure/SqlServer/Factories/CategoryFactory.cs" />
         <option value="$PROJECT_DIR$/Infrastructure/SqlServer/Category/CategoryRepository.cs" />
         <option value="$PROJECT_DIR$/Infrastructure/SqlServer/Unit/UnitRepository.cs" />
         <option value="$PROJECT_DIR$/Infrastructure/SqlServer/TrainingDate/TrainingDateRepository.cs" />
@@ -39,7 +37,6 @@
         <option value="$PROJECT_DIR$/Application/Services/Category/ICategoryService.cs" />
         <option value="$PROJECT_DIR$/Application/Services/Activity/Dto/InputDtoAddActivity.cs" />
         <option value="$PROJECT_DIR$/Application/Services/Activity/Dto/OutputDtoAddActivity.cs" />
-        <option value="$PROJECT_DIR$/Application/Services/Activity/Dto/OutputDtoQueryActivity.cs" />
         <option value="$PROJECT_DIR$/Infrastructure/SqlServer/Activity/ActivitySqlServer.cs" />
         <option value="$PROJECT_DIR$/Application/Repositories/IActivityRepository.cs" />
         <option value="$PROJECT_DIR$/Infrastructure/SqlServer/Activity/ActivityRepository.cs" />
@@ -49,7 +46,6 @@
         <option value="$PROJECT_DIR$/Domain/Training/ITraining.cs" />
         <option value="$PROJECT_DIR$/Application/Services/Training/Dto/OutputDtoAddTraining.cs" />
         <option value="$PROJECT_DIR$/Application/Services/Training/Dto/OutputDtoQueryTraining.cs" />
-        <option value="$PROJECT_DIR$/Infrastructure/SqlServer/Factories/TrainingFactory.cs" />
         <option value="$PROJECT_DIR$/Domain/Training/ITrainingFactory" />
         <option value="$PROJECT_DIR$/Infrastructure/SqlServer/User/UserRepository.cs" />
         <option value="$PROJECT_DIR$/Infrastructure/SqlServer/Factories/UserFactory.cs" />
@@ -68,16 +64,22 @@
         <option value="$PROJECT_DIR$/Application/Services/TrainingDate/ITrainingDateService.cs" />
         <option value="$PROJECT_DIR$/Application/Services/Training/ITrainingService.cs" />
         <option value="$PROJECT_DIR$/Application/Services/Training/TrainingService.cs" />
-        <option value="$PROJECT_DIR$/Api/Controllers/TrainingController.cs" />
-        <option value="$PROJECT_DIR$/Api/Controllers/ActivityController.cs" />
         <option value="$PROJECT_DIR$/Application/Services/Activity/Dto/InputDtoUpdateActivity.cs" />
-        <option value="$PROJECT_DIR$/Application/Services/Activity/ActivityService.cs" />
         <option value="$PROJECT_DIR$/Application/Services/Activity/IActivityService.cs" />
         <option value="$PROJECT_DIR$/Api/Properties/launchSettings.json" />
         <option value="$PROJECT_DIR$/Infrastructure/SqlServer/User/UserSqlServer.cs" />
         <option value="$PROJECT_DIR$/Infrastructure/SqlServer/TrainingDate/TrainingDateSqlServer.cs" />
         <option value="$PROJECT_DIR$/Infrastructure/SqlServer/init-tables.sql" />
         <option value="$PROJECT_DIR$/Infrastructure/SqlServer/Shared/Database.cs" />
+        <option value="$PROJECT_DIR$/Api/Controllers/TrainingController.cs" />
+        <option value="$PROJECT_DIR$/Infrastructure/SqlServer/Factories/TrainingFactory.cs" />
+        <option value="$PROJECT_DIR$/Api/Controllers/ActivityController.cs" />
+        <option value="$PROJECT_DIR$/Infrastructure/SqlServer/Unit/UnitSqlServer.cs" />
+        <option value="$PROJECT_DIR$/Application/Services/Activity/Dto/OutputDtoQueryActivity.cs" />
+        <option value="$PROJECT_DIR$/Application/Services/Activity/ActivityService.cs" />
+        <option value="$PROJECT_DIR$/Api/Program.cs" />
+        <option value="$PROJECT_DIR$/Infrastructure/SqlServer/Factories/ActivityFactory.cs" />
+        <option value="$PROJECT_DIR$/Infrastructure/SqlServer/Training/TrainingRepository.cs" />
       </list>
     </option>
   </component>
@@ -142,7 +144,10 @@
       <workItem from="1605713221344" duration="204000" />
       <workItem from="1605791542693" duration="10445000" />
       <workItem from="1605877743391" duration="410000" />
-      <workItem from="1605878168657" duration="4288000" />
+      <workItem from="1605878168657" duration="5709000" />
+      <workItem from="1605884318131" duration="488000" />
+      <workItem from="1605884994122" duration="75000" />
+      <workItem from="1605953396019" duration="6060000" />
     </task>
     <task id="LOCAL-00001" summary="base">
       <created>1605628139369</created>
@@ -228,7 +233,14 @@
       <option name="project" value="LOCAL" />
       <updated>1605881091767</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="SQL init tables">
+      <created>1605882612288</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1605882612288</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -260,25 +272,30 @@
     <MESSAGE value="Sevice Activity + Unit Repo" />
     <MESSAGE value="Controllers part 1" />
     <MESSAGE value="weather forecast" />
-    <option name="LAST_COMMIT_MESSAGE" value="weather forecast" />
+    <MESSAGE value="SQL init tables" />
+    <option name="LAST_COMMIT_MESSAGE" value="SQL init tables" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1493" height="210" key="GridCell.Tab.0.bottom" timestamp="1605881036759">
+    <state width="1493" height="110" key="GridCell.Tab.0.bottom" timestamp="1605960105141">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1605881036759" />
-    <state width="1493" height="210" key="GridCell.Tab.0.center" timestamp="1605881036759">
+    <state width="1493" height="110" key="GridCell.Tab.0.bottom/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1605960105141" />
+    <state width="1877" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1605956395131" />
+    <state width="1493" height="110" key="GridCell.Tab.0.center" timestamp="1605960105140">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.center/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1605881036759" />
-    <state width="1493" height="210" key="GridCell.Tab.0.left" timestamp="1605881036759">
+    <state width="1493" height="110" key="GridCell.Tab.0.center/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1605960105140" />
+    <state width="1877" height="210" key="GridCell.Tab.0.center/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1605956395131" />
+    <state width="1493" height="110" key="GridCell.Tab.0.left" timestamp="1605960105140">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.left/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1605881036759" />
-    <state width="1493" height="210" key="GridCell.Tab.0.right" timestamp="1605881036759">
+    <state width="1493" height="110" key="GridCell.Tab.0.left/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1605960105140" />
+    <state width="1877" height="210" key="GridCell.Tab.0.left/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1605956395131" />
+    <state width="1493" height="110" key="GridCell.Tab.0.right" timestamp="1605960105141">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.right/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1605881036759" />
+    <state width="1493" height="110" key="GridCell.Tab.0.right/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1605960105141" />
+    <state width="1877" height="210" key="GridCell.Tab.0.right/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1605956395131" />
     <state x="552" y="271" key="Rider.ProjectTemplateDialog.Size" timestamp="1605628738436">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
@@ -293,11 +310,11 @@
     </state>
     <state x="92" y="92" width="1736" height="896" key="VCS.FileHistoryDialog/-1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1605793154448" />
     <state x="74" y="70" width="1389" height="684" key="VCS.FileHistoryDialog/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1605880023310" />
-    <state x="442" y="208" key="Vcs.Push.Dialog.v2" timestamp="1605881094683">
+    <state x="442" y="208" key="Vcs.Push.Dialog.v2" timestamp="1605882614531">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="552" y="272" key="Vcs.Push.Dialog.v2/-1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1605798877685" />
-    <state x="442" y="208" key="Vcs.Push.Dialog.v2/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1605881094683" />
+    <state x="442" y="208" key="Vcs.Push.Dialog.v2/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1605882614531" />
     <state x="586" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1605880912431">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

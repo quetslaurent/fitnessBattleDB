@@ -33,14 +33,14 @@ namespace Infrastructure.SqlServer.Factories
                         Id = reader.GetInt32(reader.GetOrdinal(CategorySqlServer.ColId)),
                         Name = reader.GetString(reader.GetOrdinal(ActivitySqlServer.ColName))
                     },
-                    Repetitions = reader.GetInt32(reader.GetOrdinal(ActivitySqlServer.ColRepetitions)),
+                    Repetitions = reader.GetDouble(reader.GetOrdinal(ActivitySqlServer.ColRepetitions)),
                     Unit = new Domain.Unit.Unit
                     {
                         Id = reader.GetInt32(reader.GetOrdinal(UnitSqlServer.ColId)),
                         Type = reader.GetString(reader.GetOrdinal(UnitSqlServer.ColType))
                     }
                 },
-                Repetitions = reader.GetInt32(reader.GetOrdinal(TrainingSqlServer.ColRepetitions)),
+                Repetitions = reader.GetDouble(reader.GetOrdinal(TrainingSqlServer.ColRepetitions)),
                 TrainingDate = new Domain.TrainingDate.TrainingDate
                 {
                     Id = reader.GetInt32(reader.GetOrdinal(TrainingDateSqlServer.ColId)),
