@@ -3,7 +3,7 @@
     public class UnitSqlServer
     {
         public static readonly string TableName = "unit";
-        public static readonly string ColId = "id";
+        public static readonly string ColId = "unitId";
         public static readonly string ColType = "type";
 
         public static readonly string ReqCreate = $@"

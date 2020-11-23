@@ -3,7 +3,7 @@
     public class CategorySqlServer
     {
         public static readonly string TableName = "category";
-        public static readonly string ColId = "id";
+        public static readonly string ColId = "categoryId";
         public static readonly string ColName = "categoryName";
 
         public static readonly string ReqCreate = $@"

@@ -9,57 +9,57 @@ DROP TABLE IF EXISTS training;
 
 CREATE TABLE userFitness
 (
-    id     INT IDENTITY NOT NULL,
+    userId     INT IDENTITY NOT NULL,
     name   VARCHAR(100) NOT NULL,
     password   VARCHAR(100) NOT NULL,
     email   VARCHAR(100) NOT NULL,
     admin   BIT NOT NULL,
-    PRIMARY KEY (id)
+    PRIMARY KEY (userId)
 );
 
 CREATE TABLE trainingDate
 (
-    id    INT IDENTITY    NOT NULL,
+    trainingDateId    INT IDENTITY    NOT NULL,
     date DATETIME UNIQUE NOT NULL,
-    PRIMARY KEY (id)
+    PRIMARY KEY (trainingDateId)
 );
 
 CREATE TABLE unit
 (
-    id    INT IDENTITY NOT NULL,
+    unitId    INT IDENTITY NOT NULL,
     type  VARCHAR(100) NOT NULL,
-    PRIMARY KEY (id)
+    PRIMARY KEY (unitId)
 );
 
 CREATE TABLE category
 (
-    id    INT IDENTITY NOT NULL,
+    categoryId    INT IDENTITY NOT NULL,
     categoryName  VARCHAR(100) NOT NULL,
-    PRIMARY KEY (id)
+    PRIMARY KEY (categoryId)
 );
 
 CREATE TABLE activity
 (
-    id     INT IDENTITY NOT NULL,
+    activityId     INT IDENTITY NOT NULL,
     name   VARCHAR(100) NOT NULL,
     repetitions NUMERIC(7,2) NOT NULL,
-    unitId     INT NOT NULL,
-    categoryId     INT NOT NULL,
-    PRIMARY KEY (id),
-    FOREIGN KEY (unitId) REFERENCES unit (id),
-    FOREIGN KEY (categoryId) REFERENCES category (id)
+    aUnitId     INT NOT NULL,
+    aCategoryId     INT NOT NULL,
+    PRIMARY KEY (activityId),
+    FOREIGN KEY (aUnitId) REFERENCES unit (unitId),
+    FOREIGN KEY (aCategoryId) REFERENCES category (categoryId)
 );
 
 CREATE TABLE training
 (
-    id     INT IDENTITY NOT NULL,
-    repetitions NUMERIC(7,2) NOT NULL,
-    activityId INT NOT NULL,
-    userId INT NOT NULL,
-    trainingDateId INT NOT NULL,
+    trainingId     INT IDENTITY NOT NULL,
+    repetitionsNeeded NUMERIC(7,2) NOT NULL,
+    tActivityId INT NOT NULL,
+    tUserId INT NOT NULL,
+    tTrainingDateId INT NOT NULL,
     
-    PRIMARY KEY (id),
-    FOREIGN KEY (activityId) REFERENCES activity (id),
-    FOREIGN KEY (userId) REFERENCES userFitness (id),
-    FOREIGN KEY (trainingDateId) REFERENCES trainingDate (id),
+    PRIMARY KEY (trainingId),
+    FOREIGN KEY (tActivityId) REFERENCES activity (activityId),
+    FOREIGN KEY (tUserId) REFERENCES userFitness (userId),
+    FOREIGN KEY (tTrainingDateId) REFERENCES trainingDate (trainingDateId),
 );

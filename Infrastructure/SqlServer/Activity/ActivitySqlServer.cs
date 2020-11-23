@@ -9,11 +9,11 @@ namespace Infrastructure.SqlServer.Activity
     {
         
         public static readonly string TableName = "activity";
-        public static readonly string ColId = "id";
+        public static readonly string ColId = "activityId";
         public static readonly string ColName = "name";
         public static readonly string ColRepetitions = "repetitions";
-        public static readonly string ColIdUnit = "unitId";
-        public static readonly string ColIdCategory = "categoryId";
+        public static readonly string ColIdUnit = "aUnitId";
+        public static readonly string ColIdCategory = "aCategoryId";
 
         public static readonly string ReqCreate = $@"
             INSERT INTO {TableName}({ColName}, {ColRepetitions}, {ColIdUnit}, {ColIdCategory})
@@ -22,7 +22,10 @@ namespace Infrastructure.SqlServer.Activity
         ";
 
         public static readonly string ReqQuery = $"SELECT * FROM {TableName}";
-        public static readonly string ReqGetById = ReqQuery + $" WHERE {ColId} = @{ColId}";
+        public static readonly string ReqGetById = ReqQuery + $@" 
+            INNER JOIN {UnitSqlServer.TableName} unit on {ColIdUnit} = unit.{UnitSqlServer.ColId} 
+            INNER JOIN {CategorySqlServer.TableName} category on {ColIdCategory} = category.{CategorySqlServer.ColId} 
+            WHERE {ColId} = @{ColId}";
 
         public static readonly string ReqPut = $@"
             UPDATE {TableName} SET
@@ -32,12 +35,11 @@ namespace Infrastructure.SqlServer.Activity
             {ColIdCategory} = @{ColIdCategory},
             WHERE {ColId} = @{ColId}
         ";
-        
-        //ICI
+
         public static readonly string ReqGetByCategoryId = $@"
             SELECT *  FROM {TableName} 
-            INNER JOIN {UnitSqlServer.TableName} unit on {ColIdUnit} = unit.{UnitSqlServer.ColId}
-            INNER JOIN {CategorySqlServer.TableName} category on {ColIdCategory} = category.{CategorySqlServer.ColId}
+            INNER JOIN {UnitSqlServer.TableName} unit on {ColIdUnit} = unit.{UnitSqlServer.ColId} 
+            INNER JOIN {CategorySqlServer.TableName} category on {ColIdCategory} = category.{CategorySqlServer.ColId} 
             WHERE {ColIdCategory} = @{ColIdCategory}
         ";
         

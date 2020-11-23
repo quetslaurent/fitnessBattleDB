@@ -3,7 +3,7 @@
     public class TrainingDateSqlServer
     {
         public static readonly string TableName = "trainingDate";
-        public static readonly string ColId = "id";
+        public static readonly string ColId = "trainingDateId";
         public static readonly string ColDate = "date";
 
         public static readonly string ReqCreate = $@"

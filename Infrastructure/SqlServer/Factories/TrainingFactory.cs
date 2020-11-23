@@ -1,4 +1,5 @@
-﻿using System.Data.SqlClient;
+﻿using System;
+using System.Data.SqlClient;
 using Domain.Training;
 using Infrastructure.SqlServer.Activity;
 using Infrastructure.SqlServer.Category;
@@ -33,14 +34,14 @@ namespace Infrastructure.SqlServer.Factories
                         Id = reader.GetInt32(reader.GetOrdinal(CategorySqlServer.ColId)),
                         Name = reader.GetString(reader.GetOrdinal(ActivitySqlServer.ColName))
                     },
-                    Repetitions = reader.GetDouble(reader.GetOrdinal(ActivitySqlServer.ColRepetitions)),
+                    Repetitions = Decimal.ToDouble(reader.GetDecimal(reader.GetOrdinal(ActivitySqlServer.ColRepetitions))),
                     Unit = new Domain.Unit.Unit
                     {
                         Id = reader.GetInt32(reader.GetOrdinal(UnitSqlServer.ColId)),
                         Type = reader.GetString(reader.GetOrdinal(UnitSqlServer.ColType))
                     }
                 },
-                Repetitions = reader.GetDouble(reader.GetOrdinal(TrainingSqlServer.ColRepetitions)),
+                Repetitions = Decimal.ToDouble(reader.GetDecimal(reader.GetOrdinal(TrainingSqlServer.ColRepetitions))),
                 TrainingDate = new Domain.TrainingDate.TrainingDate
                 {
                     Id = reader.GetInt32(reader.GetOrdinal(TrainingDateSqlServer.ColId)),

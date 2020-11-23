@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using Application.Repositories;
@@ -35,6 +36,14 @@ namespace Application.Services.Unit
             //DTO --> Domain
             var unitFromDto = _unitFactory.CreateFromType(inputDtoAddUnit.Type);
             //Repository demande un element du domain
+
+            var unitsInDb = _unitRepository.Query();
+            foreach (var unit in unitsInDb)
+            {
+                if (unit.Type == unitFromDto.Type)
+                    throw new Exception("Unit already in database");
+            }
+            //On crée une unit dans la db
             var unitInDb = _unitRepository.Create(unitFromDto);
             
             //Domain -> DTO

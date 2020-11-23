@@ -97,7 +97,7 @@ namespace Infrastructure.SqlServer.Training
                 connection.Open();
                 var cmd = connection.CreateCommand();
 
-                cmd.CommandText = TrainingSqlServer.ReqGetByTrainingId;
+                cmd.CommandText = TrainingSqlServer.ReqGetById;
                 cmd.Parameters.AddWithValue($"@{TrainingSqlServer.ColIdTrainingDate}", dateId);
 
                 var reader = cmd.ExecuteReader(CommandBehavior.CloseConnection);
