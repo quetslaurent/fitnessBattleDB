@@ -1,5 +1,7 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.InteropServices.WindowsRuntime;
 using Application.Repositories;
 using Application.Services.Category.Dto;
 using Application.Services.User.Dto;
@@ -42,6 +44,14 @@ namespace Application.Services.User
             //DTO --> Domain
             var userFromDto = _userFactory.CreateUserFromValues(inputDtoAddUser.Name,inputDtoAddUser.Password,inputDtoAddUser.Email,inputDtoAddUser.Admin);
             //Repository demande un element du domain
+
+            var usersInDb = _userRepository.Query();
+            foreach (var user in usersInDb)
+            {
+                if (user.Email == userFromDto.Email || user.Name == userFromDto.Name)
+                    throw new Exception("User already in database");
+            }
+            //On crée l'utilisateur
             var userInDb = _userRepository.Create(userFromDto);
             
             //Domain -> DTO
