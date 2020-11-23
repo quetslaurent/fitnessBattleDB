@@ -4,6 +4,7 @@ using Domain.Activity;
 using Infrastructure.SqlServer.Activity;
 using Infrastructure.SqlServer.Category;
 using Infrastructure.SqlServer.Unit;
+using Infrastructure.SqlServer.User;
 
 namespace Infrastructure.SqlServer.Factories
 {

@@ -2,6 +2,7 @@
 using System.Data.SqlClient;
 using Domain.Category;
 using Infrastructure.SqlServer.Activity;
+using Infrastructure.SqlServer.Category;
 
 namespace Infrastructure.SqlServer.Factories
 {
@@ -11,8 +12,8 @@ namespace Infrastructure.SqlServer.Factories
         {
             return new Domain.Category.Category
             {
-                Id = reader.GetInt32(reader.GetOrdinal(ActivitySqlServer.ColId)),
-                Name = reader.GetString(reader.GetOrdinal(ActivitySqlServer.ColName))
+                Id = reader.GetInt32(reader.GetOrdinal(CategorySqlServer.ColId)),
+                Name = reader.GetString(reader.GetOrdinal(CategorySqlServer.ColName))
             };
         }
     }

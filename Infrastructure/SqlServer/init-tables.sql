@@ -34,7 +34,7 @@ CREATE TABLE unit
 CREATE TABLE category
 (
     id    INT IDENTITY NOT NULL,
-    name  VARCHAR(100) NOT NULL,
+    categoryName  VARCHAR(100) NOT NULL,
     PRIMARY KEY (id)
 );
 

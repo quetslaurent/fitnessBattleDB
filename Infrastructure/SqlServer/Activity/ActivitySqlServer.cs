@@ -1,5 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Data;
+using Infrastructure.SqlServer.Category;
+using Infrastructure.SqlServer.Unit;
 
 namespace Infrastructure.SqlServer.Activity
 {
@@ -31,8 +33,12 @@ namespace Infrastructure.SqlServer.Activity
             WHERE {ColId} = @{ColId}
         ";
         
+        //ICI
         public static readonly string ReqGetByCategoryId = $@"
-            SELECT * FROM {TableName} WHERE {ColIdCategory} = @{ColIdCategory} 
+            SELECT *  FROM {TableName} 
+            INNER JOIN {UnitSqlServer.TableName} unit on {ColIdUnit} = unit.{UnitSqlServer.ColId}
+            INNER JOIN {CategorySqlServer.TableName} category on {ColIdCategory} = category.{CategorySqlServer.ColId}
+            WHERE {ColIdCategory} = @{ColIdCategory}
         ";
         
         public static readonly string ReqDeleteById = $@"
