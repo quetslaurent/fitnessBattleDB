@@ -1,5 +1,8 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Data;
+using System.Security.Cryptography;
+using System.Text;
 using Application.Repositories;
 using Domain.User;
 using Infrastructure.SqlServer.Factories;
@@ -52,7 +55,25 @@ namespace Infrastructure.SqlServer.User
 
             return null;
         }
+        
+        public string HashPassword(string password)
+        {
+            using (var md5Hash = MD5.Create())
+            {
+                // Byte array representation of source string
+                var sourceBytes = Encoding.UTF8.GetBytes(password);
 
+                // Generate hash value(Byte Array) for input data
+                var hashBytes = md5Hash.ComputeHash(sourceBytes);
+
+                // Convert hash byte array to string
+                var hash = BitConverter.ToString(hashBytes).Replace("-", string.Empty);
+
+                // Output the MD5 hash
+                return hash;
+            }
+        }
+        
         public IUser Create(IUser user)
         {
             using (var connection = Database.GetConnection())
@@ -61,6 +82,8 @@ namespace Infrastructure.SqlServer.User
                 var cmd = connection.CreateCommand();
                 cmd.CommandText = UserSqlServer.ReqCreate;
 
+                user.Password = HashPassword(user.Password);
+                
                 cmd.Parameters.AddWithValue($"@{UserSqlServer.ColName}", user.Name);
                 cmd.Parameters.AddWithValue($"@{UserSqlServer.ColAdmin}", user.Admin);
                 cmd.Parameters.AddWithValue($"@{UserSqlServer.ColEmail}", user.Email);
