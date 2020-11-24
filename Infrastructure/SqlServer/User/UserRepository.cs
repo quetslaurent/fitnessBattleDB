@@ -1,5 +1,7 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Data;
+using System.Security.Cryptography;
 using Application.Repositories;
 using Domain.User;
 using Infrastructure.SqlServer.Factories;
@@ -52,7 +54,13 @@ namespace Infrastructure.SqlServer.User
 
             return null;
         }
-
+        
+        public string HashPassword(string password)
+        {
+            Rfc2898DeriveBytes hashedPass = new Rfc2898DeriveBytes(password,8, 100); 
+            return Convert.ToBase64String(hashedPass.GetBytes(25)); 
+        }
+        
         public IUser Create(IUser user)
         {
             using (var connection = Database.GetConnection())
@@ -61,6 +69,8 @@ namespace Infrastructure.SqlServer.User
                 var cmd = connection.CreateCommand();
                 cmd.CommandText = UserSqlServer.ReqCreate;
 
+                user.Password = HashPassword(user.Password);
+                
                 cmd.Parameters.AddWithValue($"@{UserSqlServer.ColName}", user.Name);
                 cmd.Parameters.AddWithValue($"@{UserSqlServer.ColAdmin}", user.Admin);
                 cmd.Parameters.AddWithValue($"@{UserSqlServer.ColEmail}", user.Email);
