@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using Application.Repositories;
 using Application.Services.Category.Dto;
@@ -39,6 +40,15 @@ namespace Application.Services.Category
             //DTO --> Domain
             var categoryFromDto = _categoryFactory.CreateFromName(inputDtoAddCategory.Name);
             //Repository demande un element du domain
+
+            var categoriesInDb = _categoryRepository.Query();
+
+            foreach (var category in categoriesInDb)
+            {
+                if(category.Name==categoryFromDto.Name)
+                    throw new Exception("Category already in database");
+            }
+            //On crée la catégorie
             var categoryInDb = _categoryRepository.Create(categoryFromDto);
             
             //Domain -> DTO

@@ -121,8 +121,8 @@ namespace Infrastructure.SqlServer.Activity
                 cmd.Parameters.AddWithValue($"@{ActivitySqlServer.ColId}", id);
                 cmd.Parameters.AddWithValue($"@{ActivitySqlServer.ColName}", activity.Name);
                 cmd.Parameters.AddWithValue($"@{ActivitySqlServer.ColRepetitions}", activity.Repetitions);
-                cmd.Parameters.AddWithValue($"@{ActivitySqlServer.ColIdUnit}", activity.Unit);
-                cmd.Parameters.AddWithValue($"@{ActivitySqlServer.ColIdCategory}", activity.Category);
+                cmd.Parameters.AddWithValue($"@{ActivitySqlServer.ColIdUnit}", activity.Unit.Id);
+                cmd.Parameters.AddWithValue($"@{ActivitySqlServer.ColIdCategory}", activity.Category.Id);
 
 
                 return cmd.ExecuteNonQuery() > 0;

@@ -32,7 +32,7 @@ namespace Infrastructure.SqlServer.Activity
             {ColName} = @{ColName},
             {ColRepetitions} = @{ColRepetitions},
             {ColIdUnit} = @{ColIdUnit},
-            {ColIdCategory} = @{ColIdCategory},
+            {ColIdCategory} = @{ColIdCategory} 
             WHERE {ColId} = @{ColId}
         ";
 
