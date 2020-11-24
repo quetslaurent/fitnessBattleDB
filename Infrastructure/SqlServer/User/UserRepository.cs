@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
+using System.IO;
 using System.Security.Cryptography;
 using System.Text;
 using Application.Repositories;
@@ -55,25 +56,19 @@ namespace Infrastructure.SqlServer.User
 
             return null;
         }
-        
+
         public string HashPassword(string password)
         {
-            using (var md5Hash = MD5.Create())
-            {
-                // Byte array representation of source string
-                var sourceBytes = Encoding.UTF8.GetBytes(password);
-
-                // Generate hash value(Byte Array) for input data
-                var hashBytes = md5Hash.ComputeHash(sourceBytes);
-
-                // Convert hash byte array to string
-                var hash = BitConverter.ToString(hashBytes).Replace("-", string.Empty);
-
-                // Output the MD5 hash
-                return hash;
-            }
+            return ComputeHash(password, new SHA256CryptoServiceProvider()).Replace("-", String.Empty);
         }
         
+        public string ComputeHash(string input, HashAlgorithm algorithm)
+        {
+            Byte[] inputBytes = Encoding.UTF8.GetBytes(input);
+            Byte[] hashedBytes = algorithm.ComputeHash(inputBytes);
+            return BitConverter.ToString(hashedBytes);
+        }
+
         public IUser Create(IUser user)
         {
             using (var connection = Database.GetConnection())
