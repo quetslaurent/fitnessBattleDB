@@ -1,4 +1,5 @@
-﻿using Application.Services.User;
+﻿using System;
+using Application.Services.User;
 using Application.Services.User.Dto;
 using Microsoft.AspNetCore.Mvc;
 
@@ -19,6 +20,13 @@ namespace FitnessBattle.Controllers
         public ActionResult<OutputDtoQueryUser> Query()
         {
             return Ok(_userService.Query());
+        }
+        
+        [HttpGet]
+        [Route("points/{id:int}")]
+        public ActionResult<int> GetUserPointsById(int id)
+        {
+            return Ok(_userService.GetUserPointsById(id));
         }
 
         [HttpPost]

@@ -7,6 +7,7 @@ using Application.Repositories;
 using Domain.User;
 using Infrastructure.SqlServer.Factories;
 using Infrastructure.SqlServer.Shared;
+using Infrastructure.SqlServer.Training;
 using UserFactory = Infrastructure.SqlServer.Factories.UserFactory;
 
 namespace Infrastructure.SqlServer.User
@@ -88,6 +89,27 @@ namespace Infrastructure.SqlServer.User
             }
 
             return user;
+        }
+
+        public double GetPointsById(int id)
+        {
+            using (var connection = Database.GetConnection())
+            {
+                connection.Open();
+                var cmd = connection.CreateCommand();
+
+                cmd.CommandText = TrainingSqlServer.ReqGetPointsByUserId;
+                cmd.Parameters.AddWithValue($"@{TrainingSqlServer.ColIdUser}", id);
+
+                var reader = cmd.ExecuteReader(CommandBehavior.CloseConnection);
+
+                if (reader.Read())
+                {
+                    return Decimal.ToDouble(reader.GetDecimal(reader.GetOrdinal(TrainingSqlServer.ColPoints)));
+                }
+
+                return 0;
+            }
         }
     }
 }

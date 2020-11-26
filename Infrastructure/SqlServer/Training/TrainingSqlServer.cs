@@ -43,11 +43,11 @@ namespace Infrastructure.SqlServer.Training
         public static readonly string ReqDeleteById = $@"
             DELETE FROM {TableName} WHERE {ColId} = @{ColId} 
         ";
-
-        public static readonly string ReqGetPointsById = $@"
-            SELECT {ColRepetitions}/activity.{ActivitySqlServer.ColRepetitions} FROM {TableName} 
+        
+        public static readonly string ReqGetPointsByUserId = $@"
+            SELECT SUM({ColRepetitions}/activity.{ActivitySqlServer.ColRepetitions}) as '{ColPoints}' FROM {TableName} 
             INNER JOIN {ActivitySqlServer.TableName} activity on  activity.{ActivitySqlServer.ColId}  = {ColIdActivity}
-            WHERE {ColId} = @{ColId}
+            WHERE {ColIdUser} = @{ColIdUser}
         ";
     }
 }

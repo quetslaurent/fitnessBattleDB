@@ -8,6 +8,7 @@ namespace Application.Repositories
         IEnumerable<IUser> Query();
         IUser GetById(int id);
         IUser Create(IUser user);
-        
+
+        double GetPointsById(int id);
     }
 }

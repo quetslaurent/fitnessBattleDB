@@ -7,5 +7,6 @@ namespace Application.Services.User
     {
         IEnumerable<OutputDtoQueryUser> Query();
         OutputDtoAddUser Create(InputDtoAddUser inputDtaAddUser);
+        double GetUserPointsById(int id);
     }
 }

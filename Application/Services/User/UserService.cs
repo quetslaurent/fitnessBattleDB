@@ -64,5 +64,10 @@ namespace Application.Services.User
                 Password = userInDb.Password
             };
         }
+
+        public double GetUserPointsById(int id)
+        {
+            return _userRepository.GetPointsById(id);
+        }
     }
 }
