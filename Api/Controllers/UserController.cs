@@ -23,6 +23,13 @@ namespace FitnessBattle.Controllers
         }
         
         [HttpGet]
+        [Route("{id:int}")]
+        public ActionResult<OutputDtoQueryUser> GetUserById(int id)
+        {
+            return Ok(_userService.GetUserById(id));
+        }
+        
+        [HttpGet]
         [Route("points/{id:int}")]
         public ActionResult<int> GetUserPointsById(int id)
         {

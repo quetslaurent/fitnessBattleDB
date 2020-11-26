@@ -69,5 +69,18 @@ namespace Application.Services.User
         {
             return _userRepository.GetPointsById(id);
         }
+
+        public OutputDtoQueryUser GetUserById(int id)
+        {
+            var userInDb = _userRepository.GetById(id);
+            return new OutputDtoQueryUser
+            {
+                Id = userInDb.Id,
+                Name = userInDb.Name,
+                Admin = userInDb.Admin,
+                Email = userInDb.Email,
+                Password = userInDb.Password
+            };
+        }
     }
 }

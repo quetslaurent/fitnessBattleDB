@@ -12,12 +12,8 @@
     <list default="true" id="2d50f586-c447-40ab-96ed-d6d4355f20d2" name="Default Changelist" comment="No duplicates values for user">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.FitnessBattle/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FitnessBattle/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Api/Controllers/UserController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Api/Controllers/UserController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Application/Repositories/IUserRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Application/Repositories/IUserRepository.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Application/Services/User/IUserService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Application/Services/User/IUserService.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Application/Services/User/UserService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Application/Services/User/UserService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Infrastructure/SqlServer/Training/TrainingSqlServer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Infrastructure/SqlServer/Training/TrainingSqlServer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Infrastructure/SqlServer/User/UserRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Infrastructure/SqlServer/User/UserRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Infrastructure/SqlServer/init-data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/Infrastructure/SqlServer/init-data.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,13 +74,13 @@
         <option value="$PROJECT_DIR$/Domain/Training/ITrainingFactory.cs" />
         <option value="$PROJECT_DIR$/Application/Services/Training/TrainingService.cs" />
         <option value="$PROJECT_DIR$/Infrastructure/SqlServer/init-data.sql" />
-        <option value="$PROJECT_DIR$/Application/Services/User/UserService.cs" />
-        <option value="$PROJECT_DIR$/Application/Services/User/IUserService.cs" />
         <option value="$PROJECT_DIR$/Application/Repositories/IUserRepository.cs" />
         <option value="$PROJECT_DIR$/Infrastructure/SqlServer/User/UserRepository.cs" />
-        <option value="$PROJECT_DIR$/Api/Controllers/UserController.cs" />
         <option value="$PROJECT_DIR$/Infrastructure/SqlServer/User/UserSqlServer.cs" />
         <option value="$PROJECT_DIR$/Infrastructure/SqlServer/Training/TrainingSqlServer.cs" />
+        <option value="$PROJECT_DIR$/Api/Controllers/UserController.cs" />
+        <option value="$PROJECT_DIR$/Application/Services/User/IUserService.cs" />
+        <option value="$PROJECT_DIR$/Application/Services/User/UserService.cs" />
       </list>
     </option>
   </component>
@@ -162,7 +158,8 @@
       <workItem from="1606298903849" duration="9000" />
       <workItem from="1606312804671" duration="2156000" />
       <workItem from="1606315560893" duration="189000" />
-      <workItem from="1606385184304" duration="6671000" />
+      <workItem from="1606385184304" duration="6839000" />
+      <workItem from="1606394985453" duration="433000" />
     </task>
     <task id="LOCAL-00001" summary="base">
       <created>1605628139369</created>
@@ -311,7 +308,14 @@
       <option name="project" value="LOCAL" />
       <updated>1606389201533</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="get all points of an user">
+      <created>1606392558809</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1606392558809</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -353,28 +357,29 @@
     <MESSAGE value="Commit surprise" />
     <MESSAGE value="Last commit" />
     <MESSAGE value="trainings points value" />
-    <option name="LAST_COMMIT_MESSAGE" value="trainings points value" />
+    <MESSAGE value="get all points of an user" />
+    <option name="LAST_COMMIT_MESSAGE" value="get all points of an user" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1493" height="109" key="GridCell.Tab.0.bottom" timestamp="1606391458260">
+    <state width="1493" height="109" key="GridCell.Tab.0.bottom" timestamp="1606392568203">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="109" key="GridCell.Tab.0.bottom/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1606391458260" />
+    <state width="1493" height="109" key="GridCell.Tab.0.bottom/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1606392568203" />
     <state width="1877" height="110" key="GridCell.Tab.0.bottom/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1606147073516" />
-    <state width="1493" height="109" key="GridCell.Tab.0.center" timestamp="1606391458260">
+    <state width="1493" height="109" key="GridCell.Tab.0.center" timestamp="1606392568203">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="109" key="GridCell.Tab.0.center/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1606391458260" />
+    <state width="1493" height="109" key="GridCell.Tab.0.center/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1606392568203" />
     <state width="1877" height="110" key="GridCell.Tab.0.center/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1606147073516" />
-    <state width="1493" height="109" key="GridCell.Tab.0.left" timestamp="1606391458260">
+    <state width="1493" height="109" key="GridCell.Tab.0.left" timestamp="1606392568202">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="109" key="GridCell.Tab.0.left/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1606391458260" />
+    <state width="1493" height="109" key="GridCell.Tab.0.left/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1606392568202" />
     <state width="1877" height="110" key="GridCell.Tab.0.left/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1606147073515" />
-    <state width="1493" height="109" key="GridCell.Tab.0.right" timestamp="1606391458260">
+    <state width="1493" height="109" key="GridCell.Tab.0.right" timestamp="1606392568203">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="109" key="GridCell.Tab.0.right/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1606391458260" />
+    <state width="1493" height="109" key="GridCell.Tab.0.right/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1606392568203" />
     <state width="1877" height="110" key="GridCell.Tab.0.right/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1606147073516" />
     <state width="1493" height="288" key="GridCell.Tab.1.bottom" timestamp="1606150185227">
       <screen x="0" y="0" width="1536" height="824" />
@@ -454,11 +459,11 @@
     </state>
     <state x="92" y="92" width="1736" height="896" key="VCS.FileHistoryDialog/-1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1605793154448" />
     <state x="74" y="70" width="1389" height="684" key="VCS.FileHistoryDialog/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1606227435581" />
-    <state x="442" y="208" key="Vcs.Push.Dialog.v2" timestamp="1606389203767">
+    <state x="442" y="208" key="Vcs.Push.Dialog.v2" timestamp="1606392560620">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="552" y="272" key="Vcs.Push.Dialog.v2/-1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1606228231952" />
-    <state x="442" y="208" key="Vcs.Push.Dialog.v2/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1606389203767" />
+    <state x="442" y="208" key="Vcs.Push.Dialog.v2/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1606392560620" />
     <state x="586" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1606229852938">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
