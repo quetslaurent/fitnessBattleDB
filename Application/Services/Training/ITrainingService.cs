@@ -7,8 +7,10 @@ namespace Application.Services.Training
     {
         IEnumerable<OutputDtoGetTraining> GetByTrainingDateId(int dateId);
         
-        OutputDtoAddTraining Create(InputDtoAddTraining inputDtoAddTraining);
+        IEnumerable<OutputDtoGetTraining> GetByTrainingUserId(int userId);
         
+        OutputDtoAddTraining Create(InputDtoAddTraining inputDtoAddTraining);
+
         bool DeleteTraining(int trainingId);
     }
 }

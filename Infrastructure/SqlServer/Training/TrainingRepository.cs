@@ -31,28 +31,6 @@ namespace Infrastructure.SqlServer.Training
 
             return trainings;
         }
-
-        public ITraining GetById(int id)
-        {
-            using (var connection = Database.GetConnection())
-            {
-                connection.Open();
-                var cmd = connection.CreateCommand();
-
-                cmd.CommandText = TrainingSqlServer.ReqGetById;
-                cmd.Parameters.AddWithValue($"@{TrainingSqlServer.ColId}", id);
-
-                var reader = cmd.ExecuteReader(CommandBehavior.CloseConnection);
-
-                if (reader.Read())
-                {
-                    return _factory.CreateFromReader(reader);
-                }
-            }
-
-            return null;
-        }
-        
         
         public ITraining Create(ITraining training)
         {
@@ -97,7 +75,7 @@ namespace Infrastructure.SqlServer.Training
                 connection.Open();
                 var cmd = connection.CreateCommand();
 
-                cmd.CommandText = TrainingSqlServer.ReqGetById;
+                cmd.CommandText = TrainingSqlServer.ReqGetByDateId;
                 cmd.Parameters.AddWithValue($"@{TrainingSqlServer.ColIdTrainingDate}", dateId);
 
                 var reader = cmd.ExecuteReader(CommandBehavior.CloseConnection);
@@ -110,6 +88,48 @@ namespace Infrastructure.SqlServer.Training
            
         }
 
-      
+        public IEnumerable<ITraining> GetByUserId(int userId)
+        {
+            IList<ITraining> trainings = new List<ITraining>();
+
+            using (var connection = Database.GetConnection())
+            {
+                connection.Open();
+                var cmd = connection.CreateCommand();
+
+                cmd.CommandText = TrainingSqlServer.ReqGetByUserId;
+                cmd.Parameters.AddWithValue($"@{TrainingSqlServer.ColIdUser}", userId);
+
+                var reader = cmd.ExecuteReader(CommandBehavior.CloseConnection);
+
+                while (reader.Read())
+                    trainings.Add(_factory.CreateFromReader(reader));
+            }
+
+            return trainings;
+           
+        }
+        
+        public int GetPointsByUser(int userId)
+        {
+            IList<ITraining> trainings = new List<ITraining>();
+
+            using (var connection = Database.GetConnection())
+            {
+                connection.Open();
+                var cmd = connection.CreateCommand();
+
+                cmd.CommandText = TrainingSqlServer.ReqGetByUserId;
+                cmd.Parameters.AddWithValue($"@{TrainingSqlServer.ColIdUser}", userId);
+
+                var reader = cmd.ExecuteReader(CommandBehavior.CloseConnection);
+
+                while (reader.Read())
+                    trainings.Add(_factory.CreateFromReader(reader));
+            }
+
+            return 0;
+           
+        }
     }
 }

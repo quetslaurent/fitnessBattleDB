@@ -41,7 +41,27 @@ namespace Application.Services.Training
                    Id = training.Id,
                    Repetitions = training.Repetitions,
                    ActivityName = training.Activity.Name,
-                   TrainingDateValue = training.TrainingDate.Date
+                   TrainingDateValue = training.TrainingDate.Date,
+                   Points = training.Points
+                   
+                });
+        }
+        
+        /*
+        * Récupérer la liste des training ayant un même user
+        */
+        
+        public IEnumerable<OutputDtoGetTraining> GetByTrainingUserId(int userId)
+        {
+            return _trainingRepository
+                .GetByUserId(userId)
+                .Select(training => new OutputDtoGetTraining
+                {
+                    Id = training.Id,
+                    Repetitions = training.Repetitions,
+                    ActivityName = training.Activity.Name,
+                    TrainingDateValue = training.TrainingDate.Date,
+                    Points = training.Points
                    
                 });
         }
@@ -55,7 +75,7 @@ namespace Application.Services.Training
             var activity = _activityRepository.GetById(inputDtoAddTraining.ActivityId);
             var trainingDate = _trainingDateRepository.GetById(inputDtoAddTraining.TrainingDateId);
             
-            var trainingFromDto = _trainingFactory.CreateTrainingFromValues(inputDtoAddTraining.Repetitions,user,activity,trainingDate);
+            var trainingFromDto = _trainingFactory.CreateTrainingFromValues(inputDtoAddTraining.Repetitions,user,activity,trainingDate,inputDtoAddTraining.Points);
             var trainingInDb = _trainingRepository.Create(trainingFromDto);
             
             return new OutputDtoAddTraining

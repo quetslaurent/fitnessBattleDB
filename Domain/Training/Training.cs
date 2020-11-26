@@ -11,6 +11,8 @@ namespace Domain.Training
         public int Id { get; set; }
         public IActivity Activity { get; set; }
         public ITrainingDate TrainingDate { get; set; }
+        
+        public double Points { get; set; }
 
         public Training()
         {

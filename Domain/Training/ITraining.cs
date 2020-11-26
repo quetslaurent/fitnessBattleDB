@@ -13,5 +13,7 @@ namespace Domain.Training
         double Repetitions { get; set; }
         
         ITrainingDate TrainingDate { get; set; }
+        
+        double Points { get; set; }
     }
 }

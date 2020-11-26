@@ -11,7 +11,7 @@ namespace Infrastructure.SqlServer.Activity
         public static readonly string TableName = "activity";
         public static readonly string ColId = "activityId";
         public static readonly string ColName = "name";
-        public static readonly string ColRepetitions = "repetitions";
+        public static readonly string ColRepetitions = "repetitionsNeeded";
         public static readonly string ColIdUnit = "aUnitId";
         public static readonly string ColIdCategory = "aCategoryId";
 

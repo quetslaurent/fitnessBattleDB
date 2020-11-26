@@ -42,7 +42,7 @@ CREATE TABLE activity
 (
     activityId     INT IDENTITY NOT NULL,
     name   VARCHAR(100) NOT NULL,
-    repetitions NUMERIC(7,2) NOT NULL,
+    repetitionsNeeded NUMERIC(7,2) NOT NULL,
     aUnitId     INT NOT NULL,
     aCategoryId     INT NOT NULL,
     PRIMARY KEY (activityId),
@@ -53,7 +53,7 @@ CREATE TABLE activity
 CREATE TABLE training
 (
     trainingId     INT IDENTITY NOT NULL,
-    repetitionsNeeded NUMERIC(7,2) NOT NULL,
+    repetitions NUMERIC(7,2) NOT NULL,
     tActivityId INT NOT NULL,
     tUserId INT NOT NULL,
     tTrainingDateId INT NOT NULL,

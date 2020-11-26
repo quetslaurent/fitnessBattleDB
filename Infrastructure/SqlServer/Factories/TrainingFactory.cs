@@ -46,7 +46,8 @@ namespace Infrastructure.SqlServer.Factories
                 {
                     Id = reader.GetInt32(reader.GetOrdinal(TrainingDateSqlServer.ColId)),
                     Date = reader.GetDateTime(reader.GetOrdinal(TrainingDateSqlServer.ColDate))
-                }
+                },
+                Points = Decimal.ToDouble(reader.GetDecimal(reader.GetOrdinal(TrainingSqlServer.ColPoints))),
             };
         }
     }

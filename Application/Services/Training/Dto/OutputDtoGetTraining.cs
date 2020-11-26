@@ -13,5 +13,7 @@ namespace Application.Services.Training.Dto
         public double Repetitions { get; set; }
         public string ActivityName { get; set; }
         public DateTime TrainingDateValue { get; set; }
+        
+        public double Points { get; set; }
     }
 }

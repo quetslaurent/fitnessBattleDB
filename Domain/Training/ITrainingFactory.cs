@@ -11,7 +11,7 @@ namespace Domain.Training
         DateTime Date { get; set; }
 
         ITraining CreateTrainingFromValues(double repetitions, IUser user, IActivity activity,
-            ITrainingDate trainingDate);
+            ITrainingDate trainingDate, double points);
 
 
     }

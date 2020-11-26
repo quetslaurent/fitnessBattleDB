@@ -16,10 +16,17 @@ namespace FitnessBattle.Controllers
         }
         
         [HttpGet]
-        [Route("{idTrainingDate:int}")]
+        [Route("date/{idTrainingDate:int}")]
         public ActionResult<OutputDtoGetTraining> GetTrainingsByTrainingDateId(int idTrainingDate)
         {
             return Ok(_trainingService.GetByTrainingDateId(idTrainingDate));
+        }
+        
+        [HttpGet]
+        [Route("user/{idUser:int}")]
+        public ActionResult<OutputDtoGetTraining> GetTrainingsByUserId(int idUser)
+        {
+            return Ok(_trainingService.GetByTrainingUserId(idUser));
         }
 
         [HttpPost]
