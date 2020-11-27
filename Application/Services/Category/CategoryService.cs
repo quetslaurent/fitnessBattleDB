@@ -12,12 +12,14 @@ namespace Application.Services.Category
     {
         //repository et factory
         private readonly ICategoryRepository _categoryRepository;
+        private readonly IActivityRepository _activityRepository;
         private readonly ICategoryFactory _categoryFactory = new CategoryFactory();
 
         //constructeur
-        public CategoryService(ICategoryRepository categoryRepository)
+        public CategoryService(ICategoryRepository categoryRepository,IActivityRepository activityRepository)
         {
             _categoryRepository = categoryRepository;
+            _activityRepository = activityRepository;
         }
 
         public IEnumerable<OutputDtoQueryCategory> Query()
@@ -57,6 +59,22 @@ namespace Application.Services.Category
                 Id = categoryInDb.Id,
                 Name = categoryInDb.Name
             };
+        }
+
+        public IEnumerable<OutputDtoQueryActivitiesByCategory> getActivitiesByCategory()
+        {
+            /*
+             * On récupère les categories pour les renvoyer
+             * en format DTO
+             */
+            return _categoryRepository
+                .Query()
+                .Select(category => new OutputDtoQueryActivitiesByCategory
+                {
+                    Id = category.Id,
+                    Name = category.Name,
+                    Activities = _activityRepository.GetByCategoryId(category.Id)
+                });
         }
     }
 }

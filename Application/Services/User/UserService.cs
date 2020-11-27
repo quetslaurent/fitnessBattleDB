@@ -35,8 +35,9 @@ namespace Application.Services.User
                     Name = user.Name,
                     Admin = user.Admin,
                     Email = user.Email,
-                    Password = user.Password
-                });
+                    Password = user.Password,
+                    Points = _userRepository.GetPointsById(user.Id)
+                }).OrderByDescending(user => user.Points);
         }
 
         public OutputDtoAddUser Create(InputDtoAddUser inputDtoAddUser)
@@ -79,7 +80,8 @@ namespace Application.Services.User
                 Name = userInDb.Name,
                 Admin = userInDb.Admin,
                 Email = userInDb.Email,
-                Password = userInDb.Password
+                Password = userInDb.Password,
+                Points = _userRepository.GetPointsById(userInDb.Id)
             };
         }
     }

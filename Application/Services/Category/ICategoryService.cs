@@ -8,5 +8,6 @@ namespace Application.Services.Category
     {
         IEnumerable<OutputDtoQueryCategory> Query();
         OutputDtoAddCategory Create(InputDtoAddCategory inputDtaAddCategory);
+        IEnumerable<OutputDtoQueryActivitiesByCategory> getActivitiesByCategory();
     }
 }

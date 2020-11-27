@@ -22,6 +22,14 @@ namespace FitnessBattle.Controllers
             return Ok(_categoryService.Query());
         }
 
+        [HttpGet]
+        [Route("activities")]
+
+        public ActionResult<OutputDtoQueryActivitiesByCategory> getActivitiesByCategory()
+        {
+            return Ok(_categoryService.getActivitiesByCategory());
+        }
+
         [HttpPost]
         public ActionResult<OutputDtoAddCategory> Post([FromBody] InputDtoAddCategory inputDtoAddCategory)
         {

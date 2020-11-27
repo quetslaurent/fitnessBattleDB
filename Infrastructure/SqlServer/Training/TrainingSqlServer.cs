@@ -45,7 +45,7 @@ namespace Infrastructure.SqlServer.Training
         ";
         
         public static readonly string ReqGetPointsByUserId = $@"
-            SELECT SUM({ColRepetitions}/activity.{ActivitySqlServer.ColRepetitions}) as '{ColPoints}' FROM {TableName} 
+            SELECT ISNULL(SUM({ColRepetitions}/activity.{ActivitySqlServer.ColRepetitions}),0) as '{ColPoints}' FROM {TableName} 
             INNER JOIN {ActivitySqlServer.TableName} activity on  activity.{ActivitySqlServer.ColId}  = {ColIdActivity}
             WHERE {ColIdUser} = @{ColIdUser}
         ";
