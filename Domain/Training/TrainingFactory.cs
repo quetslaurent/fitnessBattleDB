@@ -18,15 +18,14 @@ namespace Domain.Training
         }
 
         public ITraining CreateTrainingFromValues(double repetitions, IUser user, IActivity activity,
-            ITrainingDate trainingDate, double points)
+            ITrainingDate trainingDate)
         {
             return new Training
             {
                 Repetitions = repetitions,
                 User = user,
                 Activity = activity,
-                TrainingDate = trainingDate,
-                Points = points
+                TrainingDate = trainingDate
             };
         }
         

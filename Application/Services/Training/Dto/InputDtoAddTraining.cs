@@ -12,8 +12,6 @@
         public int UserId { get; set; }
         public int ActivityId { get; set; }
         public int TrainingDateId { get; set; }
-        
-        public double Points { get; set; }
-        
+
     }
 }

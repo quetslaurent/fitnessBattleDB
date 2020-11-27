@@ -75,7 +75,7 @@ namespace Application.Services.Training
             var activity = _activityRepository.GetById(inputDtoAddTraining.ActivityId);
             var trainingDate = _trainingDateRepository.GetById(inputDtoAddTraining.TrainingDateId);
             
-            var trainingFromDto = _trainingFactory.CreateTrainingFromValues(inputDtoAddTraining.Repetitions,user,activity,trainingDate,inputDtoAddTraining.Points);
+            var trainingFromDto = _trainingFactory.CreateTrainingFromValues(inputDtoAddTraining.Repetitions,user,activity,trainingDate);
             var trainingInDb = _trainingRepository.Create(trainingFromDto);
             
             return new OutputDtoAddTraining
