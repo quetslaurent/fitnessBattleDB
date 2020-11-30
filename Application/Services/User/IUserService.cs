@@ -9,5 +9,6 @@ namespace Application.Services.User
         OutputDtoAddUser Create(InputDtoAddUser inputDtaAddUser);
         double GetUserPointsById(int id);
         OutputDtoQueryUser GetUserById(int id);
+        string HashPassword(string password);
     }
 }

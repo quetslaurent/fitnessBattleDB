@@ -84,5 +84,10 @@ namespace Application.Services.User
                 Points = _userRepository.GetPointsById(userInDb.Id)
             };
         }
+
+        public string HashPassword(string password)
+        {
+            return _userRepository.HashPassword(password);
+        }
     }
 }

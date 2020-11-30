@@ -10,11 +10,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2d50f586-c447-40ab-96ed-d6d4355f20d2" name="Default Changelist" comment="tri ranking + points">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.FitnessBattle/.idea/shelf/Uncommitted_changes_before_Update_at_18-11-20_15_25__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FitnessBattle/.idea/shelf/Uncommitted_changes_before_Update_at_18-11-20_15_25__Default_Changelist_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.FitnessBattle/.idea/shelf/Uncommitted_changes_before_Update_at_18-11-20_15_51__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FitnessBattle/.idea/shelf/Uncommitted_changes_before_Update_at_18-11-20_15_51__Default_Changelist_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.FitnessBattle/.idea/shelf/Uncommitted_changes_before_Update_at_20-11-20_14_59__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FitnessBattle/.idea/shelf/Uncommitted_changes_before_Update_at_20-11-20_14_59__Default_Changelist_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.FitnessBattle/.idea/shelf/Uncommitted_changes_before_Update_at_21-11-20_10_42__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FitnessBattle/.idea/shelf/Uncommitted_changes_before_Update_at_21-11-20_10_42__Default_Changelist_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.FitnessBattle/.idea/shelf/Uncommitted_changes_before_Update_at_21-11-20_13_06__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FitnessBattle/.idea/shelf/Uncommitted_changes_before_Update_at_21-11-20_13_06__Default_Changelist_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.FitnessBattle/.idea/shelf/Uncommitted_changes_before_Update_at_24-11-20_14_39__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FitnessBattle/.idea/shelf/Uncommitted_changes_before_Update_at_24-11-20_14_39__Default_Changelist_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.FitnessBattle/.idea/shelf/Uncommitted_changes_before_Update_at_26-11-20_15_38__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FitnessBattle/.idea/shelf/Uncommitted_changes_before_Update_at_26-11-20_15_38__Default_Changelist_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.FitnessBattle/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FitnessBattle/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Application/Services/Training/Dto/InputDtoAddTraining.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Application/Services/Training/Dto/InputDtoAddTraining.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Application/Services/Training/TrainingService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Application/Services/Training/TrainingService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Domain/Training/ITrainingFactory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Domain/Training/ITrainingFactory.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Domain/Training/TrainingFactory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Domain/Training/TrainingFactory.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Api/Api.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Api/Api.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Api/Controllers/ActivityController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Api/Controllers/ActivityController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Api/Controllers/UserController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Api/Controllers/UserController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Api/Startup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Api/Startup.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Api/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/Api/appsettings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Application/Repositories/IUserRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Application/Repositories/IUserRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Application/Services/User/IUserService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Application/Services/User/IUserService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Application/Services/User/UserService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Application/Services/User/UserService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Infrastructure/SqlServer/Shared/Database.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Infrastructure/SqlServer/Shared/Database.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,10 +42,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Application/Services/Unit/Dto/OutputDtoAddUnit.cs" />
-        <option value="$PROJECT_DIR$/Domain/Training/Training.cs" />
-        <option value="$PROJECT_DIR$/Domain/Training/ITraining.cs" />
-        <option value="$PROJECT_DIR$/Application/Services/Training/Dto/OutputDtoAddTraining.cs" />
         <option value="$PROJECT_DIR$/Application/Services/Training/Dto/OutputDtoQueryTraining.cs" />
         <option value="$PROJECT_DIR$/Domain/Training/ITrainingFactory" />
         <option value="$PROJECT_DIR$/Infrastructure/SqlServer/Factories/UserFactory.cs" />
@@ -41,7 +49,6 @@
         <option value="$PROJECT_DIR$/Application/Services/Unit/Dto/OutputDtoQueryUnit.cs" />
         <option value="$PROJECT_DIR$/Application/Services/Unit/IUnitService.cs" />
         <option value="$PROJECT_DIR$/Api/Controllers/UnitController.cs" />
-        <option value="$PROJECT_DIR$/Api/Controllers/UserController.cs" />
         <option value="$PROJECT_DIR$/Application/Services/Training/Dto/OutputDtoGetTraining.cs" />
         <option value="$PROJECT_DIR$/Api/Controllers/TrainingDateController.cs" />
         <option value="$PROJECT_DIR$/Application/Services/TrainingDate/TrainingDateService.cs" />
@@ -51,7 +58,6 @@
         <option value="$PROJECT_DIR$/Application/Services/Activity/IActivityService.cs" />
         <option value="$PROJECT_DIR$/Api/Properties/launchSettings.json" />
         <option value="$PROJECT_DIR$/Api/Controllers/TrainingController.cs" />
-        <option value="$PROJECT_DIR$/Api/Controllers/ActivityController.cs" />
         <option value="$PROJECT_DIR$/Application/Services/Activity/Dto/OutputDtoQueryActivity.cs" />
         <option value="$PROJECT_DIR$/Application/Services/Activity/ActivityService.cs" />
         <option value="$PROJECT_DIR$/Api/Program.cs" />
@@ -68,7 +74,6 @@
         <option value="$PROJECT_DIR$/Infrastructure/SqlServer/Activity/ActivityRepository.cs" />
         <option value="$PROJECT_DIR$/Infrastructure/SqlServer/Activity/ActivitySqlServer.cs" />
         <option value="$PROJECT_DIR$/Infrastructure/SqlServer/init-data.sql" />
-        <option value="$PROJECT_DIR$/Infrastructure/SqlServer/Shared/Database.cs" />
         <option value="$PROJECT_DIR$/Application/Services/User/Dto/OutputDtoQueryUser.cs" />
         <option value="$PROJECT_DIR$/Infrastructure/SqlServer/User/UserRepository.cs" />
         <option value="$PROJECT_DIR$/Infrastructure/SqlServer/Training/TrainingSqlServer.cs" />
@@ -76,11 +81,18 @@
         <option value="$PROJECT_DIR$/Application/Services/Category/ICategoryService.cs" />
         <option value="$PROJECT_DIR$/Application/Services/Category/Dto/OutputDtoQueryActivitiesByCategory.cs" />
         <option value="$PROJECT_DIR$/Application/Services/Category/CategoryService.cs" />
-        <option value="$PROJECT_DIR$/Application/Services/User/UserService.cs" />
         <option value="$PROJECT_DIR$/Application/Services/Training/TrainingService.cs" />
         <option value="$PROJECT_DIR$/Domain/Training/ITrainingFactory.cs" />
         <option value="$PROJECT_DIR$/Application/Services/Training/Dto/InputDtoAddTraining.cs" />
         <option value="$PROJECT_DIR$/Domain/Training/TrainingFactory.cs" />
+        <option value="$PROJECT_DIR$/Infrastructure/SqlServer/Shared/Database.cs" />
+        <option value="$PROJECT_DIR$/Api/appsettings.json" />
+        <option value="$PROJECT_DIR$/Api/Controllers/ActivityController.cs" />
+        <option value="$PROJECT_DIR$/Application/Services/User/IUserService.cs" />
+        <option value="$PROJECT_DIR$/Application/Repositories/IUserRepository.cs" />
+        <option value="$PROJECT_DIR$/Application/Services/User/UserService.cs" />
+        <option value="$PROJECT_DIR$/Api/Controllers/UserController.cs" />
+        <option value="$PROJECT_DIR$/Api/Startup.cs" />
       </list>
     </option>
   </component>
@@ -341,29 +353,29 @@
     <option name="LAST_COMMIT_MESSAGE" value="tri ranking + points" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1877" height="99" key="GridCell.Tab.0.bottom" timestamp="1606486887220">
-      <screen x="0" y="0" width="1920" height="1080" />
+    <state width="1493" height="44" key="GridCell.Tab.0.bottom" timestamp="1606749677917">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1877" height="99" key="GridCell.Tab.0.bottom/-1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1606486887220" />
-    <state width="1493" height="83" key="GridCell.Tab.0.bottom/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1606227995782" />
+    <state width="1493" height="44" key="GridCell.Tab.0.bottom/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1606749677917" />
     <state width="1877" height="110" key="GridCell.Tab.0.bottom/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1606147073516" />
-    <state width="1877" height="99" key="GridCell.Tab.0.center" timestamp="1606486887220">
-      <screen x="0" y="0" width="1920" height="1080" />
+    <state width="1493" height="44" key="GridCell.Tab.0.center" timestamp="1606749677917">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1877" height="99" key="GridCell.Tab.0.center/-1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1606486887220" />
-    <state width="1493" height="83" key="GridCell.Tab.0.center/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1606227995782" />
+    <state width="1493" height="44" key="GridCell.Tab.0.center/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1606749677917" />
     <state width="1877" height="110" key="GridCell.Tab.0.center/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1606147073516" />
-    <state width="1877" height="99" key="GridCell.Tab.0.left" timestamp="1606486887220">
-      <screen x="0" y="0" width="1920" height="1080" />
+    <state width="1493" height="44" key="GridCell.Tab.0.left" timestamp="1606749677917">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1877" height="99" key="GridCell.Tab.0.left/-1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1606486887220" />
-    <state width="1493" height="83" key="GridCell.Tab.0.left/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1606227995782" />
+    <state width="1493" height="44" key="GridCell.Tab.0.left/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1606749677917" />
     <state width="1877" height="110" key="GridCell.Tab.0.left/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1606147073515" />
-    <state width="1877" height="99" key="GridCell.Tab.0.right" timestamp="1606486887220">
-      <screen x="0" y="0" width="1920" height="1080" />
+    <state width="1493" height="44" key="GridCell.Tab.0.right" timestamp="1606749677917">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1877" height="99" key="GridCell.Tab.0.right/-1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1606486887220" />
-    <state width="1493" height="83" key="GridCell.Tab.0.right/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1606227995782" />
+    <state width="1493" height="44" key="GridCell.Tab.0.right/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1606749677917" />
     <state width="1877" height="110" key="GridCell.Tab.0.right/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1606147073516" />
     <state width="1493" height="288" key="GridCell.Tab.1.bottom" timestamp="1606150185227">
       <screen x="0" y="0" width="1536" height="824" />

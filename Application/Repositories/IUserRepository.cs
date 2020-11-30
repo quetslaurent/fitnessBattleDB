@@ -10,5 +10,7 @@ namespace Application.Repositories
         IUser Create(IUser user);
 
         double GetPointsById(int id);
+
+        string HashPassword(string password);
     }
 }

@@ -1,3 +1,4 @@
+using System.Text;
 using Application.Repositories;
 using Application.Services.Activity;
 using Application.Services.Category;
@@ -11,11 +12,13 @@ using Infrastructure.SqlServer.Training;
 using Infrastructure.SqlServer.TrainingDate;
 using Infrastructure.SqlServer.Unit;
 using Infrastructure.SqlServer.User;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.IdentityModel.Tokens;
 
 namespace FitnessBattle
 {
@@ -42,6 +45,32 @@ namespace FitnessBattle
                     });
             });
 
+            //pwt authentification
+
+            var key = Encoding.UTF8.GetBytes(Configuration["Jwt:Secret"]);
+
+            services.AddAuthentication(x =>
+                {
+                    x.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+                    x.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+                })
+                .AddJwtBearer(x =>
+                {
+                    //on règle les options pour JwtBearer
+                    x.RequireHttpsMetadata = false;
+                    x.SaveToken = true;
+                    x.TokenValidationParameters = new TokenValidationParameters
+                    {
+                        ValidateIssuerSigningKey = true,
+                        IssuerSigningKey = new SymmetricSecurityKey(key),
+                        ValidIssuers = new string[] { Configuration["Jwt:Issuer"] },
+                        ValidAudiences = new string[] { Configuration["Jwt:Issuer"] },
+                        ValidateIssuer = true,
+                        ValidateAudience = true,
+                        ValidateLifetime = true
+                    };
+                });
+            
             //services
             services.AddSingleton<IActivityService, ActivityService>();
             services.AddSingleton<ICategoryService, CategoryService>();
@@ -76,6 +105,7 @@ namespace FitnessBattle
 
             app.UseRouting();
 
+            app.UseAuthentication();
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints => { endpoints.MapControllers(); });

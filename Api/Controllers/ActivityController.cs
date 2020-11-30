@@ -1,11 +1,14 @@
 ﻿using Application.Services.Activity;
 using Application.Services.Activity.Dto;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace FitnessBattle.Controllers
 {
     [ApiController]
     [Route("api/activity")]
+    
+    
     public class ActivityController : ControllerBase
     {
         private readonly IActivityService _activityService;
@@ -17,6 +20,7 @@ namespace FitnessBattle.Controllers
 
         [HttpGet]
         [Route("{id:int}")]
+        [Authorize]
         public ActionResult<OutputDtoQueryActivity> GetByCategoryId(int id)
         {
             return Ok(_activityService.GetByCategoryId(id));
