@@ -26,7 +26,7 @@ namespace FitnessBattle.Controllers
         }
         
         [HttpPost]
-        public ActionResult Login([FromBody] InputDtoAuthUser user)
+        public ActionResult<OutputDtoAuthUser> Login([FromBody] InputDtoAuthUser user)
         {
             //on regarde si l'user qu'on envoie correspond à un utilisateur : admin/password
             IEnumerable<OutputDtoQueryUser> users = _userService.Query();
@@ -38,7 +38,12 @@ namespace FitnessBattle.Controllers
                 if (user.Name.Equals(userInDb.Name) && password.Equals(userInDb.Password))
                 {
                     var token = GenerateJwtToken(userInDb);
-                    return Ok(token);
+                    return Ok(
+                    new OutputDtoAuthUser
+                    {
+                        Name = userInDb.Name,
+                        Token = token
+                    });
                 }
             }
             
