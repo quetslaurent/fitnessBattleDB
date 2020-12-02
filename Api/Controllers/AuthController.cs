@@ -5,6 +5,7 @@ using System.Security.Claims;
 using System.Text;
 using Application.Services.User;
 using Application.Services.User.Dto;
+using Domain.User;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
@@ -25,7 +26,7 @@ namespace FitnessBattle.Controllers
         }
         
         [HttpPost]
-        public ActionResult<String> Login([FromBody] InputDtoAddUser user)
+        public ActionResult Login([FromBody] InputDtoAuthUser user)
         {
             //on regarde si l'user qu'on envoie correspond à un utilisateur : admin/password
             IEnumerable<OutputDtoQueryUser> users = _userService.Query();
@@ -36,7 +37,7 @@ namespace FitnessBattle.Controllers
             {
                 if (user.Name.Equals(userInDb.Name) && password.Equals(userInDb.Password))
                 {
-                    var token = GenerateJwtToken(user);
+                    var token = GenerateJwtToken(userInDb);
                     return Ok(token);
                 }
             }
@@ -44,7 +45,7 @@ namespace FitnessBattle.Controllers
             return BadRequest("Invalid user");
         }
 
-        private string GenerateJwtToken(InputDtoAddUser user)
+        private string GenerateJwtToken(OutputDtoQueryUser user)
         {
             //on va chercher le "secret" qu'on a configurer dans appsettings.json
             var securityKey = Encoding.UTF8.GetBytes(_configuration["Jwt:Secret"]);

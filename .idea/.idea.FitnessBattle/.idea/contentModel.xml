@@ -100,6 +100,7 @@
           <e p="User" t="Include">
             <e p="Dto" t="Include">
               <e p="InputDtoAddUser.cs" t="Include" />
+              <e p="InputDtoAuthUser.cs" t="Include" />
               <e p="OutputDtoAddUser.cs" t="Include" />
               <e p="OutputDtoQueryUser.cs" t="Include" />
             </e>
