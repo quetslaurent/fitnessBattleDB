@@ -25,7 +25,7 @@ namespace FitnessBattle.Controllers
         }
         
         [HttpPost]
-        public ActionResult Login([FromBody] InputDtoAddUser user)
+        public ActionResult<String> Login([FromBody] InputDtoAddUser user)
         {
             //on regarde si l'user qu'on envoie correspond à un utilisateur : admin/password
             IEnumerable<OutputDtoQueryUser> users = _userService.Query();
