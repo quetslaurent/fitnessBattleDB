@@ -41,6 +41,7 @@ namespace FitnessBattle.Controllers
                     return Ok(
                     new OutputDtoAuthUser
                     {
+                        Id = userInDb.Id,
                         Name = userInDb.Name,
                         Token = token
                     });
