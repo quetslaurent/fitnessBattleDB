@@ -61,7 +61,42 @@ namespace Infrastructure.SqlServer.User
         {
             return ComputeHash(password, new SHA256CryptoServiceProvider()).Replace("-", String.Empty);
         }
-        
+
+        public bool Update(int id, IUser user)
+        {
+            using (var connection = Database.GetConnection())
+            {
+                connection.Open();
+                var cmd = connection.CreateCommand();
+
+                cmd.CommandText = UserSqlServer.ReqPut;
+
+                cmd.Parameters.AddWithValue($"@{UserSqlServer.ColId}", id);
+                cmd.Parameters.AddWithValue($"@{UserSqlServer.ColName}", user.Name);
+                cmd.Parameters.AddWithValue($"@{UserSqlServer.ColEmail}", user.Email);
+                cmd.Parameters.AddWithValue($"@{UserSqlServer.ColPassword}", user.Password);
+                cmd.Parameters.AddWithValue($"@{UserSqlServer.ColAdmin}", user.Admin);
+
+
+                return cmd.ExecuteNonQuery() > 0;
+            }
+        }
+
+        public bool Delete(int id)
+        {
+            using (var connection = Database.GetConnection())
+            {
+                connection.Open();
+                var cmd = connection.CreateCommand();
+
+                cmd.CommandText = UserSqlServer.ReqDeleteById;
+
+                cmd.Parameters.AddWithValue($"@{UserSqlServer.ColId}", id);
+
+                return cmd.ExecuteNonQuery() > 0;
+            }
+        }
+
         public string ComputeHash(string input, HashAlgorithm algorithm)
         {
             Byte[] inputBytes = Encoding.UTF8.GetBytes(input);

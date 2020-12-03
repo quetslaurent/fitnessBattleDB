@@ -12,5 +12,7 @@ namespace Application.Repositories
         double GetPointsById(int id);
 
         string HashPassword(string password);
+        bool Update(int id, IUser user);
+        bool Delete(int id);
     }
 }

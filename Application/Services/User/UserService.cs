@@ -89,5 +89,21 @@ namespace Application.Services.User
         {
             return _userRepository.HashPassword(password);
         }
+
+        public bool Update(int id, InputDtoUpdateUser inputDtoUpdateUser)
+        {
+            var userFromDto = _userFactory.CreateUserFromValues(
+                inputDtoUpdateUser.Name,
+                inputDtoUpdateUser.Email,
+                inputDtoUpdateUser.Password,
+                inputDtoUpdateUser.Admin
+                );
+            return _userRepository.Update(id,userFromDto);
+        }
+
+        public bool DeleteUser(int id)
+        {
+            return _userRepository.Delete(id);
+        }
     }
 }

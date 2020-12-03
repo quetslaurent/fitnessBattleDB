@@ -41,5 +41,29 @@ namespace FitnessBattle.Controllers
         {
             return Ok(_userService.Create(inputDtoAddUser));
         }
+        
+        [HttpPut]
+        [Route("{id:int}")]
+        public ActionResult Update(int id, InputDtoUpdateUser inputDtoUpdateUser)
+        {
+            if(_userService.Update(id,inputDtoUpdateUser))
+            {
+                return Ok();
+            }
+
+            return NotFound();
+        }
+        
+        [HttpDelete]
+        [Route("{id:int}")]
+        public ActionResult Delete(int id)
+        {
+            if (_userService.DeleteUser(id))
+            {
+                return Ok();
+            }
+
+            return NotFound();
+        }
     }
 }

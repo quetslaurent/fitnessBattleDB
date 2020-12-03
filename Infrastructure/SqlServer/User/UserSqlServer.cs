@@ -23,8 +23,12 @@
             {ColName} = @{ColName},
             {ColPassword} = @{ColPassword},
             {ColEmail} = @{ColEmail},
-            {ColAdmin} = @{ColAdmin},
+            {ColAdmin} = @{ColAdmin}
             WHERE {ColId} = @{ColId}
+        ";
+
+        public static readonly string ReqDeleteById = $@"
+            DELETE FROM {TableName} WHERE {ColId} = @{ColId} 
         ";
     }
 }

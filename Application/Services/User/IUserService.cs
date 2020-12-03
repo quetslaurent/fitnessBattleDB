@@ -10,5 +10,7 @@ namespace Application.Services.User
         double GetUserPointsById(int id);
         OutputDtoQueryUser GetUserById(int id);
         string HashPassword(string password);
+        bool Update(int id, InputDtoUpdateUser inputDtoUpdateUser);
+        bool DeleteUser(int id);
     }
 }
