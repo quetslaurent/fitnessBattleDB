@@ -33,6 +33,13 @@ namespace FitnessBattle.Controllers
         {
             return Ok(_trainingService.GetByTrainingUserId(_tokenManager.GetIdFromToken(token)));
         }
+        
+        [HttpGet]
+        [Route("user/{id:int}")]
+        public ActionResult<OutputDtoGetTraining> GetTrainingsByUserId(int id)
+        {
+            return Ok(_trainingService.GetByTrainingUserId(id));
+        }
 
         [HttpPost]
         public ActionResult<OutputDtoAddTraining> Post([FromBody] InputDtoAddTraining inputDtoAddTraining)

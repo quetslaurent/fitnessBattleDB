@@ -9,12 +9,11 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2d50f586-c447-40ab-96ed-d6d4355f20d2" name="Default Changelist" comment="tokenController">
-      <change afterPath="$PROJECT_DIR$/Application/Services/TokenManager/Dto/OutputDtoTokenUser.cs" afterDir="false" />
+    <list default="true" id="2d50f586-c447-40ab-96ed-d6d4355f20d2" name="Default Changelist" comment="tokenManager get infos depuis le token modif boolean pour getRoleFromToken">
+      <change afterPath="$PROJECT_DIR$/Api/Controllers/TokenController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.FitnessBattle/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FitnessBattle/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.FitnessBattle/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FitnessBattle/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Api/Controllers/TokenController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Api/Controllers/TokenController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Application/Services/TokenManager/ITokenManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Application/Services/TokenManager/ITokenManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Application/Services/TokenManager/TokenManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Application/Services/TokenManager/TokenManager.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,6 +29,7 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
+        <option value="$PROJECT_DIR$/Application/Services/Activity/Dto/InputDtoUpdateActivity.cs" />
         <option value="$PROJECT_DIR$/Application/Services/Activity/IActivityService.cs" />
         <option value="$PROJECT_DIR$/Api/Properties/launchSettings.json" />
         <option value="$PROJECT_DIR$/Application/Services/Activity/Dto/OutputDtoQueryActivity.cs" />
@@ -77,10 +77,9 @@
         <option value="$PROJECT_DIR$/Api/appsettings.json" />
         <option value="$PROJECT_DIR$/Api/Controllers/UserController.cs" />
         <option value="$PROJECT_DIR$/Application/Services/User/UserService.cs" />
-        <option value="$PROJECT_DIR$/Application/Services/TokenManager/Dto/OutputDtoTokenUser.cs" />
+        <option value="$PROJECT_DIR$/Application/Services/TokenManager/TokenManager.cs" />
         <option value="$PROJECT_DIR$/Api/Controllers/TokenController.cs" />
         <option value="$PROJECT_DIR$/Application/Services/TokenManager/ITokenManager.cs" />
-        <option value="$PROJECT_DIR$/Application/Services/TokenManager/TokenManager.cs" />
       </list>
     </option>
   </component>
@@ -165,7 +164,7 @@
       <workItem from="1607170617494" duration="429000" />
       <workItem from="1607171064573" duration="85000" />
       <workItem from="1607173343808" duration="842000" />
-      <workItem from="1607174210195" duration="5757000" />
+      <workItem from="1607174210195" duration="3807000" />
     </task>
     <task id="LOCAL-00001" summary="base">
       <created>1605628139369</created>
@@ -356,14 +355,7 @@
       <option name="project" value="LOCAL" />
       <updated>1607177296172</updated>
     </task>
-    <task id="LOCAL-00028" summary="tokenController">
-      <created>1607178301727</created>
-      <option name="number" value="00028" />
-      <option name="presentableId" value="LOCAL-00028" />
-      <option name="project" value="LOCAL" />
-      <updated>1607178301727</updated>
-    </task>
-    <option name="localTasksCounter" value="29" />
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -385,6 +377,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+    <MESSAGE value="Domain fini" />
     <MESSAGE value="Domain vraiment fini + debut repository" />
     <MESSAGE value="infrastructure" />
     <MESSAGE value="reste api et fin des services" />
@@ -409,32 +402,31 @@
     <MESSAGE value="modif tokenmanager plus dans api car besoin dans service" />
     <MESSAGE value="tokenManager get infos depuis le token" />
     <MESSAGE value="tokenManager get infos depuis le token modif boolean pour getRoleFromToken" />
-    <MESSAGE value="tokenController" />
-    <option name="LAST_COMMIT_MESSAGE" value="tokenController" />
+    <option name="LAST_COMMIT_MESSAGE" value="tokenManager get infos depuis le token modif boolean pour getRoleFromToken" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1877" height="150" key="GridCell.Tab.0.bottom" timestamp="1607180155486">
+    <state width="1877" height="150" key="GridCell.Tab.0.bottom" timestamp="1607177309443">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="150" key="GridCell.Tab.0.bottom/-1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1607180155486" />
+    <state width="1877" height="150" key="GridCell.Tab.0.bottom/-1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1607177309443" />
     <state width="1493" height="83" key="GridCell.Tab.0.bottom/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1606227995782" />
     <state width="1877" height="110" key="GridCell.Tab.0.bottom/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1606147073516" />
-    <state width="1877" height="150" key="GridCell.Tab.0.center" timestamp="1607180155486">
+    <state width="1877" height="150" key="GridCell.Tab.0.center" timestamp="1607177309443">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="150" key="GridCell.Tab.0.center/-1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1607180155486" />
+    <state width="1877" height="150" key="GridCell.Tab.0.center/-1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1607177309443" />
     <state width="1493" height="83" key="GridCell.Tab.0.center/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1606227995782" />
     <state width="1877" height="110" key="GridCell.Tab.0.center/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1606147073516" />
-    <state width="1877" height="150" key="GridCell.Tab.0.left" timestamp="1607180155486">
+    <state width="1877" height="150" key="GridCell.Tab.0.left" timestamp="1607177309443">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="150" key="GridCell.Tab.0.left/-1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1607180155486" />
+    <state width="1877" height="150" key="GridCell.Tab.0.left/-1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1607177309443" />
     <state width="1493" height="83" key="GridCell.Tab.0.left/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1606227995782" />
     <state width="1877" height="110" key="GridCell.Tab.0.left/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1606147073515" />
-    <state width="1877" height="150" key="GridCell.Tab.0.right" timestamp="1607180155486">
+    <state width="1877" height="150" key="GridCell.Tab.0.right" timestamp="1607177309443">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="150" key="GridCell.Tab.0.right/-1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1607180155486" />
+    <state width="1877" height="150" key="GridCell.Tab.0.right/-1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1607177309443" />
     <state width="1493" height="83" key="GridCell.Tab.0.right/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1606227995782" />
     <state width="1877" height="110" key="GridCell.Tab.0.right/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1606147073516" />
     <state width="1493" height="288" key="GridCell.Tab.1.bottom" timestamp="1606150185227">
@@ -519,10 +511,10 @@
     </state>
     <state x="92" y="92" width="1736" height="896" key="VCS.FileHistoryDialog/-1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1605793154448" />
     <state x="74" y="70" width="1389" height="684" key="VCS.FileHistoryDialog/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1606227435581" />
-    <state x="552" y="272" key="Vcs.Push.Dialog.v2" timestamp="1607178304346">
+    <state x="552" y="272" key="Vcs.Push.Dialog.v2" timestamp="1607177298258">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="552" y="272" key="Vcs.Push.Dialog.v2/-1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1607178304346" />
+    <state x="552" y="272" key="Vcs.Push.Dialog.v2/-1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1607177298258" />
     <state x="442" y="208" key="Vcs.Push.Dialog.v2/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1606227648925" />
     <state x="733" y="427" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1606401533768">
       <screen x="0" y="0" width="1920" height="1080" />

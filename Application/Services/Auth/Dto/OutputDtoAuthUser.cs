@@ -1,4 +1,4 @@
-﻿namespace Application.Services.User.Dto
+﻿namespace Application.Services.Auth.Dto
 {
     public class OutputDtoAuthUser
     {

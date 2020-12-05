@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using Application.Services.Auth.Dto;
 using Application.Services.User;
 using Application.Services.User.Dto;
 using FitnessBattle.TokenManager;

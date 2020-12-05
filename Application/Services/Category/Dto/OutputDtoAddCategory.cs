@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace Application.Services.TrainingDate.Dto
+﻿namespace Application.Services.Category.Dto
 {
     public class OutputDtoAddCategory
     {

@@ -1,5 +1,6 @@
 ﻿
 using Application.Services.Auth;
+using Application.Services.Auth.Dto;
 using Application.Services.User.Dto;
 using Microsoft.AspNetCore.Mvc;
 

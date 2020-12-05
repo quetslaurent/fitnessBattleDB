@@ -1,6 +1,6 @@
 
 
-namespace Application.Services.TrainingDate.Dto
+namespace Application.Services.Unit.Dto
 {
     public class OutputDtoAddUnit
     {
