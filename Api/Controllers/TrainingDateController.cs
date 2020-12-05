@@ -2,21 +2,21 @@
 using Application.Services.Training.Dto;
 using Application.Services.TrainingDate;
 using Application.Services.TrainingDate.Dto;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace FitnessBattle.Controllers
 {
     [ApiController]
     [Route("api/training-dates")]
+    [Authorize]
     public class TrainingDateController : ControllerBase
     {
         private readonly ITrainingDateService _trainingDateService;
-        private readonly ITrainingService _trainingService;
 
-        public TrainingDateController(ITrainingDateService trainingDateService, ITrainingService trainingService)
+        public TrainingDateController(ITrainingDateService trainingDateService )
         {
             _trainingDateService = trainingDateService;
-            _trainingService = trainingService;
         }
 
         [HttpGet]

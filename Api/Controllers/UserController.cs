@@ -1,6 +1,7 @@
-﻿
-using Application.Services.User;
+﻿using Application.Services.User;
 using Application.Services.User.Dto;
+using FitnessBattle.TokenManager;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace FitnessBattle.Controllers
@@ -10,10 +11,12 @@ namespace FitnessBattle.Controllers
     public class UserController : ControllerBase
     {
         private readonly IUserService _userService;
+        private readonly ITokenManager _tokenManager;
 
-        public UserController(IUserService userService)
+        public UserController(IUserService userService, ITokenManager tokenManager)
         {
             _userService = userService;
+            _tokenManager = tokenManager;
         }
 
         [HttpGet]
@@ -23,17 +26,19 @@ namespace FitnessBattle.Controllers
         }
         
         [HttpGet]
-        [Route("{id:int}")]
-        public ActionResult<OutputDtoQueryUser> GetUserById(int id)
+        [Route("{token}")]
+        [Authorize]
+        public ActionResult<OutputDtoQueryUser> GetUserById(string token)
         {
-            return Ok(_userService.GetUserById(id));
+            return Ok(_userService.GetUserById(_tokenManager.GetIdFromToken(token)));
         }
         
         [HttpGet]
-        [Route("points/{id:int}")]
-        public ActionResult<double> GetUserPointsById(int id)
+        [Route("points/{token}")]
+        [Authorize]
+        public ActionResult<double> GetUserPointsById(string token)
         {
-            return Ok(_userService.GetUserPointsById(id));
+            return Ok(_userService.GetUserPointsById(_tokenManager.GetIdFromToken(token)));
         }
 
         [HttpPost]
@@ -43,10 +48,24 @@ namespace FitnessBattle.Controllers
         }
         
         [HttpPut]
-        [Route("{id:int}")]
-        public ActionResult Update(int id, InputDtoUpdateUser inputDtoUpdateUser)
+        [Route("{token}")]
+        [Authorize]
+        public ActionResult Update(string token, InputDtoUpdateUser inputDtoUpdateUser)
         {
-            if(_userService.Update(id,inputDtoUpdateUser))
+            if(_userService.Update(_tokenManager.GetIdFromToken(token),inputDtoUpdateUser))
+            {
+                return Ok();
+            }
+
+            return NotFound();
+        }
+        
+        [HttpDelete]
+        [Route("{token}")]
+        [Authorize]
+        public ActionResult SelfDelete(string token)
+        {
+            if (_userService.DeleteUser(_tokenManager.GetIdFromToken(token)))
             {
                 return Ok();
             }
@@ -56,6 +75,7 @@ namespace FitnessBattle.Controllers
         
         [HttpDelete]
         [Route("{id:int}")]
+        [Authorize]
         public ActionResult Delete(int id)
         {
             if (_userService.DeleteUser(id))

@@ -43,7 +43,7 @@ namespace Application.Services.User
         public OutputDtoAddUser Create(InputDtoAddUser inputDtoAddUser)
         {
             //DTO --> Domain
-            var userFromDto = _userFactory.CreateUserFromValues(inputDtoAddUser.Name,inputDtoAddUser.Password,inputDtoAddUser.Email,inputDtoAddUser.Admin);
+            var userFromDto = _userFactory.CreateUserFromValues(inputDtoAddUser.Name,inputDtoAddUser.Password,inputDtoAddUser.Email,false);
             //Repository demande un element du domain
 
             var usersInDb = _userRepository.Query();

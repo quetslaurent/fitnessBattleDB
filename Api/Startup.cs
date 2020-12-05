@@ -1,11 +1,13 @@
 using System.Text;
 using Application.Repositories;
 using Application.Services.Activity;
+using Application.Services.Auth;
 using Application.Services.Category;
 using Application.Services.Training;
 using Application.Services.TrainingDate;
 using Application.Services.Unit;
 using Application.Services.User;
+using FitnessBattle.TokenManager;
 using Infrastructure.SqlServer.Activity;
 using Infrastructure.SqlServer.Category;
 using Infrastructure.SqlServer.Training;
@@ -70,7 +72,9 @@ namespace FitnessBattle
                         ValidateLifetime = true
                     };
                 });
-            
+            //tools
+            services.AddSingleton<ITokenManager, TokenManager.TokenManager>();
+                        
             //services
             services.AddSingleton<IActivityService, ActivityService>();
             services.AddSingleton<ICategoryService, CategoryService>();
@@ -78,6 +82,9 @@ namespace FitnessBattle
             services.AddSingleton<ITrainingDateService, TrainingDateService>();
             services.AddSingleton<IUnitService, UnitService>();
             services.AddSingleton<IUserService, UserService>();
+            services.AddSingleton<IAuthService, AuthService>();
+            
+            
             
             //repositories
             services.AddSingleton<IActivityRepository, ActivityRepository>();
