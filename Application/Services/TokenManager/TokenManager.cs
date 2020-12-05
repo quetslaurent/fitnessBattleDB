@@ -23,6 +23,27 @@ namespace Application.Services.TokenManager
             return int.Parse((tokenBody.Claims.Where(c =>c.Type == ClaimTypes.NameIdentifier)).First().Value);
         }
         
+        //get the name from the token
+        public string GetNameFromToken(string token)
+        {
+            var tokenBody = _handler.ReadJwtToken(token);
+            return (tokenBody.Claims.Where(c =>c.Type == ClaimTypes.Name)).First().Value;
+        }
+        
+        //get the email from the token
+        public string GetEmailFromToken(string token)
+        {
+            var tokenBody = _handler.ReadJwtToken(token);
+            return (tokenBody.Claims.Where(c =>c.Type == ClaimTypes.Email)).First().Value;
+        }
+        
+        //get the role from the token
+        public string GetRoleFromToken(string token)
+        {
+            var tokenBody = _handler.ReadJwtToken(token);
+            return (tokenBody.Claims.Where(c =>c.Type == ClaimTypes.Role)).First().Value;
+        }
+        
         //generate a token
         public string GenerateJwtToken(OutputDtoQueryUser user)
         {
