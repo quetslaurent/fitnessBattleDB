@@ -38,10 +38,10 @@ namespace Application.Services.TokenManager
         }
         
         //get the role from the token
-        public string GetRoleFromToken(string token)
+        public bool GetRoleFromToken(string token)
         {
             var tokenBody = _handler.ReadJwtToken(token);
-            return (tokenBody.Claims.Where(c =>c.Type == ClaimTypes.Role)).First().Value;
+            return bool.Parse((tokenBody.Claims.Where(c =>c.Type == ClaimTypes.Role)).First().Value);
         }
         
         //generate a token
