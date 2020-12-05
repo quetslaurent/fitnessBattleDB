@@ -30,10 +30,6 @@
           <e p="launchSettings.json" t="Include" />
         </e>
         <e p="Startup.cs" t="Include" />
-        <e p="TokenManager" t="Include">
-          <e p="ITokenManager.cs" t="Include" />
-          <e p="TokenManager.cs" t="Include" />
-        </e>
       </e>
       <e p="Application" t="IncludeRecursive">
         <e p="Application.csproj" t="IncludeRecursive" />
@@ -81,6 +77,10 @@
               <e p="OutputDtoQueryCategory.cs" t="Include" />
             </e>
             <e p="ICategoryService.cs" t="Include" />
+          </e>
+          <e p="TokenManager" t="Include">
+            <e p="ITokenManager.cs" t="Include" />
+            <e p="TokenManager.cs" t="Include" />
           </e>
           <e p="Training" t="Include">
             <e p="Dto" t="Include">

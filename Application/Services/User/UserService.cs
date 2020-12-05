@@ -94,8 +94,8 @@ namespace Application.Services.User
         {
             var userFromDto = _userFactory.CreateUserFromValues(
                 inputDtoUpdateUser.Name,
+                HashPassword(inputDtoUpdateUser.Password),
                 inputDtoUpdateUser.Email,
-                inputDtoUpdateUser.Password,
                 inputDtoUpdateUser.Admin
                 );
             return _userRepository.Update(id,userFromDto);

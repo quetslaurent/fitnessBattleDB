@@ -1,6 +1,8 @@
 ﻿using System.Collections.Generic;
 using Application.Services.User;
 using Application.Services.User.Dto;
+using FitnessBattle.TokenManager;
+
 namespace Application.Services.Auth
 {
     public class AuthService : IAuthService
@@ -37,4 +39,5 @@ namespace Application.Services.Auth
             return null;
         }
     }
+    
 }

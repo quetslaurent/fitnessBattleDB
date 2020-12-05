@@ -50,7 +50,7 @@ namespace FitnessBattle.Controllers
         [HttpPut]
         [Route("{token}")]
         [Authorize]
-        public ActionResult Update(string token, InputDtoUpdateUser inputDtoUpdateUser)
+        public ActionResult Update(string token,[FromBody] InputDtoUpdateUser inputDtoUpdateUser)
         {
             if(_userService.Update(_tokenManager.GetIdFromToken(token),inputDtoUpdateUser))
             {

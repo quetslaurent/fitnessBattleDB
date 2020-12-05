@@ -73,7 +73,7 @@ namespace FitnessBattle
                     };
                 });
             //tools
-            services.AddSingleton<ITokenManager, TokenManager.TokenManager>();
+            services.AddSingleton<ITokenManager, Application.Services.TokenManager.TokenManager>();
                         
             //services
             services.AddSingleton<IActivityService, ActivityService>();
