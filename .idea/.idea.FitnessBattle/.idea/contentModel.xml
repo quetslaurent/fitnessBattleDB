@@ -80,6 +80,9 @@
             <e p="ICategoryService.cs" t="Include" />
           </e>
           <e p="TokenManager" t="Include">
+            <e p="Dto" t="Include">
+              <e p="OutputDtoTokenUser.cs" t="Include" />
+            </e>
             <e p="ITokenManager.cs" t="Include" />
             <e p="TokenManager.cs" t="Include" />
           </e>

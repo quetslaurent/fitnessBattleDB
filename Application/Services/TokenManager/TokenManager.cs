@@ -3,6 +3,7 @@ using System.IdentityModel.Tokens.Jwt;
 using System.Linq;
 using System.Security.Claims;
 using System.Text;
+using Application.Services.TokenManager.Dto;
 using Application.Services.User.Dto;
 using FitnessBattle.TokenManager;
 using Microsoft.IdentityModel.Tokens;
@@ -43,7 +44,18 @@ namespace Application.Services.TokenManager
             var tokenBody = _handler.ReadJwtToken(token);
             return bool.Parse((tokenBody.Claims.Where(c =>c.Type == ClaimTypes.Role)).First().Value);
         }
-        
+
+        public OutputDtoTokenUser GetUserFromToken(string token)
+        {
+            return new OutputDtoTokenUser
+            {
+                Id = GetIdFromToken(token),
+                Email = GetEmailFromToken(token),
+                Name = GetNameFromToken(token),
+                Role = GetRoleFromToken(token)
+            };
+        }
+
         //generate a token
         public string GenerateJwtToken(OutputDtoQueryUser user)
         {

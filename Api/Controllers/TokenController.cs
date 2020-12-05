@@ -1,5 +1,6 @@
 ﻿
 
+using Application.Services.TokenManager.Dto;
 using FitnessBattle.TokenManager;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -19,27 +20,11 @@ namespace FitnessBattle.Controllers
         }
 
         [HttpGet]
-        [Route("name/{token}")]
-        public ActionResult<string> GetNameFromToken(string token)
+        [Route("{token}")]
+        public ActionResult<OutputDtoTokenUser> GetUserFromToken(string token)
         {
-            return Ok(_tokenManager.GetNameFromToken(token));
+            return Ok(_tokenManager.GetUserFromToken(token));
         }
-        
-        [HttpGet]
-        [Route("email/{token}")]
-        public ActionResult<string> GetEmailFromToken(string token)
-        {
-            return Ok(_tokenManager.GetEmailFromToken(token));
-        }
-        
-        [HttpGet]
-        [Route("role/{token}")]
-        public ActionResult<string> GetRoleFromToken(string token)
-        {
-            return Ok(_tokenManager.GetRoleFromToken(token));
-        }
-        
-        
         
         
     }

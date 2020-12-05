@@ -1,4 +1,5 @@
-﻿using Application.Services.User.Dto;
+﻿using Application.Services.TokenManager.Dto;
+using Application.Services.User.Dto;
 
 namespace FitnessBattle.TokenManager
 {
@@ -9,5 +10,6 @@ namespace FitnessBattle.TokenManager
         public string GetNameFromToken(string token);
         public string GetEmailFromToken(string token);
         public bool GetRoleFromToken(string token);
+        public OutputDtoTokenUser GetUserFromToken(string token);
     }
 }
