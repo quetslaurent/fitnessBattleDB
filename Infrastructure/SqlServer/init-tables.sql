@@ -46,8 +46,8 @@ CREATE TABLE activity
     aUnitId     INT NOT NULL,
     aCategoryId     INT NOT NULL,
     PRIMARY KEY (activityId),
-    FOREIGN KEY (aUnitId) REFERENCES unit (unitId),
-    FOREIGN KEY (aCategoryId) REFERENCES category (categoryId)
+    FOREIGN KEY (aUnitId) REFERENCES unit (unitId) ON DELETE CASCADE,
+    FOREIGN KEY (aCategoryId) REFERENCES category (categoryId) ON DELETE CASCADE
 );
 
 CREATE TABLE training
@@ -59,7 +59,7 @@ CREATE TABLE training
     tTrainingDateId INT NOT NULL,
     
     PRIMARY KEY (trainingId),
-    FOREIGN KEY (tActivityId) REFERENCES activity (activityId),
-    FOREIGN KEY (tUserId) REFERENCES userFitness (userId),
-    FOREIGN KEY (tTrainingDateId) REFERENCES trainingDate (trainingDateId),
+    FOREIGN KEY (tActivityId) REFERENCES activity (activityId) ON DELETE CASCADE,
+    FOREIGN KEY (tUserId) REFERENCES userFitness (userId) ON DELETE CASCADE,
+    FOREIGN KEY (tTrainingDateId) REFERENCES trainingDate (trainingDateId) ON DELETE CASCADE,
 );

@@ -1,61 +1,61 @@
 ﻿USE sql_fitness_battle;
 
-INSERT INTO unit (type) values ('km');
-INSERT INTO unit (type) values ('m');
-INSERT INTO unit (type) values ('repetitions');
-INSERT INTO unit (type) values ('swimming length');
-INSERT INTO unit (type) values ('min');
-INSERT INTO unit (type) values ('sec');
+INSERT INTO unit (type) VALUES ('km');
+INSERT INTO unit (type) VALUES ('m');
+INSERT INTO unit (type) VALUES ('repetitions');
+INSERT INTO unit (type) VALUES ('swimming length');
+INSERT INTO unit (type) VALUES ('min');
+INSERT INTO unit (type) VALUES ('sec');
 
 
-INSERT INTO category (categoryName) values ('Cardio');
-INSERT INTO category (categoryName) values ('Upper Body');
-INSERT INTO category (categoryName) values ('Lower Body');
-INSERT INTO category (categoryName) values ('Other');
+INSERT INTO category (categoryName) VALUES ('Cardio');
+INSERT INTO category (categoryName) VALUES ('Upper Body');
+INSERT INTO category (categoryName) VALUES ('Lower Body');
+INSERT INTO category (categoryName) VALUES ('Other');
 
 
-INSERT INTO activity (name,repetitionsNeeded,aUnitId,aCategoryId) values ('Burpees',15,3,1);
-INSERT INTO activity (name,repetitionsNeeded,aUnitId,aCategoryId) values ('Jumping Rope',120,6,1);
-INSERT INTO activity (name,repetitionsNeeded,aUnitId,aCategoryId) values ('Running',1,1,1);
-INSERT INTO activity (name,repetitionsNeeded,aUnitId,aCategoryId) values ('Jumping Jack',40,3,1);
-INSERT INTO activity (name,repetitionsNeeded,aUnitId,aCategoryId) values ('Mountain Climber',40,3,1);
-INSERT INTO activity (name,repetitionsNeeded,aUnitId,aCategoryId) values ('Swimming',3,4,1);
-INSERT INTO activity (name,repetitionsNeeded,aUnitId,aCategoryId) values ('Cycling',2.5,1,1);
-INSERT INTO activity (name,repetitionsNeeded,aUnitId,aCategoryId) values ('Training Video',7,5,1);
+INSERT INTO activity (name,repetitionsNeeded,aUnitId,aCategoryId) VALUES ('Burpees',15,3,1);
+INSERT INTO activity (name,repetitionsNeeded,aUnitId,aCategoryId) VALUES ('Jumping Rope',120,6,1);
+INSERT INTO activity (name,repetitionsNeeded,aUnitId,aCategoryId) VALUES ('Running',1,1,1);
+INSERT INTO activity (name,repetitionsNeeded,aUnitId,aCategoryId) VALUES ('Jumping Jack',40,3,1);
+INSERT INTO activity (name,repetitionsNeeded,aUnitId,aCategoryId) VALUES ('Mountain Climber',40,3,1);
+INSERT INTO activity (name,repetitionsNeeded,aUnitId,aCategoryId) VALUES ('Swimming',3,4,1);
+INSERT INTO activity (name,repetitionsNeeded,aUnitId,aCategoryId) VALUES ('Cycling',2.5,1,1);
+INSERT INTO activity (name,repetitionsNeeded,aUnitId,aCategoryId) VALUES ('Training Video',7,5,1);
 
-INSERT INTO activity (name,repetitionsNeeded,aUnitId,aCategoryId) values ('Curl',20,3,2);
-INSERT INTO activity (name,repetitionsNeeded,aUnitId,aCategoryId) values ('Dips',20,3,2);
-INSERT INTO activity (name,repetitionsNeeded,aUnitId,aCategoryId) values ('Pull over',20,3,2);
-INSERT INTO activity (name,repetitionsNeeded,aUnitId,aCategoryId) values ('Dumbbell triceps',20,3,2);
-INSERT INTO activity (name,repetitionsNeeded,aUnitId,aCategoryId) values ('Frontal elevation',20,3,2);
-INSERT INTO activity (name,repetitionsNeeded,aUnitId,aCategoryId) values ('Frontal elevation',20,3,2);
-INSERT INTO activity (name,repetitionsNeeded,aUnitId,aCategoryId) values ('Abdominals',30,3,2);
-INSERT INTO activity (name,repetitionsNeeded,aUnitId,aCategoryId) values ('Bicycle crunches',30,3,2);
-INSERT INTO activity (name,repetitionsNeeded,aUnitId,aCategoryId) values ('Crunch',40,3,2);
-INSERT INTO activity (name,repetitionsNeeded,aUnitId,aCategoryId) values ('Abdominals cladding',120,6,2);
-INSERT INTO activity (name,repetitionsNeeded,aUnitId,aCategoryId) values ('Leg raises',30,3,2);
-INSERT INTO activity (name,repetitionsNeeded,aUnitId,aCategoryId) values ('Side plank',120,6,2);
-INSERT INTO activity (name,repetitionsNeeded,aUnitId,aCategoryId) values ('Reverse cruches',40,3,2);
-INSERT INTO activity (name,repetitionsNeeded,aUnitId,aCategoryId) values ('Russian Twist',40,3,2);
-INSERT INTO activity (name,repetitionsNeeded,aUnitId,aCategoryId) values ('Pull Up',20,3,2);
-INSERT INTO activity (name,repetitionsNeeded,aUnitId,aCategoryId) values ('Superman',20,3,2);
-INSERT INTO activity (name,repetitionsNeeded,aUnitId,aCategoryId) values ('Hyper extension',25,3,2);
-INSERT INTO activity (name,repetitionsNeeded,aUnitId,aCategoryId) values ('Push up',30,3,2);
-INSERT INTO activity (name,repetitionsNeeded,aUnitId,aCategoryId) values ('Incline press',20,3,2);
-INSERT INTO activity (name,repetitionsNeeded,aUnitId,aCategoryId) values ('Bench press',20,3,2);
-INSERT INTO activity (name,repetitionsNeeded,aUnitId,aCategoryId) values ('Peck deck',20,3,2);
-INSERT INTO activity (name,repetitionsNeeded,aUnitId,aCategoryId) values ('Pull Up',20,3,2);
-
-
-INSERT INTO activity (name,repetitionsNeeded,aUnitId,aCategoryId) values ('Squat jump',25,3,3);
-INSERT INTO activity (name,repetitionsNeeded,aUnitId,aCategoryId) values ('Squat',35,3,3);
-INSERT INTO activity (name,repetitionsNeeded,aUnitId,aCategoryId) values ('Single leg bridge',30,3,3);
-INSERT INTO activity (name,repetitionsNeeded,aUnitId,aCategoryId) values ('Leg press',20,3,3);
-INSERT INTO activity (name,repetitionsNeeded,aUnitId,aCategoryId) values ('Hip thrust',35,3,3);
-INSERT INTO activity (name,repetitionsNeeded,aUnitId,aCategoryId) values ('Lunge',30,3,3);
-
-INSERT INTO activity (name,repetitionsNeeded,aUnitId,aCategoryId) values ('Other activity',30,5,4);
+INSERT INTO activity (name,repetitionsNeeded,aUnitId,aCategoryId) VALUES ('Curl',20,3,2);
+INSERT INTO activity (name,repetitionsNeeded,aUnitId,aCategoryId) VALUES ('Dips',20,3,2);
+INSERT INTO activity (name,repetitionsNeeded,aUnitId,aCategoryId) VALUES ('Pull over',20,3,2);
+INSERT INTO activity (name,repetitionsNeeded,aUnitId,aCategoryId) VALUES ('Dumbbell triceps',20,3,2);
+INSERT INTO activity (name,repetitionsNeeded,aUnitId,aCategoryId) VALUES ('Frontal elevation',20,3,2);
+INSERT INTO activity (name,repetitionsNeeded,aUnitId,aCategoryId) VALUES ('Frontal elevation',20,3,2);
+INSERT INTO activity (name,repetitionsNeeded,aUnitId,aCategoryId) VALUES ('Abdominals',30,3,2);
+INSERT INTO activity (name,repetitionsNeeded,aUnitId,aCategoryId) VALUES ('Bicycle crunches',30,3,2);
+INSERT INTO activity (name,repetitionsNeeded,aUnitId,aCategoryId) VALUES ('Crunch',40,3,2);
+INSERT INTO activity (name,repetitionsNeeded,aUnitId,aCategoryId) VALUES ('Abdominals cladding',120,6,2);
+INSERT INTO activity (name,repetitionsNeeded,aUnitId,aCategoryId) VALUES ('Leg raises',30,3,2);
+INSERT INTO activity (name,repetitionsNeeded,aUnitId,aCategoryId) VALUES ('Side plank',120,6,2);
+INSERT INTO activity (name,repetitionsNeeded,aUnitId,aCategoryId) VALUES ('Reverse cruches',40,3,2);
+INSERT INTO activity (name,repetitionsNeeded,aUnitId,aCategoryId) VALUES ('Russian Twist',40,3,2);
+INSERT INTO activity (name,repetitionsNeeded,aUnitId,aCategoryId) VALUES ('Pull Up',20,3,2);
+INSERT INTO activity (name,repetitionsNeeded,aUnitId,aCategoryId) VALUES ('Superman',20,3,2);
+INSERT INTO activity (name,repetitionsNeeded,aUnitId,aCategoryId) VALUES ('Hyper extension',25,3,2);
+INSERT INTO activity (name,repetitionsNeeded,aUnitId,aCategoryId) VALUES ('Push up',30,3,2);
+INSERT INTO activity (name,repetitionsNeeded,aUnitId,aCategoryId) VALUES ('Incline press',20,3,2);
+INSERT INTO activity (name,repetitionsNeeded,aUnitId,aCategoryId) VALUES ('Bench press',20,3,2);
+INSERT INTO activity (name,repetitionsNeeded,aUnitId,aCategoryId) VALUES ('Peck deck',20,3,2);
+INSERT INTO activity (name,repetitionsNeeded,aUnitId,aCategoryId) VALUES ('Pull Up',20,3,2);
 
 
-INSERT INTO userFitness (name,password,email,admin) values ('admin','8C6976E5B5410415BDE908BD4DEE15DFB167A9C873FC4BB8A81F6F2AB448A918','admin@gmail.com','true');
-INSERT INTO userFitness (name,password,email,admin) values ('user','04F8996DA763B7A969B1028EE3007569EAF3A635486DDAB211D512C85B9DF8FB','user@gmail.com','false');
+INSERT INTO activity (name,repetitionsNeeded,aUnitId,aCategoryId) VALUES ('Squat jump',25,3,3);
+INSERT INTO activity (name,repetitionsNeeded,aUnitId,aCategoryId) VALUES ('Squat',35,3,3);
+INSERT INTO activity (name,repetitionsNeeded,aUnitId,aCategoryId) VALUES ('Single leg bridge',30,3,3);
+INSERT INTO activity (name,repetitionsNeeded,aUnitId,aCategoryId) VALUES ('Leg press',20,3,3);
+INSERT INTO activity (name,repetitionsNeeded,aUnitId,aCategoryId) VALUES ('Hip thrust',35,3,3);
+INSERT INTO activity (name,repetitionsNeeded,aUnitId,aCategoryId) VALUES ('Lunge',30,3,3);
+
+INSERT INTO activity (name,repetitionsNeeded,aUnitId,aCategoryId) VALUES ('Other activity',30,5,4);
+
+
+INSERT INTO userFitness (name,password,email,admin) VALUES ('admin','8C6976E5B5410415BDE908BD4DEE15DFB167A9C873FC4BB8A81F6F2AB448A918','admin@gmail.com','true');
+INSERT INTO userFitness (name,password,email,admin) VALUES ('user','04F8996DA763B7A969B1028EE3007569EAF3A635486DDAB211D512C85B9DF8FB','user@gmail.com','false');
