@@ -39,10 +39,10 @@ namespace Application.Services.TokenManager
         }
         
         //get the role from the token
-        public bool GetRoleFromToken(string token)
+        public string GetRoleFromToken(string token)
         {
             var tokenBody = _handler.ReadJwtToken(token);
-            return bool.Parse((tokenBody.Claims.Where(c =>c.Type == ClaimTypes.Role)).First().Value);
+            return (tokenBody.Claims.Where(c =>c.Type == ClaimTypes.Role)).First().Value;
         }
 
         public OutputDtoTokenUser GetUserFromToken(string token)
@@ -67,7 +67,7 @@ namespace Application.Services.TokenManager
                 new Claim(ClaimTypes.Email,user.Email),
                 new Claim(ClaimTypes.Name,user.Name),
                 new Claim(ClaimTypes.NameIdentifier,user.Id.ToString()),
-                new Claim(ClaimTypes.Role,user.Admin.ToString())
+                new Claim(ClaimTypes.Role,user.Role)
             };
 
             //on précise quel algorithme on doit utiliser

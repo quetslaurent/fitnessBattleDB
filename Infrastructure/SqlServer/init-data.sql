@@ -57,5 +57,5 @@ INSERT INTO activity (name,repetitionsNeeded,aUnitId,aCategoryId) VALUES ('Lunge
 INSERT INTO activity (name,repetitionsNeeded,aUnitId,aCategoryId) VALUES ('Other activity',30,5,4);
 
 
-INSERT INTO userFitness (name,password,email,admin) VALUES ('admin','8C6976E5B5410415BDE908BD4DEE15DFB167A9C873FC4BB8A81F6F2AB448A918','admin@gmail.com','true');
-INSERT INTO userFitness (name,password,email,admin) VALUES ('user','04F8996DA763B7A969B1028EE3007569EAF3A635486DDAB211D512C85B9DF8FB','user@gmail.com','false');
+INSERT INTO userFitness (name,password,email,role) VALUES ('admin','8C6976E5B5410415BDE908BD4DEE15DFB167A9C873FC4BB8A81F6F2AB448A918','admin@gmail.com','admin');
+INSERT INTO userFitness (name,password,email,role) VALUES ('user','04F8996DA763B7A969B1028EE3007569EAF3A635486DDAB211D512C85B9DF8FB','user@gmail.com','user');

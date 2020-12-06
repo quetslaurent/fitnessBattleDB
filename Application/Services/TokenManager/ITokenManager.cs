@@ -9,7 +9,7 @@ namespace FitnessBattle.TokenManager
         public string GenerateJwtToken(OutputDtoQueryUser user);
         public string GetNameFromToken(string token);
         public string GetEmailFromToken(string token);
-        public bool GetRoleFromToken(string token);
+        public string GetRoleFromToken(string token);
         public OutputDtoTokenUser GetUserFromToken(string token);
     }
 }

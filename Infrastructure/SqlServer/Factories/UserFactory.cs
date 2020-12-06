@@ -14,7 +14,7 @@ namespace Infrastructure.SqlServer.Factories
                 Name = reader.GetString(reader.GetOrdinal(UserSqlServer.ColName)),
                 Password = reader.GetString(reader.GetOrdinal(UserSqlServer.ColPassword)),
                 Email = reader.GetString(reader.GetOrdinal(UserSqlServer.ColEmail)),
-                Admin = reader.GetBoolean(reader.GetOrdinal(UserSqlServer.ColAdmin))
+                Role = reader.GetString(reader.GetOrdinal(UserSqlServer.ColRole))
             };
         }
     }

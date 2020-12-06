@@ -33,7 +33,7 @@ namespace Application.Services.User
                 {
                     Id = user.Id,
                     Name = user.Name,
-                    Admin = user.Admin,
+                    Role = user.Role,
                     Email = user.Email,
                     Password = user.Password,
                     Points = _userRepository.GetPointsById(user.Id)
@@ -43,7 +43,7 @@ namespace Application.Services.User
         public OutputDtoAddUser Create(InputDtoAddUser inputDtoAddUser)
         {
             //DTO --> Domain
-            var userFromDto = _userFactory.CreateUserFromValues(inputDtoAddUser.Name,inputDtoAddUser.Password,inputDtoAddUser.Email,false);
+            var userFromDto = _userFactory.CreateUserFromValues(inputDtoAddUser.Name,inputDtoAddUser.Password,inputDtoAddUser.Email,"user");
             //Repository demande un element du domain
 
             var usersInDb = _userRepository.Query();
@@ -60,7 +60,7 @@ namespace Application.Services.User
             {
                 Id = userInDb.Id,
                 Name = userInDb.Name,
-                Admin = userInDb.Admin,
+                Role = userInDb.Role,
                 Email = userInDb.Email,
                 Password = userInDb.Password
             };
@@ -78,7 +78,7 @@ namespace Application.Services.User
             {
                 Id = userInDb.Id,
                 Name = userInDb.Name,
-                Admin = userInDb.Admin,
+                Role = userInDb.Role,
                 Email = userInDb.Email,
                 Password = userInDb.Password,
                 Points = _userRepository.GetPointsById(userInDb.Id)
@@ -96,7 +96,7 @@ namespace Application.Services.User
                 inputDtoUpdateUser.Name,
                 HashPassword(inputDtoUpdateUser.Password),
                 inputDtoUpdateUser.Email,
-                inputDtoUpdateUser.Admin
+                inputDtoUpdateUser.Role
                 );
             return _userRepository.Update(id,userFromDto);
         }

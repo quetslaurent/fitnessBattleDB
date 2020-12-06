@@ -7,12 +7,12 @@
         public static readonly string ColName = "name";
         public static readonly string ColPassword = "password";
         public static readonly string ColEmail = "email";
-        public static readonly string ColAdmin = "admin";
+        public static readonly string ColRole = "role";
 
         public static readonly string ReqCreate = $@"
-            INSERT INTO {TableName}({ColName}, {ColPassword}, {ColEmail}, {ColAdmin})
+            INSERT INTO {TableName}({ColName}, {ColPassword}, {ColEmail}, {ColRole})
             OUTPUT INSERTED.{ColId}
-            VALUES(@{ColName}, @{ColPassword}, @{ColEmail}, @{ColAdmin})
+            VALUES(@{ColName}, @{ColPassword}, @{ColEmail}, @{ColRole})
         ";
 
         public static readonly string ReqQuery = $"SELECT * FROM {TableName}";
@@ -23,7 +23,7 @@
             {ColName} = @{ColName},
             {ColPassword} = @{ColPassword},
             {ColEmail} = @{ColEmail},
-            {ColAdmin} = @{ColAdmin}
+            {ColRole} = @{ColRole}
             WHERE {ColId} = @{ColId}
         ";
 

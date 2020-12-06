@@ -75,7 +75,7 @@ namespace Infrastructure.SqlServer.User
                 cmd.Parameters.AddWithValue($"@{UserSqlServer.ColName}", user.Name);
                 cmd.Parameters.AddWithValue($"@{UserSqlServer.ColEmail}", user.Email);
                 cmd.Parameters.AddWithValue($"@{UserSqlServer.ColPassword}", user.Password);
-                cmd.Parameters.AddWithValue($"@{UserSqlServer.ColAdmin}", user.Admin);
+                cmd.Parameters.AddWithValue($"@{UserSqlServer.ColRole}", user.Role);
 
 
                 return cmd.ExecuteNonQuery() > 0;
@@ -115,7 +115,7 @@ namespace Infrastructure.SqlServer.User
                 user.Password = HashPassword(user.Password);
                 
                 cmd.Parameters.AddWithValue($"@{UserSqlServer.ColName}", user.Name);
-                cmd.Parameters.AddWithValue($"@{UserSqlServer.ColAdmin}", user.Admin);
+                cmd.Parameters.AddWithValue($"@{UserSqlServer.ColRole}", user.Role);
                 cmd.Parameters.AddWithValue($"@{UserSqlServer.ColEmail}", user.Email);
                 cmd.Parameters.AddWithValue($"@{UserSqlServer.ColPassword}", user.Password);
 

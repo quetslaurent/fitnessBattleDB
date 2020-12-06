@@ -8,7 +8,7 @@ namespace FitnessBattle.Controllers
 {
     [ApiController]
     [Route("api/activity")]
-    [Authorize]
+    [Authorize(Roles = "admin")]
     
     public class ActivityController : ControllerBase
     {

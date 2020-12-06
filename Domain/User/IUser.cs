@@ -7,6 +7,6 @@ namespace Domain.User
         string Name { get; set; }
         string Password { get; set; }
         string Email { get; set; }
-        bool Admin { get; set; }
+        string Role { get; set; }
     }
 }
