@@ -87,9 +87,9 @@ namespace Application.Services.Training
             };
         }
 
-        public bool DeleteTraining(int trainingId)
+        public bool DeleteTraining(int id)
         {
-            return _trainingRepository.Delete(trainingId);
+            return _trainingRepository.Delete(id);
         }
         
         

@@ -46,5 +46,17 @@ namespace FitnessBattle.Controllers
         {
             return Ok(_trainingService.Create(inputDtoAddTraining));
         }
+        
+        [HttpDelete]
+        [Route("{id:int}")]
+        public ActionResult Delete(int id)
+        {
+            if (_trainingService.DeleteTraining(id))
+            {
+                return Ok();
+            }
+
+            return NotFound();
+        }
     }
 }

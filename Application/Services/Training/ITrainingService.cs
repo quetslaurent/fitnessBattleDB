@@ -10,7 +10,6 @@ namespace Application.Services.Training
         IEnumerable<OutputDtoGetTraining> GetByTrainingUserId(int userId);
         
         OutputDtoAddTraining Create(InputDtoAddTraining inputDtoAddTraining);
-
-        bool DeleteTraining(int trainingId);
+        bool DeleteTraining(int id);
     }
 }
