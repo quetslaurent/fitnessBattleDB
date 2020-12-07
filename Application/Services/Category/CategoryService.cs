@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using Application.Repositories;
+using Application.Services.Activity.Dto;
 using Application.Services.Category.Dto;
 using Application.Services.TrainingDate.Dto;
 using Domain.Category;

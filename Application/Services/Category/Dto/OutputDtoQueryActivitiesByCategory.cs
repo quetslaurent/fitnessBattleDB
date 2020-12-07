@@ -7,6 +7,6 @@ namespace Application.Services.Category.Dto
     {
         public int Id { get; set; } // le retour renvoie aussi l'id
         public string Name { get; set; }
-        public IEnumerable<Domain.Activity.Activity> Activities{ get;set;} // list d'activité ayant cette categorie
+        public IEnumerable<IActivity> Activities{ get;set;} // list d'activité ayant cette categorie
     }
 }
