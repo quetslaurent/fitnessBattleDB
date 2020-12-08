@@ -20,12 +20,18 @@ namespace FitnessBattle.Controllers
         }
 
         [HttpGet]
+        public ActionResult<OutputDtoQueryActivity> query()
+        {
+            return Ok(_activityService.query());
+        }
+        
+        [HttpGet]
         [Route("{id:int}")]
         public ActionResult<OutputDtoQueryActivity> GetByCategoryId(int id)
          {
              return Ok(_activityService.GetByCategoryId(id));
          }
-         
+        
         [HttpPost]
         public ActionResult<OutputDtoAddActivity> Post([FromBody] InputDtoAddActivity inputDtoAddActivity)
         {

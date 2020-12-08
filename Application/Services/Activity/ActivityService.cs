@@ -86,5 +86,19 @@ namespace Application.Services.Activity
         {
            return _activityRepository.Delete(activityId);
         }
+
+        public IEnumerable<OutputDtoQueryActivity> query()
+        {
+            return _activityRepository
+                .Query()
+                .Select(activity => new OutputDtoQueryActivity
+                {
+                    Id = activity.Id,
+                    Name = activity.Name,
+                    Repetitions = activity.Repetitions,
+                    CategoryName = activity.Category.Name,
+                    UnitType = activity.Unit.Type
+                });
+        }
     }
 }

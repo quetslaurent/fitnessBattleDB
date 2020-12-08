@@ -11,5 +11,6 @@ namespace Application.Services.Activity
         bool Update(int id,InputDtoUpdateActivity inputDtoAddActivity);
 
         bool DeleteActivity(int activityId);
+        IEnumerable<OutputDtoQueryActivity> query();
     }
 }

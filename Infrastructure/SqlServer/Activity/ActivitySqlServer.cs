@@ -21,10 +21,12 @@ namespace Infrastructure.SqlServer.Activity
             VALUES(@{ColName}, @{ColRepetitions}, @{ColIdUnit}, @{ColIdCategory})
         ";
 
-        public static readonly string ReqQuery = $"SELECT * FROM {TableName}";
-        public static readonly string ReqGetById = ReqQuery + $@" 
+        public static readonly string ReqQuery = $@"
+            SELECT * FROM {TableName}
             INNER JOIN {UnitSqlServer.TableName} unit on {ColIdUnit} = unit.{UnitSqlServer.ColId} 
-            INNER JOIN {CategorySqlServer.TableName} category on {ColIdCategory} = category.{CategorySqlServer.ColId} 
+            INNER JOIN {CategorySqlServer.TableName} category on {ColIdCategory} = category.{CategorySqlServer.ColId}";
+        
+        public static readonly string ReqGetById = ReqQuery + $@"
             WHERE {ColId} = @{ColId}";
 
         public static readonly string ReqPut = $@"
@@ -36,12 +38,8 @@ namespace Infrastructure.SqlServer.Activity
             WHERE {ColId} = @{ColId}
         ";
 
-        public static readonly string ReqGetByCategoryId = $@"
-            SELECT *  FROM {TableName} 
-            INNER JOIN {UnitSqlServer.TableName} unit on {ColIdUnit} = unit.{UnitSqlServer.ColId} 
-            INNER JOIN {CategorySqlServer.TableName} category on {ColIdCategory} = category.{CategorySqlServer.ColId} 
-            WHERE {ColIdCategory} = @{ColIdCategory}
-        ";
+        public static readonly string ReqGetByCategoryId = ReqQuery + $@"
+            WHERE {ColIdCategory} = @{ColIdCategory}";
         
         public static readonly string ReqDeleteById = $@"
             DELETE FROM {TableName} WHERE {ColId} = @{ColId} 
