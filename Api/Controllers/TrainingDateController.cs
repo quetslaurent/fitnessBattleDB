@@ -1,6 +1,4 @@
-﻿using Application.Services.Training;
-using Application.Services.Training.Dto;
-using Application.Services.TrainingDate;
+﻿using Application.Services.TrainingDate;
 using Application.Services.TrainingDate.Dto;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -29,6 +27,13 @@ namespace FitnessBattle.Controllers
         public ActionResult<OutputDtoAddTrainingDate> Post([FromBody] InputDtoAddTrainingDate inputDtoAddTrainingDate)
         {
             return Ok(_trainingDateService.Create(inputDtoAddTrainingDate));
+        }
+        
+        [HttpPost]
+        [Route("today")]
+        public ActionResult<OutputDtoAddTrainingDate> Post()
+        {
+            return Ok(_trainingDateService.CreateToday());
         }
     }
 }
