@@ -9,5 +9,6 @@ namespace Application.Services.TrainingDate
         IEnumerable<OutputDtoQueryTrainingDate> Query();
 
         OutputDtoAddTrainingDate Create(InputDtoAddTrainingDate inputDtoAddTrainingDate);
+        OutputDtoAddTrainingDate CreateToday();
     }
 }

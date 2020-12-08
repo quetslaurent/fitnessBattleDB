@@ -1,4 +1,5 @@
 ﻿
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using Application.Repositories;
@@ -27,6 +28,16 @@ namespace Application.Services.TrainingDate
         public OutputDtoAddTrainingDate Create(InputDtoAddTrainingDate inputDtoAddTrainingDate)
         {
             var trainingDate = _trainingDateRepository.Create(inputDtoAddTrainingDate.Date);
+            return new OutputDtoAddTrainingDate
+            {
+                Id=trainingDate.Id,
+                Date = trainingDate.Date
+            };
+        }
+
+        public OutputDtoAddTrainingDate CreateToday()
+        {
+            var trainingDate = _trainingDateRepository.Create(DateTime.Now);
             return new OutputDtoAddTrainingDate
             {
                 Id=trainingDate.Id,
