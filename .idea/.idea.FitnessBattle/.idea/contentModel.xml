@@ -239,6 +239,8 @@
       <e p="NUnitTestCases" t="IncludeRecursive">
         <e p="bin" t="ExcludeRecursive" />
         <e p="Domain" t="Include">
+          <e p="ActivityFactoryTest.cs" t="Include" />
+          <e p="CategoryFactoryTest.cs" t="Include" />
           <e p="TrainingDateFactoryTest.cs" t="Include" />
           <e p="TrainingFactoryTest.cs" t="Include" />
           <e p="UnitFactoryTest.cs" t="Include" />

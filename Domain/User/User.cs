@@ -27,5 +27,11 @@ namespace Domain.User
         {
             return Id == other.Id && Name == other.Name && Password == other.Password && Email == other.Email && Role == other.Role;
         }
+
+        public override bool Equals(object obj)
+        {
+            if (obj.GetType() != this.GetType()) return false;
+            return Equals((User) obj);
+        }
     }
 }

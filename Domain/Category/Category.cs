@@ -12,9 +12,8 @@ namespace Domain.Category
             
         }
 
-        public Category(int id, string name)
+        public Category(string name)
         {
-            Id = id;
             Name = name;
         }
 
