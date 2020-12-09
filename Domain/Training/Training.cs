@@ -20,14 +20,12 @@ namespace Domain.Training
             
         }
 
-        public Training(IUser user, double repetitions, int id, IActivity activity, ITrainingDate trainingDate, double points)
+        public Training(IUser user, double repetitions, IActivity activity, ITrainingDate trainingDate)
         {
             User = user;
             Repetitions = repetitions;
-            Id = id;
             Activity = activity;
             TrainingDate = trainingDate;
-            Points = points;
         }
 
         protected bool Equals(Training other)
