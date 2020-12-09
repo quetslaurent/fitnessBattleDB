@@ -10,8 +10,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2d50f586-c447-40ab-96ed-d6d4355f20d2" name="Default Changelist" comment="autorize et tokenManager">
-      <change beforePath="$PROJECT_DIR$/Domain/Activity/Activity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Domain/Activity/Activity.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NUnitTestCases/Domain/ActivityFactoryTest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/NUnitTestCases/Domain/ActivityFactoryTest.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.FitnessBattle/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FitnessBattle/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.FitnessBattle/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FitnessBattle/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FitnessBattle.sln.DotSettings.user" beforeDir="false" afterPath="$PROJECT_DIR$/FitnessBattle.sln.DotSettings.user" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -395,44 +396,40 @@
       <option name="project" value="LOCAL" />
       <updated>1607511548243</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="activity test">
+      <created>1607511967279</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1607511967279</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="UnitTestsCoverage.Settings">
-    <option name="coveragePercentColumnWidth" value="69" />
+    <option name="coveragePercentColumnWidth" value="72" />
     <option name="sortOrder" value="DESCENDING" />
     <option name="sortedColumn" value="1" />
-    <option name="symbolColumnWidth" value="161" />
+    <option name="symbolColumnWidth" value="167" />
     <coverage-tree-state>
       <expand>
         <path>
           <item name="rootNode" type="c53c71d1:RiderDotCoverCoverageTreeModel$RootNode" />
-          <item name="Total 12% 1136/1292" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Total 19% 1061/1303" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
         </path>
         <path>
           <item name="rootNode" type="c53c71d1:RiderDotCoverCoverageTreeModel$RootNode" />
-          <item name="Total 12% 1136/1292" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="NUnitTestCases 78% 16/74" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Total 19% 1061/1303" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Domain 91% 15/176" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
         </path>
         <path>
           <item name="rootNode" type="c53c71d1:RiderDotCoverCoverageTreeModel$RootNode" />
-          <item name="Total 12% 1136/1292" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="NUnitTestCases 78% 16/74" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="NUnitTestCases.Domain 78% 16/74" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-        </path>
-        <path>
-          <item name="rootNode" type="c53c71d1:RiderDotCoverCoverageTreeModel$RootNode" />
-          <item name="Total 12% 1136/1292" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="Domain 55% 80/178" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-        </path>
-        <path>
-          <item name="rootNode" type="c53c71d1:RiderDotCoverCoverageTreeModel$RootNode" />
-          <item name="Total 12% 1136/1292" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="Domain 55% 80/178" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="Domain 55% 80/178" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Total 19% 1061/1303" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Domain 91% 15/176" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Domain 91% 15/176" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
         </path>
       </expand>
       <select />
@@ -454,7 +451,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="triningdate controller" />
     <MESSAGE value="Sevice Activity + Unit Repo" />
     <MESSAGE value="Controllers part 1" />
     <MESSAGE value="weather forecast" />
@@ -479,7 +475,8 @@
     <MESSAGE value="query for activities" />
     <MESSAGE value="user test" />
     <MESSAGE value="category test" />
-    <option name="LAST_COMMIT_MESSAGE" value="category test" />
+    <MESSAGE value="activity test" />
+    <option name="LAST_COMMIT_MESSAGE" value="activity test" />
   </component>
   <component name="WindowStateProjectService">
     <state width="1493" height="44" key="GridCell.Tab.0.bottom" timestamp="1607424141103">
@@ -592,17 +589,17 @@
     </state>
     <state x="92" y="92" width="1736" height="896" key="VCS.FileHistoryDialog/-1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1605793154448" />
     <state x="74" y="70" width="1389" height="684" key="VCS.FileHistoryDialog/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1606227435581" />
-    <state x="442" y="208" key="Vcs.Push.Dialog.v2" timestamp="1607511553209">
+    <state x="442" y="208" key="Vcs.Push.Dialog.v2" timestamp="1607511972569">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="552" y="272" key="Vcs.Push.Dialog.v2/-1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1607177298258" />
-    <state x="442" y="208" key="Vcs.Push.Dialog.v2/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1607511553209" />
+    <state x="442" y="208" key="Vcs.Push.Dialog.v2/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1607511972569" />
     <state x="442" y="208" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1607248300649" />
-    <state x="586" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1607511519693">
+    <state x="586" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1607512329441">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="733" y="427" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/-1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1606401533768" />
-    <state x="586" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1607511519693" />
+    <state x="586" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1607512329441" />
     <state x="586" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824@0.0.1536.824" timestamp="1607251974815" />
     <state x="465" y="143" width="1588" height="963" key="dock-window-1" timestamp="1605800156820">
       <screen x="0" y="0" width="1920" height="1080" />

@@ -237,6 +237,7 @@
         </e>
       </e>
       <e p="NUnitTestCases" t="IncludeRecursive">
+        <e p="Application" t="Include" />
         <e p="bin" t="ExcludeRecursive" />
         <e p="Domain" t="Include">
           <e p="ActivityFactoryTest.cs" t="Include" />

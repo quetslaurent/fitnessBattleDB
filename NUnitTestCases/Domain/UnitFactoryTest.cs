@@ -10,6 +10,14 @@ namespace NUnitTestCases.Domain
 
         [Test]
         [TestCase("kilometer")]
+        public void CreateFromType_Type_UnitIsNotNull(string type)
+        {
+            var res = unitFactory.CreateFromType(type);
+            Assert.IsNotNull(res);
+        }
+        
+        [Test]
+        [TestCase("kilometer")]
         public void CreateFromType_Type_UnitAreSame(string type)
         {
             var res = unitFactory.CreateFromType(type);
