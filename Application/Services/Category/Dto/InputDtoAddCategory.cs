@@ -8,6 +8,10 @@
     public class InputDtoAddCategory
     {
         public string Name { get; set; }
-        
+
+        public InputDtoAddCategory(string name)
+        {
+            Name = name;
+        }
     }
 }

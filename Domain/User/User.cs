@@ -23,6 +23,15 @@ namespace Domain.User
             Role = role;
         }
 
+        public User(int id, string name, string password, string email, string role)
+        {
+            Id = id;
+            Name = name;
+            Password = password;
+            Email = email;
+            Role = role;
+        }
+
         protected bool Equals(User other)
         {
             return Id == other.Id && Name == other.Name && Password == other.Password && Email == other.Email && Role == other.Role;

@@ -13,5 +13,14 @@
         public string Email { get; set; }
         // public bool Role { get; set; }
         
+        public InputDtoAddUser()
+        {
+        }
+        public InputDtoAddUser(string name, string password, string email)
+        {
+            Name = name;
+            Password = password;
+            Email = email;
+        }
     }
 }

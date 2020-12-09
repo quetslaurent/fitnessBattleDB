@@ -12,5 +12,10 @@
     &lt;TestId&gt;NUnit3x::0F43B072-8486-4A2D-B54E-5DD6FE69C555::.NETCoreApp,Version=v3.1::NUnitTestCases.Domain.CategoryFactoryTest&lt;/TestId&gt;&#xD;
     &lt;TestId&gt;NUnit3x::0F43B072-8486-4A2D-B54E-5DD6FE69C555::.NETCoreApp,Version=v3.1::NUnitTestCases.Domain.ActivityFactoryTest&lt;/TestId&gt;&#xD;
     &lt;TestId&gt;NUnit3x::0F43B072-8486-4A2D-B54E-5DD6FE69C555::.NETCoreApp,Version=v3.1::NUnitTestCases.Domain.TrainingFactoryTest.CreateTrainingFromValues_AllValues_TrainingsAreSame&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::0F43B072-8486-4A2D-B54E-5DD6FE69C555::.NETCoreApp,Version=v3.1::NUnitTestCases.Application.CategoryServiceTest&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::0F43B072-8486-4A2D-B54E-5DD6FE69C555::.NETCoreApp,Version=v3.1::NUnitTestCases.Application.UnitServiceTest&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::0F43B072-8486-4A2D-B54E-5DD6FE69C555::.NETCoreApp,Version=v3.1::NUnitTestCases.Application.TrainingDateServiceTest&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::0F43B072-8486-4A2D-B54E-5DD6FE69C555::.NETCoreApp,Version=v3.1::NUnitTestCases.Application.UserServiceTest&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::0F43B072-8486-4A2D-B54E-5DD6FE69C555::.NETCoreApp,Version=v3.1::NUnitTestCases.Application.TokenManagerTest&lt;/TestId&gt;&#xD;
   &lt;/TestAncestor&gt;&#xD;
 &lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>
