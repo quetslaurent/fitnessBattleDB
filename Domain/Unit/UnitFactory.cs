@@ -1,5 +1,4 @@
-﻿using Domain.User;
-
+﻿
 namespace Domain.Unit
 {
     public class UnitFactory : IUnitFactory
