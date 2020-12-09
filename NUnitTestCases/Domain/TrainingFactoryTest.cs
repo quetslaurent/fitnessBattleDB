@@ -18,6 +18,16 @@ namespace NUnitTestCases.Domain
         private ITrainingDate _trainingDate = Substitute.For<ITrainingDate>();
 
         [Test]
+        public void CreateTrainingFromValues_AllValues_TrainingsNotNull()
+        {
+            double repetitions = 25;
+            
+            ITraining res =_trainingFactory.CreateTrainingFromValues(repetitions, _user, _activity, _trainingDate);
+            
+            Assert.IsNotNull(res);
+        }
+        
+        [Test]
         public void CreateTrainingFromValues_AllValues_TrainingsAreSame()
         {
             double repetitions = 25;

@@ -6,7 +6,16 @@ namespace NUnitTestCases.Domain
     [TestFixture]
     public class UserFactoryTest
     {
-        private UserFactory _userFactory = new UserFactory();
+        private UserFactory _userFactory = new UserFactory(); 
+        
+        
+        [Test]
+        [TestCase("name","password","email","role")]
+        public void CreateUserFromValues_NamePasswordEmailRole_UserNotNull(string name, string password, string email, string role)
+        {
+            var res = _userFactory.CreateUserFromValues(name, password, email, role);
+            Assert.IsNotNull(res);
+        }
 
         [Test]
         [TestCase("name","password","email","role")]

@@ -8,6 +8,15 @@ namespace NUnitTestCases.Domain
     {
         private CategoryFactory _categoryFactory = new CategoryFactory();
 
+        
+        [Test]
+        [TestCase("name")]
+        public void CreateFromName_Name_CategoryNotNull(string name)
+        {
+            var res = _categoryFactory.CreateFromName(name);
+            Assert.IsNotNull(res);
+        }
+        
         [Test]
         [TestCase("name")]
         public void CreateFromName_Name_CategoryAreEquals(string name)

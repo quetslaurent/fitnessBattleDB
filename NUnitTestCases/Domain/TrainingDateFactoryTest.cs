@@ -8,7 +8,25 @@ namespace NUnitTestCases.Domain
     public class TrainingDateFactoryTest
     {
         private TrainingDateFactory _trainingDateFactory = new TrainingDateFactory();
+        
+        [Test]
+        [TestCase(1)]
+        public void Create_IdDateTime_TrainingDateNotNull(int id)
+        {
+            DateTime date = new DateTime(2000,9,2);
+            var res = _trainingDateFactory.Create(id, date);
+            Assert.IsNotNull(res);
+        }
 
+        [Test]
+        public void CreateFromDateTime_DateTime_TrainingDateNotNull()
+        {
+            DateTime date = new DateTime(2000,9,2);
+            var res = _trainingDateFactory.CreateFromDateTime(date);
+            Assert.IsNotNull(res);
+        }
+
+        
         [Test]
         [TestCase(1)]
         public void Create_IdDateTime_TrainingDateAreSame(int id)
