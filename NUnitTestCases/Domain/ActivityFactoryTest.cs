@@ -14,6 +14,14 @@ namespace NUnitTestCases.Domain
         private ICategory _category = Substitute.For<ICategory>();
 
         [Test]
+        [TestCase("name", 1)]
+        public void CreateFromValues_NameRepetitionsUnitCategory_ActivityIsNotNull(string name, double repetitions)
+        {
+            var res = _activityFactory.CreateFromValues(name, repetitions, _unit, _category);
+            Assert.IsNotNull(res);
+        }
+
+        [Test]
         [TestCase("name",1)]
         public void CreateFromValues_NameRepetitionsUnitCategory_ActivityAreSame(string name, double repetitions)
         {
