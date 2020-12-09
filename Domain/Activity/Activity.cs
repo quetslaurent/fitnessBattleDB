@@ -17,9 +17,8 @@ namespace Domain.Activity
             
         }
 
-        public Activity(int id, string name, double repetitions, IUnit unit, ICategory category)
+        public Activity(string name, double repetitions, IUnit unit, ICategory category)
         {
-            Id = id;
             Name = name;
             Repetitions = repetitions;
             Unit = unit;

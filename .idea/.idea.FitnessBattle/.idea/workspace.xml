@@ -10,13 +10,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2d50f586-c447-40ab-96ed-d6d4355f20d2" name="Default Changelist" comment="autorize et tokenManager">
-      <change afterPath="$PROJECT_DIR$/NUnitTestCases/Domain/ActivityFactoryTest.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NUnitTestCases/Domain/CategoryFactoryTest.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.FitnessBattle/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FitnessBattle/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Domain/Category/Category.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Domain/Category/Category.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Domain/User/User.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Domain/User/User.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FitnessBattle.sln.DotSettings.user" beforeDir="false" afterPath="$PROJECT_DIR$/FitnessBattle.sln.DotSettings.user" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NUnitTestCases/Domain/UserFactoryTest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/NUnitTestCases/Domain/UserFactoryTest.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Domain/Activity/Activity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Domain/Activity/Activity.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NUnitTestCases/Domain/ActivityFactoryTest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/NUnitTestCases/Domain/ActivityFactoryTest.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,7 +31,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Infrastructure/SqlServer/Training/TrainingSqlServer.cs" />
         <option value="$PROJECT_DIR$/Application/Services/Category/ICategoryService.cs" />
         <option value="$PROJECT_DIR$/Application/Services/Category/Dto/OutputDtoQueryActivitiesByCategory.cs" />
         <option value="$PROJECT_DIR$/Application/Services/Category/CategoryService.cs" />
@@ -86,6 +80,7 @@
         <option value="$PROJECT_DIR$/Domain/Category/Category.cs" />
         <option value="$PROJECT_DIR$/NUnitTestCases/Domain/CategoryFactoryTest.cs" />
         <option value="$PROJECT_DIR$/NUnitTestCases/Domain/UserFactoryTest.cs" />
+        <option value="$PROJECT_DIR$/Domain/Activity/Activity.cs" />
         <option value="$PROJECT_DIR$/NUnitTestCases/Domain/ActivityFactoryTest.cs" />
       </list>
     </option>
@@ -393,7 +388,14 @@
       <option name="project" value="LOCAL" />
       <updated>1607510699267</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="category test">
+      <created>1607511548243</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1607511548243</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -408,29 +410,29 @@
       <expand>
         <path>
           <item name="rootNode" type="c53c71d1:RiderDotCoverCoverageTreeModel$RootNode" />
-          <item name="Total 12% 1129/1285" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Total 12% 1136/1292" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
         </path>
         <path>
           <item name="rootNode" type="c53c71d1:RiderDotCoverCoverageTreeModel$RootNode" />
-          <item name="Total 12% 1129/1285" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="NUnitTestCases 88% 8/66" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Total 12% 1136/1292" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="NUnitTestCases 78% 16/74" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
         </path>
         <path>
           <item name="rootNode" type="c53c71d1:RiderDotCoverCoverageTreeModel$RootNode" />
-          <item name="Total 12% 1129/1285" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="NUnitTestCases 88% 8/66" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="NUnitTestCases.Domain 88% 8/66" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Total 12% 1136/1292" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="NUnitTestCases 78% 16/74" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="NUnitTestCases.Domain 78% 16/74" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
         </path>
         <path>
           <item name="rootNode" type="c53c71d1:RiderDotCoverCoverageTreeModel$RootNode" />
-          <item name="Total 12% 1129/1285" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="Domain 55% 81/179" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Total 12% 1136/1292" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Domain 55% 80/178" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
         </path>
         <path>
           <item name="rootNode" type="c53c71d1:RiderDotCoverCoverageTreeModel$RootNode" />
-          <item name="Total 12% 1129/1285" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="Domain 55% 81/179" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="Domain 55% 81/179" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Total 12% 1136/1292" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Domain 55% 80/178" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Domain 55% 80/178" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
         </path>
       </expand>
       <select />
@@ -452,7 +454,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="reste activity et training service" />
     <MESSAGE value="triningdate controller" />
     <MESSAGE value="Sevice Activity + Unit Repo" />
     <MESSAGE value="Controllers part 1" />
@@ -477,7 +478,8 @@
     <MESSAGE value="training controller delete" />
     <MESSAGE value="query for activities" />
     <MESSAGE value="user test" />
-    <option name="LAST_COMMIT_MESSAGE" value="user test" />
+    <MESSAGE value="category test" />
+    <option name="LAST_COMMIT_MESSAGE" value="category test" />
   </component>
   <component name="WindowStateProjectService">
     <state width="1493" height="44" key="GridCell.Tab.0.bottom" timestamp="1607424141103">
@@ -590,17 +592,17 @@
     </state>
     <state x="92" y="92" width="1736" height="896" key="VCS.FileHistoryDialog/-1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1605793154448" />
     <state x="74" y="70" width="1389" height="684" key="VCS.FileHistoryDialog/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1606227435581" />
-    <state x="442" y="208" key="Vcs.Push.Dialog.v2" timestamp="1607510702386">
+    <state x="442" y="208" key="Vcs.Push.Dialog.v2" timestamp="1607511553209">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="552" y="272" key="Vcs.Push.Dialog.v2/-1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1607177298258" />
-    <state x="442" y="208" key="Vcs.Push.Dialog.v2/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1607510702386" />
+    <state x="442" y="208" key="Vcs.Push.Dialog.v2/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1607511553209" />
     <state x="442" y="208" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1607248300649" />
-    <state x="586" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1607510909549">
+    <state x="586" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1607511519693">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="733" y="427" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/-1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1606401533768" />
-    <state x="586" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1607510909549" />
+    <state x="586" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1607511519693" />
     <state x="586" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824@0.0.1536.824" timestamp="1607251974815" />
     <state x="465" y="143" width="1588" height="963" key="dock-window-1" timestamp="1605800156820">
       <screen x="0" y="0" width="1920" height="1080" />
