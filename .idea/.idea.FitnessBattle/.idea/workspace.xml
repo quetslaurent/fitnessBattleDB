@@ -9,31 +9,15 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2d50f586-c447-40ab-96ed-d6d4355f20d2" name="Default Changelist" comment="ajout create today pour la date">
-      <change afterPath="$PROJECT_DIR$/NUnitTestCases/Domain/TrainingDateFactoryTest.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NUnitTestCases/Domain/UnitFactoryTest.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.FitnessBattle/.idea/.name" beforeDir="false" />
+    <list default="true" id="2d50f586-c447-40ab-96ed-d6d4355f20d2" name="Default Changelist" comment="unit tests traindate et unit factory domain">
+      <change afterPath="$PROJECT_DIR$/NUnitTestCases/Domain/TrainingFactoryTest.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.FitnessBattle/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FitnessBattle/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.FitnessBattle/.idea/shelf/Uncommitted_changes_before_Update_at_03-12-20_11_56__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FitnessBattle/.idea/shelf/Uncommitted_changes_before_Update_at_03-12-20_11_56__Default_Changelist_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.FitnessBattle/.idea/shelf/Uncommitted_changes_before_Update_at_03-12-20_16_31__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FitnessBattle/.idea/shelf/Uncommitted_changes_before_Update_at_03-12-20_16_31__Default_Changelist_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.FitnessBattle/.idea/shelf/Uncommitted_changes_before_Update_at_05-12-20_13_18__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FitnessBattle/.idea/shelf/Uncommitted_changes_before_Update_at_05-12-20_13_18__Default_Changelist_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.FitnessBattle/.idea/shelf/Uncommitted_changes_before_Update_at_05-12-20_14_41__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FitnessBattle/.idea/shelf/Uncommitted_changes_before_Update_at_05-12-20_14_41__Default_Changelist_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.FitnessBattle/.idea/shelf/Uncommitted_changes_before_Update_at_05-12-20_15_56__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FitnessBattle/.idea/shelf/Uncommitted_changes_before_Update_at_05-12-20_15_56__Default_Changelist_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.FitnessBattle/.idea/shelf/Uncommitted_changes_before_Update_at_05-12-20_16_36__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FitnessBattle/.idea/shelf/Uncommitted_changes_before_Update_at_05-12-20_16_36__Default_Changelist_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.FitnessBattle/.idea/shelf/Uncommitted_changes_before_Update_at_07-12-20_12_53__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FitnessBattle/.idea/shelf/Uncommitted_changes_before_Update_at_07-12-20_12_53__Default_Changelist_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.FitnessBattle/.idea/shelf/Uncommitted_changes_before_Update_at_18-11-20_15_25__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FitnessBattle/.idea/shelf/Uncommitted_changes_before_Update_at_18-11-20_15_25__Default_Changelist_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.FitnessBattle/.idea/shelf/Uncommitted_changes_before_Update_at_18-11-20_15_51__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FitnessBattle/.idea/shelf/Uncommitted_changes_before_Update_at_18-11-20_15_51__Default_Changelist_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.FitnessBattle/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FitnessBattle/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Api/Api.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Api/Api.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Api/Controllers/UnitController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Api/Controllers/UnitController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Application/Application.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Application/Application.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Domain/Domain.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Domain/Domain.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Domain/Activity/Activity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Domain/Activity/Activity.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Domain/Category/Category.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Domain/Category/Category.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Domain/Training/Training.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Domain/Training/Training.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Domain/TrainingDate/TrainingDate.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Domain/TrainingDate/TrainingDate.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Domain/Unit/Unit.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Domain/Unit/Unit.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Domain/Unit/UnitFactory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Domain/Unit/UnitFactory.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Infrastructure/Infrastructure.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Infrastructure/Infrastructure.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NUnitTestCases/NUnitTestCases.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/NUnitTestCases/NUnitTestCases.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NUnitTestCases/UnitTest1.cs" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,10 +38,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Application/Services/Category/CategoryService.cs" />
-        <option value="$PROJECT_DIR$/Domain/Training/ITrainingFactory.cs" />
-        <option value="$PROJECT_DIR$/Application/Services/Training/Dto/InputDtoAddTraining.cs" />
-        <option value="$PROJECT_DIR$/Domain/Training/TrainingFactory.cs" />
         <option value="$PROJECT_DIR$/Application/Services/User/Dto/InputDtoAuthUser.cs" />
         <option value="$PROJECT_DIR$/Application/Services/User/Dto/InputDtoAddUser.cs" />
         <option value="$PROJECT_DIR$/Application/Services/Auth/Dto/OutputDtoAuthUser.cs" />
@@ -101,10 +81,14 @@
         <option value="$PROJECT_DIR$/NUnitTestCases/Controllers/UnitControllerTest.cs" />
         <option value="$PROJECT_DIR$/NUnitTestCases/Domain/Unit.resx" />
         <option value="$PROJECT_DIR$/Domain/Unit/UnitFactory.cs" />
-        <option value="$PROJECT_DIR$/Domain/Unit/Unit.cs" />
         <option value="$PROJECT_DIR$/NUnitTestCases/Domain/UnitFactoryTest.cs" />
-        <option value="$PROJECT_DIR$/Domain/TrainingDate/TrainingDate.cs" />
         <option value="$PROJECT_DIR$/NUnitTestCases/Domain/TrainingDateFactoryTest.cs" />
+        <option value="$PROJECT_DIR$/NUnitTestCases/Domain/TrainingFactoryTest.cs" />
+        <option value="$PROJECT_DIR$/Domain/Training/Training.cs" />
+        <option value="$PROJECT_DIR$/Domain/TrainingDate/TrainingDate.cs" />
+        <option value="$PROJECT_DIR$/Domain/Unit/Unit.cs" />
+        <option value="$PROJECT_DIR$/Domain/Category/Category.cs" />
+        <option value="$PROJECT_DIR$/Domain/Activity/Activity.cs" />
       </list>
     </option>
   </component>
@@ -197,7 +181,7 @@
       <workItem from="1607241468798" duration="7798000" />
       <workItem from="1607417159047" duration="4970000" />
       <workItem from="1607435871649" duration="1680000" />
-      <workItem from="1607506294654" duration="3674000" />
+      <workItem from="1607506294654" duration="4516000" />
     </task>
     <task id="LOCAL-00001" summary="base">
       <created>1605628139369</created>
@@ -409,7 +393,14 @@
       <option name="project" value="LOCAL" />
       <updated>1607422596510</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="unit tests traindate et unit factory domain">
+      <created>1607510026901</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1607510026901</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -424,18 +415,18 @@
       <expand>
         <path>
           <item name="rootNode" type="c53c71d1:RiderDotCoverCoverageTreeModel$RootNode" />
-          <item name="Total 7% 1114/1203" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Total 7% 1139/1228" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
         </path>
         <path>
           <item name="rootNode" type="c53c71d1:RiderDotCoverCoverageTreeModel$RootNode" />
-          <item name="Total 7% 1114/1203" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="Domain 42% 74/127" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Total 7% 1139/1228" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Domain 37% 91/144" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
         </path>
         <path>
           <item name="rootNode" type="c53c71d1:RiderDotCoverCoverageTreeModel$RootNode" />
-          <item name="Total 7% 1114/1203" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="Domain 42% 74/127" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="Domain 42% 74/127" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Total 7% 1139/1228" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Domain 37% 91/144" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Domain 37% 91/144" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
         </path>
       </expand>
       <select />
@@ -457,7 +448,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="reste api et fin des services" />
     <MESSAGE value="reste activity et training service" />
     <MESSAGE value="triningdate controller" />
     <MESSAGE value="Sevice Activity + Unit Repo" />
@@ -482,7 +472,8 @@
     <MESSAGE value="delete double emthod" />
     <MESSAGE value="training controller delete" />
     <MESSAGE value="query for activities" />
-    <option name="LAST_COMMIT_MESSAGE" value="query for activities" />
+    <MESSAGE value="unit tests traindate et unit factory domain" />
+    <option name="LAST_COMMIT_MESSAGE" value="unit tests traindate et unit factory domain" />
   </component>
   <component name="WindowStateProjectService">
     <state width="1877" height="206" key="GridCell.Tab.0.bottom" timestamp="1607444129623">
@@ -585,20 +576,20 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="552" y="271" key="Rider.ProjectTemplateDialog.Size/-1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1605628738436" />
-    <state x="751" y="149" key="RiderGenerateDialog" timestamp="1607509450293">
+    <state x="751" y="149" key="RiderGenerateDialog" timestamp="1607510837900">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="751" y="149" key="RiderGenerateDialog/-1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1607509450293" />
+    <state x="751" y="149" key="RiderGenerateDialog/-1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1607510837900" />
     <state x="601" y="114" key="RiderGenerateDialog/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1607437035907" />
     <state x="74" y="70" width="1389" height="684" key="VCS.FileHistoryDialog" timestamp="1606227435581">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="92" y="92" width="1736" height="896" key="VCS.FileHistoryDialog/-1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1605793154448" />
     <state x="74" y="70" width="1389" height="684" key="VCS.FileHistoryDialog/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1606227435581" />
-    <state x="442" y="208" key="Vcs.Push.Dialog.v2" timestamp="1607422598413">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state x="552" y="272" key="Vcs.Push.Dialog.v2" timestamp="1607510029383">
+      <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="552" y="272" key="Vcs.Push.Dialog.v2/-1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1607177298258" />
+    <state x="552" y="272" key="Vcs.Push.Dialog.v2/-1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1607510029383" />
     <state x="442" y="208" key="Vcs.Push.Dialog.v2/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1607422598413" />
     <state x="442" y="208" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1607248300649" />
     <state x="586" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1607420483213">

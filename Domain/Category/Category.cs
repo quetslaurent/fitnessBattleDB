@@ -1,4 +1,6 @@
-﻿namespace Domain.Category
+﻿using System;
+
+namespace Domain.Category
 {
     public class Category : ICategory
     {
@@ -9,5 +11,23 @@
         {
             
         }
+
+        public Category(int id, string name)
+        {
+            Id = id;
+            Name = name;
+        }
+
+        protected bool Equals(Category other)
+        {
+            return Id == other.Id && Name == other.Name;
+        }
+
+        public override bool Equals(object obj)
+        {
+            if (obj.GetType() != this.GetType()) return false;
+            return Equals((Category) obj);
+        }
+        
     }
 }

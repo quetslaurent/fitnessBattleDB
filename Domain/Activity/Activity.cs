@@ -1,4 +1,5 @@
-﻿using Domain.Category;
+﻿using System;
+using Domain.Category;
 using Domain.Unit;
 
 namespace Domain.Activity
@@ -14,6 +15,26 @@ namespace Domain.Activity
         public Activity()
         {
             
+        }
+
+        public Activity(int id, string name, double repetitions, IUnit unit, ICategory category)
+        {
+            Id = id;
+            Name = name;
+            Repetitions = repetitions;
+            Unit = unit;
+            Category = category;
+        }
+
+        protected bool Equals(Activity other)
+        {
+            return Id == other.Id && Name == other.Name && Repetitions.Equals(other.Repetitions) && Equals(Unit, other.Unit) && Equals(Category, other.Category);
+        }
+
+        public override bool Equals(object obj)
+        {
+            if (obj.GetType() != this.GetType()) return false;
+            return Equals((Activity) obj);
         }
     }
 }

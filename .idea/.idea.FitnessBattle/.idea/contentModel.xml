@@ -240,6 +240,7 @@
         <e p="bin" t="ExcludeRecursive" />
         <e p="Domain" t="Include">
           <e p="TrainingDateFactoryTest.cs" t="Include" />
+          <e p="TrainingFactoryTest.cs" t="Include" />
           <e p="UnitFactoryTest.cs" t="Include" />
         </e>
         <e p="NUnitTestCases.csproj" t="IncludeRecursive" />
