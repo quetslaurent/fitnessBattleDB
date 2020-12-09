@@ -10,5 +10,14 @@ namespace Application.Services.TrainingDate.Dto
     public class InputDtoAddTrainingDate
     {
         public DateTime Date { get; set; }
+
+        public InputDtoAddTrainingDate(DateTime date)
+        {
+            Date = date;
+        }
+
+        public InputDtoAddTrainingDate()
+        {
+        }
     }
 }

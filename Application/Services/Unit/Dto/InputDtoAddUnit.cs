@@ -9,6 +9,11 @@
      */
         
         public string Type { get; set; }
+
+        public InputDtoAddUnit(string type)
+        {
+            Type = type;
+        }
         
     }
 }

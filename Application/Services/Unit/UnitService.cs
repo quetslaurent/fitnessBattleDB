@@ -2,10 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using Application.Repositories;
-using Application.Services.Category.Dto;
-using Application.Services.TrainingDate.Dto;
 using Application.Services.Unit.Dto;
-using Domain.Category;
 using Domain.Unit;
 
 namespace Application.Services.Unit
