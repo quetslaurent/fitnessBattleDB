@@ -9,31 +9,10 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2d50f586-c447-40ab-96ed-d6d4355f20d2" name="Default Changelist" comment="ajout create today pour la date">
-      <change afterPath="$PROJECT_DIR$/NUnitTestCases/Domain/TrainingDateFactoryTest.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NUnitTestCases/Domain/UnitFactoryTest.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.FitnessBattle/.idea/.name" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.FitnessBattle/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FitnessBattle/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.FitnessBattle/.idea/shelf/Uncommitted_changes_before_Update_at_03-12-20_11_56__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FitnessBattle/.idea/shelf/Uncommitted_changes_before_Update_at_03-12-20_11_56__Default_Changelist_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.FitnessBattle/.idea/shelf/Uncommitted_changes_before_Update_at_03-12-20_16_31__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FitnessBattle/.idea/shelf/Uncommitted_changes_before_Update_at_03-12-20_16_31__Default_Changelist_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.FitnessBattle/.idea/shelf/Uncommitted_changes_before_Update_at_05-12-20_13_18__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FitnessBattle/.idea/shelf/Uncommitted_changes_before_Update_at_05-12-20_13_18__Default_Changelist_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.FitnessBattle/.idea/shelf/Uncommitted_changes_before_Update_at_05-12-20_14_41__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FitnessBattle/.idea/shelf/Uncommitted_changes_before_Update_at_05-12-20_14_41__Default_Changelist_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.FitnessBattle/.idea/shelf/Uncommitted_changes_before_Update_at_05-12-20_15_56__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FitnessBattle/.idea/shelf/Uncommitted_changes_before_Update_at_05-12-20_15_56__Default_Changelist_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.FitnessBattle/.idea/shelf/Uncommitted_changes_before_Update_at_05-12-20_16_36__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FitnessBattle/.idea/shelf/Uncommitted_changes_before_Update_at_05-12-20_16_36__Default_Changelist_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.FitnessBattle/.idea/shelf/Uncommitted_changes_before_Update_at_07-12-20_12_53__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FitnessBattle/.idea/shelf/Uncommitted_changes_before_Update_at_07-12-20_12_53__Default_Changelist_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.FitnessBattle/.idea/shelf/Uncommitted_changes_before_Update_at_18-11-20_15_25__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FitnessBattle/.idea/shelf/Uncommitted_changes_before_Update_at_18-11-20_15_25__Default_Changelist_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.FitnessBattle/.idea/shelf/Uncommitted_changes_before_Update_at_18-11-20_15_51__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FitnessBattle/.idea/shelf/Uncommitted_changes_before_Update_at_18-11-20_15_51__Default_Changelist_.xml" afterDir="false" />
+    <list default="true" id="2d50f586-c447-40ab-96ed-d6d4355f20d2" name="Default Changelist" comment="autorize et tokenManager">
+      <change afterPath="$PROJECT_DIR$/NUnitTestCases/Domain/UserFactoryTest.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.FitnessBattle/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FitnessBattle/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Api/Api.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Api/Api.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Api/Controllers/UnitController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Api/Controllers/UnitController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Application/Application.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Application/Application.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Domain/Domain.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Domain/Domain.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Domain/TrainingDate/TrainingDate.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Domain/TrainingDate/TrainingDate.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Domain/Unit/Unit.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Domain/Unit/Unit.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Domain/Unit/UnitFactory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Domain/Unit/UnitFactory.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Infrastructure/Infrastructure.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Infrastructure/Infrastructure.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NUnitTestCases/NUnitTestCases.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/NUnitTestCases/NUnitTestCases.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NUnitTestCases/UnitTest1.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Domain/User/User.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Domain/User/User.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,16 +23,21 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/UnitTests/ControllersTests/UnitControllerTest.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Api/Controllers/ActivityController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Application/Services/Auth/AuthService.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Api/Controllers/AuthController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Api/Controllers/UserController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Application/Services/Auth/Dto/OutputDtoAuthUser.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Application/Services/Auth/AuthService.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Api/Controllers/AuthController.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
+        <option value="$PROJECT_DIR$/Infrastructure/SqlServer/Activity/ActivityRepository.cs" />
+        <option value="$PROJECT_DIR$/Infrastructure/SqlServer/Shared/Database.cs" />
+        <option value="$PROJECT_DIR$/Infrastructure/SqlServer/User/UserRepository.cs" />
+        <option value="$PROJECT_DIR$/Infrastructure/SqlServer/Training/TrainingSqlServer.cs" />
+        <option value="$PROJECT_DIR$/Application/Services/Category/ICategoryService.cs" />
+        <option value="$PROJECT_DIR$/Application/Services/Category/Dto/OutputDtoQueryActivitiesByCategory.cs" />
         <option value="$PROJECT_DIR$/Application/Services/Category/CategoryService.cs" />
         <option value="$PROJECT_DIR$/Domain/Training/ITrainingFactory.cs" />
         <option value="$PROJECT_DIR$/Application/Services/Training/Dto/InputDtoAddTraining.cs" />
@@ -66,6 +50,7 @@
         <option value="$PROJECT_DIR$/Application/Services/Auth/IAuthService.cs" />
         <option value="$PROJECT_DIR$/Api/Controllers/AuthController.cs" />
         <option value="$PROJECT_DIR$/Api/Controllers/CategoryController.cs" />
+        <option value="$PROJECT_DIR$/Api/Controllers/UnitController.cs" />
         <option value="$PROJECT_DIR$/Api/Startup.cs" />
         <option value="$PROJECT_DIR$/Api/TokenManager/TokenManager.cs" />
         <option value="$PROJECT_DIR$/Application/Services/Auth/AuthService.cs" />
@@ -81,7 +66,6 @@
         <option value="$PROJECT_DIR$/Infrastructure/SqlServer/init-data.sql" />
         <option value="$PROJECT_DIR$/Infrastructure/SqlServer/User/UserSqlServer.cs" />
         <option value="$PROJECT_DIR$/Domain/User/IUser.cs" />
-        <option value="$PROJECT_DIR$/Domain/User/User.cs" />
         <option value="$PROJECT_DIR$/Domain/User/UserFactory.cs" />
         <option value="$PROJECT_DIR$/Domain/User/IUserFactory.cs" />
         <option value="$PROJECT_DIR$/Infrastructure/SqlServer/Factories/TrainingFactory.cs" />
@@ -97,14 +81,8 @@
         <option value="$PROJECT_DIR$/Infrastructure/SqlServer/Activity/ActivitySqlServer.cs" />
         <option value="$PROJECT_DIR$/Api/Controllers/TrainingDateController.cs" />
         <option value="$PROJECT_DIR$/Api/TestsControllers/unitTests.cs" />
-        <option value="$PROJECT_DIR$/Api/Controllers/UnitController.cs" />
-        <option value="$PROJECT_DIR$/NUnitTestCases/Controllers/UnitControllerTest.cs" />
-        <option value="$PROJECT_DIR$/NUnitTestCases/Domain/Unit.resx" />
-        <option value="$PROJECT_DIR$/Domain/Unit/UnitFactory.cs" />
-        <option value="$PROJECT_DIR$/Domain/Unit/Unit.cs" />
-        <option value="$PROJECT_DIR$/NUnitTestCases/Domain/UnitFactoryTest.cs" />
-        <option value="$PROJECT_DIR$/Domain/TrainingDate/TrainingDate.cs" />
-        <option value="$PROJECT_DIR$/NUnitTestCases/Domain/TrainingDateFactoryTest.cs" />
+        <option value="$PROJECT_DIR$/Domain/User/User.cs" />
+        <option value="$PROJECT_DIR$/NUnitTestCases/Domain/UserFactoryTest.cs" />
       </list>
     </option>
   </component>
@@ -152,10 +130,6 @@
         <option name="Build" />
       </method>
     </configuration>
-    <list>
-      <item itemvalue=".NET Launch Settings Profile.FitnessBattle" />
-      <item itemvalue=".NET Launch Settings Profile.FitnessBattle: IIS Express" />
-    </list>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -197,7 +171,6 @@
       <workItem from="1607241468798" duration="7798000" />
       <workItem from="1607417159047" duration="4970000" />
       <workItem from="1607435871649" duration="1680000" />
-      <workItem from="1607506294654" duration="3674000" />
     </task>
     <task id="LOCAL-00001" summary="base">
       <created>1605628139369</created>
@@ -415,32 +388,6 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
-  <component name="UnitTestsCoverage.Settings">
-    <option name="coveragePercentColumnWidth" value="117" />
-    <option name="sortOrder" value="DESCENDING" />
-    <option name="sortedColumn" value="1" />
-    <option name="symbolColumnWidth" value="219" />
-    <coverage-tree-state>
-      <expand>
-        <path>
-          <item name="rootNode" type="c53c71d1:RiderDotCoverCoverageTreeModel$RootNode" />
-          <item name="Total 7% 1114/1203" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-        </path>
-        <path>
-          <item name="rootNode" type="c53c71d1:RiderDotCoverCoverageTreeModel$RootNode" />
-          <item name="Total 7% 1114/1203" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="Domain 42% 74/127" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-        </path>
-        <path>
-          <item name="rootNode" type="c53c71d1:RiderDotCoverCoverageTreeModel$RootNode" />
-          <item name="Total 7% 1114/1203" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="Domain 42% 74/127" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="Domain 42% 74/127" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-        </path>
-      </expand>
-      <select />
-    </coverage-tree-state>
-  </component>
   <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
   <component name="Vcs.Log.Tabs.Properties">
@@ -485,31 +432,31 @@
     <option name="LAST_COMMIT_MESSAGE" value="query for activities" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1877" height="206" key="GridCell.Tab.0.bottom" timestamp="1607444129623">
-      <screen x="0" y="0" width="1920" height="1080" />
+    <state width="1493" height="44" key="GridCell.Tab.0.bottom" timestamp="1607424141103">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1877" height="206" key="GridCell.Tab.0.bottom/-1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1607444129623" />
+    <state width="1877" height="150" key="GridCell.Tab.0.bottom/-1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1607177309443" />
     <state width="1493" height="44" key="GridCell.Tab.0.bottom/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1607424141103" />
     <state width="1877" height="110" key="GridCell.Tab.0.bottom/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1606147073516" />
     <state width="1493" height="44" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1607252565585" />
-    <state width="1877" height="206" key="GridCell.Tab.0.center" timestamp="1607444129622">
-      <screen x="0" y="0" width="1920" height="1080" />
+    <state width="1493" height="44" key="GridCell.Tab.0.center" timestamp="1607424141102">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1877" height="206" key="GridCell.Tab.0.center/-1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1607444129622" />
+    <state width="1877" height="150" key="GridCell.Tab.0.center/-1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1607177309443" />
     <state width="1493" height="44" key="GridCell.Tab.0.center/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1607424141102" />
     <state width="1877" height="110" key="GridCell.Tab.0.center/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1606147073516" />
     <state width="1493" height="44" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1607252565585" />
-    <state width="1877" height="206" key="GridCell.Tab.0.left" timestamp="1607444129622">
-      <screen x="0" y="0" width="1920" height="1080" />
+    <state width="1493" height="44" key="GridCell.Tab.0.left" timestamp="1607424141102">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1877" height="206" key="GridCell.Tab.0.left/-1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1607444129622" />
+    <state width="1877" height="150" key="GridCell.Tab.0.left/-1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1607177309443" />
     <state width="1493" height="44" key="GridCell.Tab.0.left/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1607424141102" />
     <state width="1877" height="110" key="GridCell.Tab.0.left/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1606147073515" />
     <state width="1493" height="44" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1607252565584" />
-    <state width="1877" height="206" key="GridCell.Tab.0.right" timestamp="1607444129622">
-      <screen x="0" y="0" width="1920" height="1080" />
+    <state width="1493" height="44" key="GridCell.Tab.0.right" timestamp="1607424141103">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1877" height="206" key="GridCell.Tab.0.right/-1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1607444129622" />
+    <state width="1877" height="150" key="GridCell.Tab.0.right/-1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1607177309443" />
     <state width="1493" height="44" key="GridCell.Tab.0.right/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1607424141103" />
     <state width="1877" height="110" key="GridCell.Tab.0.right/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1606147073516" />
     <state width="1493" height="44" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1607252565585" />
@@ -585,11 +532,11 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="552" y="271" key="Rider.ProjectTemplateDialog.Size/-1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1605628738436" />
-    <state x="751" y="149" key="RiderGenerateDialog" timestamp="1607509450293">
-      <screen x="0" y="0" width="1920" height="1080" />
+    <state x="601" y="104" key="RiderGenerateDialog" timestamp="1607510383979">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="751" y="149" key="RiderGenerateDialog/-1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1607509450293" />
-    <state x="601" y="114" key="RiderGenerateDialog/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1607437035907" />
+    <state x="751" y="149" key="RiderGenerateDialog/-1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1607177877470" />
+    <state x="601" y="104" key="RiderGenerateDialog/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1607510383979" />
     <state x="74" y="70" width="1389" height="684" key="VCS.FileHistoryDialog" timestamp="1606227435581">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

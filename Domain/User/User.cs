@@ -1,4 +1,6 @@
-﻿namespace Domain.User
+﻿using System;
+
+namespace Domain.User
 {
     public class User : IUser
     {
@@ -11,6 +13,19 @@
         public User()
         {
             
+        }
+
+        public User(string name, string password, string email, string role)
+        {
+            Name = name;
+            Password = password;
+            Email = email;
+            Role = role;
+        }
+
+        protected bool Equals(User other)
+        {
+            return Id == other.Id && Name == other.Name && Password == other.Password && Email == other.Email && Role == other.Role;
         }
     }
 }

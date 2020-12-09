@@ -6,5 +6,7 @@
   &lt;TestAncestor&gt;&#xD;
     &lt;TestId&gt;NUnit3x::0F43B072-8486-4A2D-B54E-5DD6FE69C555::.NETCoreApp,Version=v3.1::NUnitTestCases.Domain.UnitFactoryTest&lt;/TestId&gt;&#xD;
     &lt;TestId&gt;NUnit3x::0F43B072-8486-4A2D-B54E-5DD6FE69C555::.NETCoreApp,Version=v3.1::NUnitTestCases.Domain.TrainingDateFactoryTest&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::0F43B072-8486-4A2D-B54E-5DD6FE69C555::.NETCoreApp,Version=v3.1::NUnitTestCases.Domain.UserFactoryTest.CreateUserFromValues_NamePasswordEmailRole_UserNotSame("name","password","email","role")&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::0F43B072-8486-4A2D-B54E-5DD6FE69C555::.NETCoreApp,Version=v3.1::NUnitTestCases.Domain.UserFactoryTest.CreateUserFromValues_NamePasswordEmailRole_UserNotSame&lt;/TestId&gt;&#xD;
   &lt;/TestAncestor&gt;&#xD;
 &lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>
