@@ -13,5 +13,18 @@ namespace Application.Services.Activity.Dto
         public double Repetitions { get; set; }
         public int CategoryId { get; set; }
         public int UnitId { get; set; }
+        
+        public InputDtoAddActivity()
+        {
+        }
+        public InputDtoAddActivity(string name, double repetitions, int categoryId, int unitId)
+        {
+            Name = name;
+            Repetitions = repetitions;
+            CategoryId = categoryId;
+            UnitId = unitId;
+        }
+
+
     }
 }

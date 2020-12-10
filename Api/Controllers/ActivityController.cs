@@ -22,7 +22,7 @@ namespace FitnessBattle.Controllers
         [HttpGet]
         public ActionResult<OutputDtoQueryActivity> query()
         {
-            return Ok(_activityService.query());
+            return Ok(_activityService.Query());
         }
         
         [HttpGet]

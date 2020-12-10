@@ -17,5 +17,14 @@
     &lt;TestId&gt;NUnit3x::0F43B072-8486-4A2D-B54E-5DD6FE69C555::.NETCoreApp,Version=v3.1::NUnitTestCases.Application.TrainingDateServiceTest&lt;/TestId&gt;&#xD;
     &lt;TestId&gt;NUnit3x::0F43B072-8486-4A2D-B54E-5DD6FE69C555::.NETCoreApp,Version=v3.1::NUnitTestCases.Application.UserServiceTest&lt;/TestId&gt;&#xD;
     &lt;TestId&gt;NUnit3x::0F43B072-8486-4A2D-B54E-5DD6FE69C555::.NETCoreApp,Version=v3.1::NUnitTestCases.Application.TokenManagerTest&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::0F43B072-8486-4A2D-B54E-5DD6FE69C555::.NETCoreApp,Version=v3.1::NUnitTestCases.Infrastructure.UnitRepositoryTest.Query_NotNull&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::0F43B072-8486-4A2D-B54E-5DD6FE69C555::.NETCoreApp,Version=v3.1::NUnitTestCases.Infrastructure.UnitRepositoryTest&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::0F43B072-8486-4A2D-B54E-5DD6FE69C555::.NETCoreApp,Version=v3.1::NUnitTestCases.Application.ActivityServiceTest.GetByCategoryId_categoryId_NotNull&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::0F43B072-8486-4A2D-B54E-5DD6FE69C555::.NETCoreApp,Version=v3.1::NUnitTestCases.Application.ActivityServiceTest.GetByCategoryId_categoryId_NotNull(1)&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::0F43B072-8486-4A2D-B54E-5DD6FE69C555::.NETCoreApp,Version=v3.1::NUnitTestCases.Application.ActivityServiceTest.GetByCategoryId_categoryId_AreSame(1)&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::0F43B072-8486-4A2D-B54E-5DD6FE69C555::.NETCoreApp,Version=v3.1::NUnitTestCases.Application.ActivityServiceTest.GetByCategoryId_categoryId_AreSame&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::0F43B072-8486-4A2D-B54E-5DD6FE69C555::.NETCoreApp,Version=v3.1::NUnitTestCases.Application.ActivityServiceTest.GetByCategoryId_categoryId_AreNotSame&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::0F43B072-8486-4A2D-B54E-5DD6FE69C555::.NETCoreApp,Version=v3.1::NUnitTestCases.Application.ActivityServiceTest.GetByCategoryId_categoryId_AreNotSame(1)&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::0F43B072-8486-4A2D-B54E-5DD6FE69C555::.NETCoreApp,Version=v3.1::NUnitTestCases.Application.ActivityServiceTest&lt;/TestId&gt;&#xD;
   &lt;/TestAncestor&gt;&#xD;
 &lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>
