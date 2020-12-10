@@ -157,21 +157,39 @@ namespace NUnitTestCases.Application
         
         //Update
         
-        /*
+        
         [Test]
         public void Update_InputDtoAddUser_AreSame()
         {
-            var inputUpdate= new InputDtoUpdateUser("nameUserUpdated","password","emailUser","user");
-            _userFactory.CreateUserFromValues(inputUpdate.Name,inputUpdate.Password,inputUpdate.Email, "user").Returns(new User(inputUpdate.Name,inputUpdate.Password,inputUpdate.Email, "user"));
-            var iuserUpdated = _userFactory.CreateUserFromValues(inputUpdate.Name,inputUpdate.Password,inputUpdate.Email, "user");
-            _userRepository.Query().Returns(getUserList());
-            _userRepository.Create(iuserUpdated).Returns(new User(inputUpdate.Name,inputUpdate.Password,inputUpdate.Email, "user"));
+             _userRepository.HashPassword("admin")
+                 .Returns("8C6976E5B5410415BDE908BD4DEE15DFB167A9C873FC4BB8A81F6F2AB448A918");
+            
+            var inputUpdate= new InputDtoUpdateUser("admin","admin","admin@gmail.com","admin");
+
+            var hashedPassword = _userRepository.HashPassword("admin");
+            
+            _userFactory.CreateUserFromValues(inputUpdate.Name, hashedPassword,inputUpdate.Email, "admin")
+                .Returns(new User(inputUpdate.Name, hashedPassword,inputUpdate.Email, "admin"));
+
+            var iuserUpdated = _userFactory.CreateUserFromValues(inputUpdate.Name, hashedPassword,inputUpdate.Email, "admin");
+            
             _userRepository.Update(1, iuserUpdated).Returns(true);
             
             var res = _userService.Update(1,inputUpdate);
-            var expected = true;
-            Assert.AreEqual(expected, res);
-        }*/
+            Assert.IsTrue(res);
+        }
+        
+        
+        //DELETE
+
+        [Test]
+        public void DeleteUser_id()
+        {
+            _userRepository.Delete(1).Returns(true);
+
+            var res = _userService.DeleteUser(1);
+            Assert.IsTrue(res);
+        }
         
         //CREATE
 

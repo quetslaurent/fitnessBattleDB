@@ -14,5 +14,9 @@
             Email = email;
             Role = role;
         }
+
+        public InputDtoUpdateUser()
+        {
+        }
     }
 }
