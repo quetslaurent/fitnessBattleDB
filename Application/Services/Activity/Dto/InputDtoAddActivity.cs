@@ -1,4 +1,6 @@
 ﻿
+using System.ComponentModel.DataAnnotations;
+
 namespace Application.Services.Activity.Dto
 {
     public class InputDtoAddActivity
@@ -10,8 +12,14 @@ namespace Application.Services.Activity.Dto
      */
 
         public string Name { get; set; }
+        [Required]
+        [Range(0,99999)]
         public double Repetitions { get; set; }
+        [Required]
+        [Range(1,99999)]
         public int CategoryId { get; set; }
+        [Required]
+        [Range(1,99999)]
         public int UnitId { get; set; }
         
         public InputDtoAddActivity()

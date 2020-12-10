@@ -1,10 +1,18 @@
-﻿namespace Application.Services.Activity.Dto
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace Application.Services.Activity.Dto
 {
     public class InputDtoUpdateActivity
     {
         public string Name { get; }
+        [Required]
+        [Range(0,99999)]
         public double Repetitions { get;}
+        [Required]
+        [Range(1,99999)]
         public int CategoryId { get; }
+        [Required]
+        [Range(1,99999)]
         public int UnitId { get;}
 
         public InputDtoUpdateActivity()

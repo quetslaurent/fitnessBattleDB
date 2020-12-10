@@ -1,4 +1,5 @@
 ﻿using System;
+using System.ComponentModel.DataAnnotations;
 
 namespace Application.Services.TrainingDate.Dto
 {
@@ -9,6 +10,7 @@ namespace Application.Services.TrainingDate.Dto
      */
     public class InputDtoAddTrainingDate
     {
+        [DataType(DataType.Date)] 
         public DateTime Date { get; set; }
 
         public InputDtoAddTrainingDate(DateTime date)
