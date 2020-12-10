@@ -15,5 +15,29 @@ namespace Application.Services.Training.Dto
         public DateTime TrainingDateValue { get; set; }
         
         public double Points { get; set; }
+
+        public OutputDtoGetTraining( double repetitions, string activityName, DateTime trainingDateValue, double points)
+        {
+            Repetitions = repetitions;
+            ActivityName = activityName;
+            TrainingDateValue = trainingDateValue;
+            Points = points;
+        }
+
+        public OutputDtoGetTraining()
+        {
+        }
+
+        protected bool Equals(OutputDtoGetTraining other)
+        {
+            return Repetitions.Equals(other.Repetitions) && ActivityName == other.ActivityName && TrainingDateValue.Equals(other.TrainingDateValue) && Points.Equals(other.Points);
+        }
+
+        public override bool Equals(object obj)
+        {
+            if (obj.GetType() != this.GetType()) return false;
+            return Equals((OutputDtoGetTraining) obj);
+        }
+        
     }
 }

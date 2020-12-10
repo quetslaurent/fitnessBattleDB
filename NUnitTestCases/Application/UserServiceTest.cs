@@ -183,7 +183,7 @@ namespace NUnitTestCases.Application
         //DELETE
 
         [Test]
-        public void DeleteUser_id()
+        public void DeleteUser_id_isDeleted()
         {
             _userRepository.Delete(1).Returns(true);
 
