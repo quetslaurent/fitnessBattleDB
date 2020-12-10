@@ -13,10 +13,9 @@ using NUnit.Framework;
 namespace NUnitTestCases.Application
 {
     [TestFixture]
-    public class AuthTest
+    public class AuthServiceTest
     {
         private static readonly  IUserService _userService = Substitute.For<IUserService>();
-        private readonly IUserRepository _userRepository = Substitute.For<IUserRepository>();
         private static readonly ITokenManager _tokenManager = Substitute.For<ITokenManager>();
         
         private readonly IAuthService _authService = new AuthService(_userService,_tokenManager);
