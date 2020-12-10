@@ -238,8 +238,12 @@
       </e>
       <e p="NUnitTestCases" t="IncludeRecursive">
         <e p="Application" t="Include">
+          <e p="ActivityServiceTest.cs" t="Include" />
+          <e p="AuthTest.cs" t="Include" />
           <e p="CategoryServiceTest.cs" t="Include" />
+          <e p="TokenManagerTest.cs" t="Include" />
           <e p="TrainingDateServiceTest.cs" t="Include" />
+          <e p="TrainingServiceTest.cs" t="Include" />
           <e p="UnitServiceTest.cs" t="Include" />
           <e p="UserServiceTest.cs" t="Include" />
         </e>

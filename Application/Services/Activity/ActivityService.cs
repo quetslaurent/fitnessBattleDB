@@ -87,7 +87,7 @@ namespace Application.Services.Activity
            return _activityRepository.Delete(activityId);
         }
 
-        public IEnumerable<OutputDtoQueryActivity> query()
+        public IEnumerable<OutputDtoQueryActivity> Query()
         {
             return _activityRepository
                 .Query()
