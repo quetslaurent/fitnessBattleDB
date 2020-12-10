@@ -9,34 +9,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2d50f586-c447-40ab-96ed-d6d4355f20d2" name="Default Changelist" comment="autorize et tokenManager">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.FitnessBattle/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FitnessBattle/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.FitnessBattle/.idea/shelf/Uncommitted_changes_before_Update_at_03-12-20_11_56_[Default_Changelist]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.FitnessBattle/.idea/shelf/Uncommitted_changes_before_Update_at_03-12-20_11_56__Default_Changelist_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.FitnessBattle/.idea/shelf/Uncommitted_changes_before_Update_at_03-12-20_16_31__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FitnessBattle/.idea/shelf/Uncommitted_changes_before_Update_at_03-12-20_16_31__Default_Changelist_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.FitnessBattle/.idea/shelf/Uncommitted_changes_before_Update_at_05-12-20_13_18__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FitnessBattle/.idea/shelf/Uncommitted_changes_before_Update_at_05-12-20_13_18__Default_Changelist_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.FitnessBattle/.idea/shelf/Uncommitted_changes_before_Update_at_05-12-20_14_41__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FitnessBattle/.idea/shelf/Uncommitted_changes_before_Update_at_05-12-20_14_41__Default_Changelist_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.FitnessBattle/.idea/shelf/Uncommitted_changes_before_Update_at_05-12-20_15_56__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FitnessBattle/.idea/shelf/Uncommitted_changes_before_Update_at_05-12-20_15_56__Default_Changelist_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.FitnessBattle/.idea/shelf/Uncommitted_changes_before_Update_at_05-12-20_16_36__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FitnessBattle/.idea/shelf/Uncommitted_changes_before_Update_at_05-12-20_16_36__Default_Changelist_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.FitnessBattle/.idea/shelf/Uncommitted_changes_before_Update_at_06-12-20_10_52__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FitnessBattle/.idea/shelf/Uncommitted_changes_before_Update_at_06-12-20_10_52__Default_Changelist_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.FitnessBattle/.idea/shelf/Uncommitted_changes_before_Update_at_06-12-20_12_26__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FitnessBattle/.idea/shelf/Uncommitted_changes_before_Update_at_06-12-20_12_26__Default_Changelist_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.FitnessBattle/.idea/shelf/Uncommitted_changes_before_Update_at_07-12-20_12_53__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FitnessBattle/.idea/shelf/Uncommitted_changes_before_Update_at_07-12-20_12_53__Default_Changelist_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.FitnessBattle/.idea/shelf/Uncommitted_changes_before_Update_at_08-12-20_11_35__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FitnessBattle/.idea/shelf/Uncommitted_changes_before_Update_at_08-12-20_11_35__Default_Changelist_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.FitnessBattle/.idea/shelf/Uncommitted_changes_before_Update_at_08-12-20_15_36__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FitnessBattle/.idea/shelf/Uncommitted_changes_before_Update_at_08-12-20_15_36__Default_Changelist_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.FitnessBattle/.idea/shelf/Uncommitted_changes_before_Update_at_09-12-20_11_34__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FitnessBattle/.idea/shelf/Uncommitted_changes_before_Update_at_09-12-20_11_34__Default_Changelist_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.FitnessBattle/.idea/shelf/Uncommitted_changes_before_Update_at_18-11-20_15_25__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FitnessBattle/.idea/shelf/Uncommitted_changes_before_Update_at_18-11-20_15_25__Default_Changelist_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.FitnessBattle/.idea/shelf/Uncommitted_changes_before_Update_at_18-11-20_15_51__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FitnessBattle/.idea/shelf/Uncommitted_changes_before_Update_at_18-11-20_15_51__Default_Changelist_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.FitnessBattle/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FitnessBattle/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Api/Controllers/ActivityController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Api/Controllers/ActivityController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Application/Services/Activity/ActivityService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Application/Services/Activity/ActivityService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Application/Services/Activity/Dto/InputDtoAddActivity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Application/Services/Activity/Dto/InputDtoAddActivity.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Application/Services/Activity/Dto/InputDtoUpdateActivity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Application/Services/Activity/Dto/InputDtoUpdateActivity.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Application/Services/Activity/Dto/OutputDtoAddActivity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Application/Services/Activity/Dto/OutputDtoAddActivity.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Application/Services/Activity/Dto/OutputDtoQueryActivity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Application/Services/Activity/Dto/OutputDtoQueryActivity.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Application/Services/Activity/IActivityService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Application/Services/Activity/IActivityService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FitnessBattle.sln.DotSettings.user" beforeDir="false" afterPath="$PROJECT_DIR$/FitnessBattle.sln.DotSettings.user" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NUnitTestCases/Application/ActivityServiceTest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/NUnitTestCases/Application/ActivityServiceTest.cs" afterDir="false" />
-    </list>
+    <list default="true" id="2d50f586-c447-40ab-96ed-d6d4355f20d2" name="Default Changelist" comment="autorize et tokenManager" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -195,7 +168,7 @@
       <workItem from="1607417159047" duration="4970000" />
       <workItem from="1607435871649" duration="1680000" />
       <workItem from="1607524790431" duration="4877000" />
-      <workItem from="1607605226510" duration="6403000" />
+      <workItem from="1607605226510" duration="6720000" />
     </task>
     <task id="LOCAL-00001" summary="base">
       <created>1605628139369</created>
@@ -449,7 +422,14 @@
       <option name="project" value="LOCAL" />
       <updated>1607529629495</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="activity service test">
+      <created>1607613262667</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1607613262667</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -464,25 +444,18 @@
       <expand>
         <path>
           <item name="rootNode" type="c53c71d1:RiderDotCoverCoverageTreeModel$RootNode" />
-          <item name="Total 57% 851/1973" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Total 58% 834/1973" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
         </path>
         <path>
           <item name="rootNode" type="c53c71d1:RiderDotCoverCoverageTreeModel$RootNode" />
-          <item name="Total 57% 851/1973" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="Application 75% 150/611" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Total 58% 834/1973" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Application 78% 136/611" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
         </path>
         <path>
           <item name="rootNode" type="c53c71d1:RiderDotCoverCoverageTreeModel$RootNode" />
-          <item name="Total 57% 851/1973" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="Application 75% 150/611" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="Application.Services 75% 150/611" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-        </path>
-        <path>
-          <item name="rootNode" type="c53c71d1:RiderDotCoverCoverageTreeModel$RootNode" />
-          <item name="Total 57% 851/1973" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="Application 75% 150/611" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="Application.Services 75% 150/611" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="Activity 75% 33/133" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Total 58% 834/1973" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Application 78% 136/611" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Application.Services 78% 136/611" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
         </path>
       </expand>
       <select />
@@ -504,7 +477,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="SQL init tables" />
     <MESSAGE value="Searching for postman problem w/ activityget" />
     <MESSAGE value="Fix getbyCategoryId" />
     <MESSAGE value="No duplicates values for user" />
@@ -529,7 +501,8 @@
     <MESSAGE value="factory isnotnull part 1" />
     <MESSAGE value="factory isnotnull part 2" />
     <MESSAGE value="User test to complete" />
-    <option name="LAST_COMMIT_MESSAGE" value="User test to complete" />
+    <MESSAGE value="activity service test" />
+    <option name="LAST_COMMIT_MESSAGE" value="activity service test" />
   </component>
   <component name="WindowStateProjectService">
     <state width="1493" height="44" key="GridCell.Tab.0.bottom" timestamp="1607529711474">
@@ -642,17 +615,17 @@
     </state>
     <state x="92" y="92" width="1736" height="896" key="VCS.FileHistoryDialog/-1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1605793154448" />
     <state x="74" y="70" width="1389" height="684" key="VCS.FileHistoryDialog/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1606227435581" />
-    <state x="442" y="208" key="Vcs.Push.Dialog.v2" timestamp="1607529703811">
+    <state x="442" y="208" key="Vcs.Push.Dialog.v2" timestamp="1607613264821">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="552" y="272" key="Vcs.Push.Dialog.v2/-1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1607177298258" />
-    <state x="442" y="208" key="Vcs.Push.Dialog.v2/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1607529703811" />
+    <state x="442" y="208" key="Vcs.Push.Dialog.v2/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1607613264821" />
     <state x="442" y="208" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1607248300649" />
-    <state x="586" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1607608927058">
+    <state x="586" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1607613351516">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="733" y="427" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/-1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1606401533768" />
-    <state x="586" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1607608927058" />
+    <state x="586" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1607613351516" />
     <state x="586" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824@0.0.1536.824" timestamp="1607251974815" />
     <state x="465" y="143" width="1588" height="963" key="dock-window-1" timestamp="1605800156820">
       <screen x="0" y="0" width="1920" height="1080" />
