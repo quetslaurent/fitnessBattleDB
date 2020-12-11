@@ -8,7 +8,7 @@ namespace FitnessBattle.Controllers
 {
     [ApiController]
     [Route("api/activity")]
-    [Authorize(Roles = "admin")]
+    [Authorize]
     
     public class ActivityController : ControllerBase
     {
@@ -33,6 +33,7 @@ namespace FitnessBattle.Controllers
          }
         
         [HttpPost]
+        [Authorize(Roles = "admin")]
         public ActionResult<OutputDtoAddActivity> Post([FromBody] InputDtoAddActivity inputDtoAddActivity)
         {
             return Ok(_activityService.Create(inputDtoAddActivity));
@@ -40,6 +41,7 @@ namespace FitnessBattle.Controllers
 
         [HttpPut]
         [Route("{id:int}")]
+        [Authorize(Roles = "admin")]
         public ActionResult Update(int id, InputDtoUpdateActivity inputDtoUpdateActivity)
         {
             if(_activityService.Update(id,inputDtoUpdateActivity))
@@ -52,6 +54,7 @@ namespace FitnessBattle.Controllers
 
         [HttpDelete]
         [Route("{id:int}")]
+        [Authorize(Roles = "admin")]
         public ActionResult Delete(int id)
         {
             if (_activityService.DeleteActivity(id))
