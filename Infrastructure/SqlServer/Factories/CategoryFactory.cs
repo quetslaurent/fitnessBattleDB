@@ -8,6 +8,7 @@ namespace Infrastructure.SqlServer.Factories
 {
     public class CategoryFactory : IInstanceFromReaderFactory<ICategory>
     {
+        //crée une categorie depuis le reader
         public ICategory CreateFromReader(SqlDataReader reader)
         {
             return new Domain.Category.Category

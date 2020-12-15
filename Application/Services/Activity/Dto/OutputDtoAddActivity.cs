@@ -1,5 +1,9 @@
 ﻿namespace Application.Services.Activity.Dto
 {
+    /*
+     * Dto utilisé comme retour d'une méthode qui ne renvoie qu'une seule activité
+     */
+    
     public class OutputDtoAddActivity
     {
         public int Id { get; set; }

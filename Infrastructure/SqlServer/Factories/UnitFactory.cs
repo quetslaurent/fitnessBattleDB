@@ -6,6 +6,7 @@ namespace Infrastructure.SqlServer.Factories
 {
     public class UnitFactory: IInstanceFromReaderFactory<IUnit>
     {
+        //crée une unit depuis le reader
         public IUnit CreateFromReader(SqlDataReader reader)
         {
             return new Domain.Unit.Unit

@@ -12,6 +12,7 @@ namespace Infrastructure.SqlServer.Category
     {
          private readonly IInstanceFromReaderFactory<ICategory> _factory = new CategoryFactory();
 
+         //renvoie la liste de categorie
         public IEnumerable<ICategory> Query()
         {
             IList<ICategory> categories = new List<ICategory>();
@@ -32,6 +33,7 @@ namespace Infrastructure.SqlServer.Category
             return categories;
         }
 
+        //renvoie la categorie ayant le bon id
         public ICategory GetById(int id)
         {
             using (var connection = Database.GetConnection())
@@ -53,6 +55,7 @@ namespace Infrastructure.SqlServer.Category
             return null;
         }
 
+        //crée une categorie
         public ICategory Create(ICategory category)
         {
             using (var connection = Database.GetConnection())
@@ -69,6 +72,7 @@ namespace Infrastructure.SqlServer.Category
             return category;
         }
 
+        //modifie une categorie
         public bool Update(int id, ICategory category)
         {
             using (var connection = Database.GetConnection())

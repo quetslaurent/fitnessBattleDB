@@ -12,6 +12,7 @@ namespace Infrastructure.SqlServer.Training
     {
          private readonly IInstanceFromReaderFactory<ITraining> _factory = new TrainingFactory();
 
+        //renvoie la liste des entrainments
         public IEnumerable<ITraining> Query()
         {
             IList<ITraining> trainings = new List<ITraining>();
@@ -32,6 +33,7 @@ namespace Infrastructure.SqlServer.Training
             return trainings;
         }
         
+        //crée un training
         public ITraining Create(ITraining training)
         {
             using (var connection = Database.GetConnection())
@@ -51,6 +53,7 @@ namespace Infrastructure.SqlServer.Training
             return training;
         }
 
+        //supprimer un training via id
         public bool Delete(int id)
         {
             using (var connection = Database.GetConnection())
@@ -66,6 +69,7 @@ namespace Infrastructure.SqlServer.Training
             }
         }
         
+        //renvoie un training via la date
         public IEnumerable<ITraining> GetByDateId(int dateId)
         {
             IList<ITraining> trainings = new List<ITraining>();

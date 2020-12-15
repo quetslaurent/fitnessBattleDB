@@ -2,6 +2,11 @@
 
 namespace Application.Services.Activity.Dto
 {
+    /*
+     * DTO qui permets de modifier une Activity
+     * 
+     */
+    
     public class InputDtoUpdateActivity
     {
         public string Name { get; }

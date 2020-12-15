@@ -6,6 +6,7 @@ namespace Infrastructure.SqlServer.Factories
 {
     public class UserFactory : IInstanceFromReaderFactory<IUser>
     {
+        //crée un user depuis le reader
         public IUser CreateFromReader(SqlDataReader reader)
         {
             return new Domain.User.User

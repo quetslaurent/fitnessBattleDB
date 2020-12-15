@@ -1,5 +1,8 @@
 ﻿namespace Application.Services.Activity.Dto
 {
+    /*
+     * Dto utilisé comme retour d'une méthode qui ne renvoie plusieurs activités
+     */
     public class OutputDtoQueryActivity
     {
         public int Id { get; set; }

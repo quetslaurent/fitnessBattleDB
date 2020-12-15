@@ -1,5 +1,4 @@
-﻿using System;
-
+﻿
 namespace Domain.Category
 {
     public class Category : ICategory
@@ -17,6 +16,7 @@ namespace Domain.Category
             Name = name;
         }
 
+        //equals
         protected bool Equals(Category other)
         {
             return Id == other.Id && Name == other.Name;

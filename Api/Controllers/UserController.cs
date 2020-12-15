@@ -19,12 +19,14 @@ namespace FitnessBattle.Controllers
             _tokenManager = tokenManager;
         }
 
+        //renvoie la liste des users
         [HttpGet]
         public ActionResult<OutputDtoQueryUser> Query()
         {
             return Ok(_userService.Query());
         }
         
+        //renvoie l'user correspondant au token
         [HttpGet]
         [Route("{token}")]
         [Authorize]
@@ -33,6 +35,7 @@ namespace FitnessBattle.Controllers
             return Ok(_userService.GetUserById(_tokenManager.GetIdFromToken(token)));
         }
         
+        //renvoir les points d'un user
         [HttpGet]
         [Route("points/{token}")]
         [Authorize]
@@ -41,12 +44,14 @@ namespace FitnessBattle.Controllers
             return Ok(_userService.GetUserPointsById(_tokenManager.GetIdFromToken(token)));
         }
 
+        //crée un user
         [HttpPost]
         public ActionResult<OutputDtoAddUser> Post([FromBody] InputDtoAddUser inputDtoAddUser)
         {
             return Ok(_userService.Create(inputDtoAddUser));
         }
         
+        //modifie un user via token
         [HttpPut]
         [Route("{token}")]
         [Authorize]
@@ -60,6 +65,7 @@ namespace FitnessBattle.Controllers
             return NotFound();
         }
         
+        //supprime un user via token
         [HttpDelete]
         [Route("{token}")]
         [Authorize]
@@ -73,6 +79,7 @@ namespace FitnessBattle.Controllers
             return NotFound();
         }
         
+        //supprimer un user via id
         [HttpDelete]
         [Route("{id:int}")]
         [Authorize]

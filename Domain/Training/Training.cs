@@ -28,6 +28,7 @@ namespace Domain.Training
             TrainingDate = trainingDate;
         }
 
+        //equals
         protected bool Equals(Training other)
         {
             return Equals(User, other.User) && Repetitions.Equals(other.Repetitions) && Id == other.Id && Equals(Activity, other.Activity) && Equals(TrainingDate, other.TrainingDate) && Points.Equals(other.Points);

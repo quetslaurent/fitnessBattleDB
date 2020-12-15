@@ -12,6 +12,7 @@ namespace Infrastructure.SqlServer.Factories
 {
     public class TrainingFactory : IInstanceFromReaderFactory<ITraining>
     {
+        //crée un training depuis le reader
         public ITraining CreateFromReader(SqlDataReader reader)
         {
             return new Domain.Training.Training

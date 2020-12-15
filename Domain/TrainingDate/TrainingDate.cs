@@ -23,6 +23,7 @@ namespace Domain.TrainingDate
             Date = date;
         }
 
+        //equals
         protected bool Equals(TrainingDate other)
         {
             return Id == other.Id && Date.Equals(other.Date);

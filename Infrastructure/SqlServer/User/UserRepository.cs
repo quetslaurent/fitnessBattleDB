@@ -16,6 +16,7 @@ namespace Infrastructure.SqlServer.User
     {
          private readonly IInstanceFromReaderFactory<IUser> _factory = new UserFactory();
 
+        //renvoie la liste des users 
         public IEnumerable<IUser> Query()
         {
             IList<IUser> users = new List<IUser>();
@@ -36,6 +37,7 @@ namespace Infrastructure.SqlServer.User
             return users;
         }
 
+        //renvoie l'user ayant l'id de l'argument
         public IUser GetById(int id)
         {
             using (var connection = Database.GetConnection())
@@ -57,11 +59,13 @@ namespace Infrastructure.SqlServer.User
             return null;
         }
 
+        //hash le password grâce a SHA256
         public string HashPassword(string password)
         {
             return ComputeHash(password, new SHA256CryptoServiceProvider()).Replace("-", String.Empty);
         }
 
+        //modifie l'user
         public bool Update(int id, IUser user)
         {
             using (var connection = Database.GetConnection())
@@ -82,6 +86,7 @@ namespace Infrastructure.SqlServer.User
             }
         }
 
+        //supprimer un user
         public bool Delete(int id)
         {
             using (var connection = Database.GetConnection())
@@ -97,6 +102,7 @@ namespace Infrastructure.SqlServer.User
             }
         }
 
+        //permet de hash
         public string ComputeHash(string input, HashAlgorithm algorithm)
         {
             Byte[] inputBytes = Encoding.UTF8.GetBytes(input);
@@ -104,6 +110,7 @@ namespace Infrastructure.SqlServer.User
             return BitConverter.ToString(hashedBytes);
         }
 
+        //créer un user
         public IUser Create(IUser user)
         {
             using (var connection = Database.GetConnection())
@@ -126,6 +133,7 @@ namespace Infrastructure.SqlServer.User
             return user;
         }
 
+        //renvoie les points d'un user
         public double GetPointsById(int id)
         {
             using (var connection = Database.GetConnection())

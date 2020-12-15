@@ -17,6 +17,9 @@ namespace Domain.Activity
             
         }
 
+        /*
+         * constructeur
+         */
         public Activity(string name, double repetitions, IUnit unit, ICategory category)
         {
             Name = name;
@@ -25,6 +28,10 @@ namespace Domain.Activity
             Category = category;
         }
 
+        /*
+         * Equals
+         */
+        
         protected bool Equals(Activity other)
         {
             return Id == other.Id && Name == other.Name && Repetitions.Equals(other.Repetitions) && Equals(Unit, other.Unit) && Equals(Category, other.Category);

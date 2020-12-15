@@ -14,6 +14,7 @@ namespace Infrastructure.SqlServer.TrainingDate
     {
         private readonly IInstanceFromReaderFactory<ITrainingDate> _factory = new TrainingDatesFactory();
 
+        //renvoie la liste des trainingDates
         public IEnumerable<ITrainingDate> Query()
         {
             IList<ITrainingDate> trainingDates = new List<ITrainingDate>();
@@ -33,6 +34,7 @@ namespace Infrastructure.SqlServer.TrainingDate
             return trainingDates;
         }
 
+        //renvoie le trainingDate correspondant à l'id
         public ITrainingDate GetById(int id)
         {
             using (var connection = Database.GetConnection())
@@ -54,6 +56,7 @@ namespace Infrastructure.SqlServer.TrainingDate
             return null;
         }
 
+        //crée une trainingDate depuis une date
         public ITrainingDate Create(DateTime date)
         {
             var trainingDate = new Domain.TrainingDate.TrainingDate()

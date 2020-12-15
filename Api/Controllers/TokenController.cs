@@ -19,6 +19,7 @@ namespace FitnessBattle.Controllers
             _tokenManager = tokenManager;
         }
 
+        //renvoie l'utilisateur correspondant au token
         [HttpGet]
         [Route("{token}")]
         public ActionResult<OutputDtoTokenUser> GetUserFromToken(string token)

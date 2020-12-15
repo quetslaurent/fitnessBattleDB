@@ -16,6 +16,9 @@ namespace Application.Services.TrainingDate
             _trainingDateRepository = trainingDateRepository;
         }
 
+        /*
+         * Renvoie la liste des trainingDate
+         */
         public IEnumerable<OutputDtoQueryTrainingDate> Query()
         {
             return _trainingDateRepository.Query().Select(trainingDate => new OutputDtoQueryTrainingDate
@@ -25,6 +28,9 @@ namespace Application.Services.TrainingDate
             });
         }
         
+        /*
+         * Créer un trainingDate
+         */
         public OutputDtoAddTrainingDate Create(InputDtoAddTrainingDate inputDtoAddTrainingDate)
         {
             var trainingDate = _trainingDateRepository.Create(inputDtoAddTrainingDate.Date);
@@ -35,6 +41,9 @@ namespace Application.Services.TrainingDate
             };
         }
 
+        /*
+         * Créer une trainingDate à la date du jour
+         */
         public OutputDtoAddTrainingDate CreateToday()
         {
             var trainingDate = _trainingDateRepository.Create(DateTime.Now);

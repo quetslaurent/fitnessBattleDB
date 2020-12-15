@@ -19,12 +19,14 @@ namespace FitnessBattle.Controllers
             _activityService = activityService;
         }
 
+        //renvoie la liste des activités
         [HttpGet]
         public ActionResult<OutputDtoQueryActivity> query()
         {
             return Ok(_activityService.Query());
         }
         
+        //renvoie les activités appartenant a la categorie
         [HttpGet]
         [Route("{id:int}")]
         public ActionResult<OutputDtoQueryActivity> GetByCategoryId(int id)
@@ -32,6 +34,7 @@ namespace FitnessBattle.Controllers
              return Ok(_activityService.GetByCategoryId(id));
          }
         
+        //créer une nouvelle activité si le user est admin
         [HttpPost]
         [Authorize(Roles = "admin")]
         public ActionResult<OutputDtoAddActivity> Post([FromBody] InputDtoAddActivity inputDtoAddActivity)
@@ -39,6 +42,7 @@ namespace FitnessBattle.Controllers
             return Ok(_activityService.Create(inputDtoAddActivity));
         }
 
+        //permet de modifier une activité si le user est admin
         [HttpPut]
         [Route("{id:int}")]
         [Authorize(Roles = "admin")]
@@ -51,7 +55,9 @@ namespace FitnessBattle.Controllers
 
             return NotFound();
         }
-
+        
+        
+        //permet de supprimer une activité si l'user est admin
         [HttpDelete]
         [Route("{id:int}")]
         [Authorize(Roles = "admin")]

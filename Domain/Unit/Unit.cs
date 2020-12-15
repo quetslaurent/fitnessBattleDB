@@ -14,6 +14,7 @@ namespace Domain.Unit
             Type = type;
         }
 
+        //equals
         protected bool Equals(Unit other)
         {
             return Id == other.Id && Type == other.Type;

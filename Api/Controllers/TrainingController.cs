@@ -20,6 +20,7 @@ namespace FitnessBattle.Controllers
             _tokenManager = tokenManager;
         }
         
+        //renvoie les trainings correspondant à la date
         [HttpGet]
         [Route("date/{idTrainingDate:int}")]
         public ActionResult<OutputDtoGetTraining> GetTrainingsByTrainingDateId(int idTrainingDate)
@@ -27,6 +28,7 @@ namespace FitnessBattle.Controllers
             return Ok(_trainingService.GetByTrainingDateId(idTrainingDate));
         }
         
+        //renvoie les training de l'user via le token
         [HttpGet]
         [Route("user/{token}")]
         public ActionResult<OutputDtoGetTraining> GetTrainingsByUserId(string token)
@@ -34,6 +36,7 @@ namespace FitnessBattle.Controllers
             return Ok(_trainingService.GetByTrainingUserId(_tokenManager.GetIdFromToken(token)));
         }
         
+        //renvoie les training de l'user via l'id
         [HttpGet]
         [Route("user/{id:int}")]
         public ActionResult<OutputDtoGetTraining> GetTrainingsByUserId(int id)
@@ -41,12 +44,14 @@ namespace FitnessBattle.Controllers
             return Ok(_trainingService.GetByTrainingUserId(id));
         }
 
+        //permet de créer un training
         [HttpPost]
         public ActionResult<OutputDtoAddTraining> Post([FromBody] InputDtoAddTraining inputDtoAddTraining)
         {
             return Ok(_trainingService.Create(inputDtoAddTraining));
         }
         
+        //permet de supprimer un training
         [HttpDelete]
         [Route("{id:int}")]
         public ActionResult Delete(int id)

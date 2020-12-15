@@ -10,6 +10,7 @@ namespace Infrastructure.SqlServer.Factories
 {
     public class ActivityFactory : IInstanceFromReaderFactory<IActivity>
     {
+        //crée une activité depuis le reader
         public IActivity CreateFromReader(SqlDataReader reader)
         {
             return new Domain.Activity.Activity

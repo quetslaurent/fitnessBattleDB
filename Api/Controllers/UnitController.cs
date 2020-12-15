@@ -17,12 +17,14 @@ namespace FitnessBattle.Controllers
             _unitService = unitService;
         }
 
+        //renvoie la liste des unités
         [HttpGet]
         public ActionResult<OutputDtoAddUnit> Query()
         {
             return Ok(_unitService.Query());
         }
 
+        //permet de créer une nouvelle unité
         [HttpPost]
         public ActionResult<OutputDtoAddUnit> Post([FromBody] InputDtoAddUnit inputDtoAddUnit)
         {

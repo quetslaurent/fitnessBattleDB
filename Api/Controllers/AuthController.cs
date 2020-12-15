@@ -19,6 +19,7 @@ namespace FitnessBattle.Controllers
             _authService = authService;
         }
 
+        //permet a un user de se connecter
         [HttpPost]
         public ActionResult<OutputDtoAuthUser> Login([FromBody] InputDtoAuthUser user)
         {

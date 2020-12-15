@@ -18,12 +18,14 @@ namespace FitnessBattle.Controllers
             _categoryService = unitService;
         }
 
+        //renvoie la liste des catégories
         [HttpGet]
         public ActionResult<OutputDtoQueryCategory> Query()
         {
             return Ok(_categoryService.Query());
         }
 
+        //renvoie une liste de catégorie avec pour chacune les activités correspondantes
         [HttpGet]
         [Route("activities")]
 
@@ -32,6 +34,7 @@ namespace FitnessBattle.Controllers
             return Ok(_categoryService.getActivitiesByCategory());
         }
 
+        //permet de créer une categorie
         [HttpPost]
         public ActionResult<OutputDtoAddCategory> Post([FromBody] InputDtoAddCategory inputDtoAddCategory)
         {

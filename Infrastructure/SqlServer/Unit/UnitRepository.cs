@@ -12,6 +12,7 @@ namespace Infrastructure.SqlServer.Unit
     {
         private readonly IInstanceFromReaderFactory<IUnit> _factory = new UnitFactory();
 
+        //renvoie la liste des units
         public IEnumerable<IUnit> Query()
         {
             IList<IUnit> units = new List<IUnit>();
@@ -32,6 +33,7 @@ namespace Infrastructure.SqlServer.Unit
             return units;
         }
 
+        //renvoie l'unit correspondant à l'id
         public IUnit GetById(int id)
         {
             using (var connection = Database.GetConnection())
@@ -53,6 +55,7 @@ namespace Infrastructure.SqlServer.Unit
             return null;
         }
 
+        //crée une unit
         public IUnit Create(IUnit unit)
         {
             using (var connection = Database.GetConnection())
@@ -69,6 +72,7 @@ namespace Infrastructure.SqlServer.Unit
             return unit;
         }
 
+        //permet de modifier une unit
         public bool Update(int id, IUnit unit)
         {
             using (var connection = Database.GetConnection())

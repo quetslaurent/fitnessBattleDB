@@ -2,6 +2,9 @@
 
 namespace Application.Services.TokenManager.Dto
 {
+    /*
+     * Retour d'un utilisateur obtenu via un token
+     */
     public class OutputDtoTokenUser
     {
         public int Id { get; set; }

@@ -2,6 +2,7 @@
 {
     public class UserFactory : IUserFactory
     {
+        //crée un user depuis les valeurs passées en argument
         public IUser CreateUserFromValues(string name, string password, string email, string role)
         {
             return new User

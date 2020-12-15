@@ -17,6 +17,7 @@ namespace Domain.Training
             Trainings = new List<ITraining>();
         }
 
+        //créer une training depuis les valeurs passées en argument
         public ITraining CreateTrainingFromValues(double repetitions, IUser user, IActivity activity,
             ITrainingDate trainingDate)
         {

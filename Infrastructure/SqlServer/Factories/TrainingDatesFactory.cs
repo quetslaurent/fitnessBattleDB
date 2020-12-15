@@ -6,6 +6,7 @@ namespace Infrastructure.SqlServer.Factories
 {
     public class TrainingDatesFactory : IInstanceFromReaderFactory<ITrainingDate>
     {
+        //crée une trainingDate depuis le reader
         public ITrainingDate CreateFromReader(SqlDataReader reader)
         {
             return new Domain.TrainingDate.TrainingDate

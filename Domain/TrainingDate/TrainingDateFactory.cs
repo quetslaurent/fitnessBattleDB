@@ -13,6 +13,7 @@ namespace Domain.TrainingDate
             };
         }
 
+        //créer un trainingdate depuis une date
         public ITrainingDate CreateFromDateTime(DateTime dateTime)
         {
             return Create(0, dateTime);
